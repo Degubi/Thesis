@@ -13,13 +13,19 @@ def download_file_to(url, output_file):
 if(Path('pdfs').exists()):
     rmtree('pdfs')
 
+if(Path('tessdata').exists()):
+    rmtree('tessdata')
+
 mkdir('pdfs')
 mkdir('pdfs/9')
 mkdir('pdfs/10')
 mkdir('pdfs/11')
 mkdir('pdfs/12')
+mkdir('tessdata')
 
 download_file_to('https://rgai.inf.u-szeged.hu/sites/rgai.inf.u-szeged.hu/files/magyarlanc-3.0.jar', 'magyarlanc.jar')
+download_file_to('https://raw.githubusercontent.com/tesseract-ocr/tessdata/main/hun.traineddata', 'tessdata/hun.traineddata')
+download_file_to('https://raw.githubusercontent.com/tesseract-ocr/tessdata/main/osd.traineddata', 'tessdata/osd.traineddata')
 
 download_file_to('https://www.tankonyvkatalogus.hu/pdf/OH-MIR09SZ__teljes.pdf', 'pdfs/9/szgy.pdf')
 download_file_to('https://www.tankonyvkatalogus.hu/pdf/OH-MIR09TA__teljes.pdf', 'pdfs/9/tk.pdf')

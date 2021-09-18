@@ -1,6 +1,7 @@
 /.settings/
 /target/
 /pdfs/
+/tessdata/
 
 .classpath
 .project

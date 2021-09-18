@@ -1,52 +1,28 @@
 package szakdoga;
 
-import java.awt.geom.*;
-import java.io.*;
 import java.nio.file.*;
 import java.util.*;
-import java.util.regex.*;
+import net.sourceforge.tess4j.*;
 import org.apache.pdfbox.pdmodel.*;
-import org.apache.pdfbox.text.*;
+import org.apache.pdfbox.rendering.*;
 import szakdoga.model.*;
 
 public final class Main {
-    private static final Pattern jibberishCharacterReplacer = Pattern.compile("▶|•| ");
 
     public static void main(String[] args) throws Exception {
         var sentences = analyzePDFText("pdfs/9/szgy.pdf");
 
     }
 
-    public static MagyarlancSentence[] analyzePDFText(String pdfPath) throws InterruptedException, IOException {
+    public static MagyarlancSentence[] analyzePDFText(String pdfPath) throws Exception {
         var extractionOutputFile = "tempOut.txt";
         var extractionOutputPath = Path.of(extractionOutputFile);
 
         System.out.println("Extracting text from: " + pdfPath);
 
-        try(var inputPDFDocument = PDDocument.load(Path.of(pdfPath).toFile());
-            var outputTextFile = Files.newBufferedWriter(extractionOutputPath)) {
+        var extractedText = extractTextFromPDF(pdfPath);
 
-            var textStripper = new PDFTextStripperByArea();
-            var firstPageBBox = inputPDFDocument.getPage(1).getBBox();
-
-            textStripper.addRegion("SkipMargin", new Rectangle2D.Double(40, 40, firstPageBBox.getWidth() - 80, firstPageBBox.getHeight() - 80));
-
-            var pages = inputPDFDocument.getPages();
-            for(var i = 11; i < 16; ++i) {
-                textStripper.extractRegions(pages.get(i));
-
-                textStripper.getTextForRegion("SkipMargin")
-                            .lines()
-                            .forEach(k -> {
-                                try {
-                                    outputTextFile.write(k);
-                                    outputTextFile.write('\n');
-                                } catch (IOException e) {
-                                    e.printStackTrace();
-                                }
-                            });
-            }
-        }
+        Files.writeString(extractionOutputPath, extractedText);
 
         System.out.println("Analyzing text from: " + pdfPath);
 
@@ -65,5 +41,19 @@ public final class Main {
         return Arrays.stream(magyarlancOutput.split("\n\n"))
                      .map(MagyarlancSentence::new)
                      .toArray(MagyarlancSentence[]::new);
+    }
+
+
+    private static String extractTextFromPDF(String pdfPath) throws Exception {
+        try(var inputPDFDocument = PDDocument.load(Path.of(pdfPath).toFile())) {
+            var image = new PDFRenderer(inputPDFDocument).renderImageWithDPI(11, 300);
+            var tesseract = new Tesseract();
+            tesseract.setDatapath(Path.of("tessdata").toAbsolutePath().toString());
+            tesseract.setTessVariable("user_defined_dpi", "300");
+            tesseract.setPageSegMode(1);
+            tesseract.setLanguage("hun");
+
+            return tesseract.doOCR(image);
+        }
     }
 }
