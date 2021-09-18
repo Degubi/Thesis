@@ -1,8 +1,8 @@
 /.settings/
 /target/
+/pdfs/
 
 .classpath
 .project
 magyarlanc.jar
-*.pdf
 *.txt
