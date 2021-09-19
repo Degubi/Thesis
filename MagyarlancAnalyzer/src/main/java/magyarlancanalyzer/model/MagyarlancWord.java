@@ -1,4 +1,4 @@
-package szakdoga.model;
+package magyarlancanalyzer.model;
 
 public final class MagyarlancWord {
 

@@ -1,4 +1,4 @@
-package szakdoga.model;
+package magyarlancanalyzer.model;
 
 import java.util.*;
 import java.util.stream.*;

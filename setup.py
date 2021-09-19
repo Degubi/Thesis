@@ -10,29 +10,27 @@ def download_file_to(url, output_file):
         copyfileobj(input.raw, output)
 
 
-if(Path('pdfs').exists()):
-    rmtree('pdfs')
+if(Path('TextExtractor/pdfs').exists()):
+    rmtree('TextExtractor/pdfs')
 
-if(Path('tessdata').exists()):
-    rmtree('tessdata')
+if(Path('TextExtractor/tessdata').exists()):
+    rmtree('TextExtractor/tessdata')
 
-mkdir('pdfs')
-mkdir('pdfs/9')
-mkdir('pdfs/10')
-mkdir('pdfs/11')
-mkdir('pdfs/12')
-mkdir('tessdata')
+mkdir('TextExtractor/pdfs')
+mkdir('TextExtractor/pdfs/9')
+mkdir('TextExtractor/pdfs/10')
+mkdir('TextExtractor/pdfs/11')
+mkdir('TextExtractor/pdfs/12')
+mkdir('TextExtractor/tessdata')
 
-download_file_to('https://rgai.inf.u-szeged.hu/sites/rgai.inf.u-szeged.hu/files/magyarlanc-3.0.jar', 'magyarlanc.jar')
-download_file_to('https://raw.githubusercontent.com/tesseract-ocr/tessdata/main/hun.traineddata', 'tessdata/hun.traineddata')
-download_file_to('https://raw.githubusercontent.com/tesseract-ocr/tessdata/main/osd.traineddata', 'tessdata/osd.traineddata')
+download_file_to('https://rgai.inf.u-szeged.hu/sites/rgai.inf.u-szeged.hu/files/magyarlanc-3.0.jar', 'MagyarlancAnalyzer/magyarlanc.jar')
+download_file_to('https://raw.githubusercontent.com/tesseract-ocr/tessdata/main/hun.traineddata', 'TextExtractor/tessdata/hun.traineddata')
+download_file_to('https://raw.githubusercontent.com/tesseract-ocr/tessdata/main/osd.traineddata', 'TextExtractor/tessdata/osd.traineddata')
 
-download_file_to('https://www.tankonyvkatalogus.hu/pdf/OH-MIR09SZ__teljes.pdf', 'pdfs/9/szgy.pdf')
-download_file_to('https://www.tankonyvkatalogus.hu/pdf/OH-MIR09TA__teljes.pdf', 'pdfs/9/tk.pdf')
+download_file_to('https://www.tankonyvkatalogus.hu/pdf/OH-MIR09SZ__teljes.pdf', 'TextExtractor/pdfs/9/szgy.pdf')
+download_file_to('https://www.tankonyvkatalogus.hu/pdf/OH-MIR09TA__teljes.pdf', 'TextExtractor/pdfs/9/tk.pdf')
 
-download_file_to('https://www.tankonyvkatalogus.hu/pdf/FI-501021002_1__teljes.pdf', 'pdfs/10/szgy.pdf')
-download_file_to('https://www.tankonyvkatalogus.hu/pdf/FI-501021001_1__teljes.pdf', 'pdfs/10/tk.pdf')
-
-
+download_file_to('https://www.tankonyvkatalogus.hu/pdf/FI-501021002_1__teljes.pdf', 'TextExtractor/pdfs/10/szgy.pdf')
+download_file_to('https://www.tankonyvkatalogus.hu/pdf/FI-501021001_1__teljes.pdf', 'TextExtractor/pdfs/10/tk.pdf')
 
 print('Done!')
