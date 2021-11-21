@@ -3,7 +3,6 @@ package textextractor;
 import java.io.*;
 import java.nio.file.*;
 import java.util.*;
-import java.util.regex.*;
 import java.util.stream.*;
 import javax.imageio.*;
 import net.sourceforge.tess4j.*;
@@ -23,48 +22,69 @@ public final class Main {
             return;
         }
 
-        var inputPDFPath = Path.of(params.get("-input"));
-        var extractionOutputFileName = "extract";
+        var inputPath = Path.of(params.get("-input"));
+        var inputPDFPaths = Files.isDirectory(inputPath) ? listPDFsInDirectory(inputPath) : new Path[] { inputPath };
         var optionalPageRange = params.get("-pageRange");
         var splitPageRange = optionalPageRange != null ? optionalPageRange.split("-") : null;
 
-        try(var inputPDFDocument = PDDocument.load(inputPDFPath.toFile())) {
-            var imageRenderer = new PDFRenderer(inputPDFDocument);
-            var tesseract = ThreadLocal.withInitial(Main::createTesseract);
-            var lineEndingRegex = Pattern.compile("-\n|\n");
+        System.out.println("Extracting " + inputPDFPaths.length + " pdf files");
 
-            var startingPage = splitPageRange == null ? 1 : Integer.parseInt(splitPageRange[0]) - 1;
-            var endingPage = splitPageRange == null ? inputPDFDocument.getNumberOfPages() - 1 : Integer.parseInt(splitPageRange[1]) - 1;
+        var totalStartTime = System.currentTimeMillis();
+        for(var inputPDFPath : inputPDFPaths) {
+            try(var inputPDFDocument = PDDocument.load(inputPDFPath.toFile())) {
+                var imageRenderer = new PDFRenderer(inputPDFDocument);
+                var tesseract = ThreadLocal.withInitial(Main::createTesseract);
+                var startingPage = splitPageRange == null ? 1 : Integer.parseInt(splitPageRange[0]) - 1;
+                var endingPage = splitPageRange == null ? inputPDFDocument.getNumberOfPages() - 1 : Integer.parseInt(splitPageRange[1]) - 1;
 
-            System.out.println("Extracting text from: " + inputPDFPath + ", page range: " + startingPage + "-" + endingPage);
+                System.out.println("Extracting text from: " + inputPDFPath + ", page range: " + startingPage + "-" + endingPage);
 
-            var startTime = System.currentTimeMillis();
+                var pdfStartTime = System.currentTimeMillis();
 
-            var rawExtractedText = IntStream.rangeClosed(startingPage, endingPage)
-                                            .parallel()
-                                            .mapToObj(i -> extractTextFromPage(imageRenderer, tesseract, i))
-                                            .sorted(Comparator.comparingInt(ExtractResult::page))
-                                            .map(ExtractResult::content)
-                                            .collect(Collectors.joining());
+                var rawExtractedText = IntStream.rangeClosed(startingPage, endingPage)
+                                                .parallel()
+                                                .mapToObj(i -> extractTextFromPage(imageRenderer, tesseract, i))
+                                                .sorted(Comparator.comparingInt(ExtractResult::page))
+                                                .map(ExtractResult::content)
+                                                .collect(Collectors.joining());
 
-            var perParagraphExtract = Arrays.stream(rawExtractedText.split("\n\n"))
-                                            .map(k -> lineEndingRegex.matcher(k).replaceAll(""))
-                                            .collect(Collectors.joining("\n"));
+                var perParagraphExtract = Arrays.stream(rawExtractedText.split("\n\n"))
+                                                .map(k -> k.replace("-\n", "").replace('\n', ' '))
+                                                .collect(Collectors.joining("\n"));
 
-            var endTime = System.currentTimeMillis();
+                var pdfEndTime = System.currentTimeMillis();
 
-            Files.writeString(Path.of(extractionOutputFileName + "_raw.txt"), rawExtractedText);
-            Files.writeString(Path.of(extractionOutputFileName + "_paragraph.txt"), perParagraphExtract);
+                var inputPathString = inputPDFPath.toString();
+                var outputDirectory = "./extract/" + inputPathString.substring(0, inputPathString.lastIndexOf('.'));
 
-            System.out.println("Done in " + (endTime - startTime) + "ms!");
+                Files.createDirectories(Path.of(outputDirectory));
+                Files.writeString(Path.of(outputDirectory + "/raw.txt"), rawExtractedText);
+                Files.writeString(Path.of(outputDirectory + "/paragraph.txt"), perParagraphExtract);
+
+                System.out.println("PDF done in " + (pdfEndTime - pdfStartTime) + "ms!");
+            }
         }
+
+        var totalEndTime = System.currentTimeMillis();
+        System.out.println("All done in " + (totalEndTime - totalStartTime) + "ms!");
     }
 
+
+    private static Path[] listPDFsInDirectory(Path inputPath) {
+        try(var folder = Files.walk(inputPath)) {
+            return folder.filter(k -> Files.isRegularFile(k))
+                         .filter(k -> k.toString().endsWith(".pdf"))
+                         .toArray(Path[]::new);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return new Path[0];
+        }
+    }
 
     private static ExtractResult extractTextFromPage(PDFRenderer imageRenderer, ThreadLocal<Tesseract> tesseract, int page) {
         try {
             var image = imageRenderer.renderImageWithDPI(page, 300);
-            var croppedImage = image.getSubimage(100, 100, image.getWidth() - 200, image.getHeight() - 200);
+            var croppedImage = image.getSubimage(150, 150, image.getWidth() - 300, image.getHeight() - 300);
 
             if(IMAGE_DEBUG) {
                 ImageIO.write(croppedImage, "png", new File("image-extract-" + page + ".png"));
