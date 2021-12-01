@@ -5,6 +5,14 @@
     <artifactId>MagyarlancAnalyzer</artifactId>
     <version>1.0</version>
 
+    <dependencies>
+        <dependency>
+            <groupId>rgai.inf.u.szeged.hu</groupId>
+            <artifactId>magyarlanc</artifactId>
+            <version>3.0</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>

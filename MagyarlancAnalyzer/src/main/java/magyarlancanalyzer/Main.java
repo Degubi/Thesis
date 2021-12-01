@@ -1,30 +1,37 @@
 package magyarlancanalyzer;
 
+import hu.u_szeged.magyarlanc.*;
+import hu.u_szeged.magyarlanc.util.*;
+import java.io.*;
+import java.nio.charset.*;
 import java.nio.file.*;
-import java.util.*;
-import magyarlancanalyzer.model.*;
 
 public final class Main {
 
     public static void main(String[] args) throws Exception {
-        var sentences = analyzeTextFile("extract.txt");
+        var outputDirPath = Path.of("../magyarlanc_outputs");
+        if(!Files.exists(outputDirPath)) {
+            Files.createDirectory(outputDirPath);
+        }
 
+        Magyarlanc.fullInit();
+
+        try(var inputFiles = Files.list(Path.of("../paraphrised_extracts"))) {
+            inputFiles.forEach(Main::analyzeWithMagyarlanc);
+        }
     }
 
-    public static MagyarlancSentence[] analyzeTextFile(String inputFilePath) throws Exception {
-        System.out.println("Analyzing text from: " + inputFilePath);
+    private static void analyzeWithMagyarlanc(Path inputFile) {
+        System.out.println("\nAnalyzing file: " + inputFile);
 
-        var magyarlancOutputFile = "analyse.txt";
-        var magyarlancOutputPath = Path.of(magyarlancOutputFile);
+        try(var output = Files.newBufferedWriter(Path.of("../magyarlanc_outputs/" + inputFile.getFileName()), StandardCharsets.UTF_8, StandardOpenOption.TRUNCATE_EXISTING)) {
+            var input = SafeReader.read(inputFile.toString(), StandardCharsets.UTF_8.name());
 
-        Runtime.getRuntime().exec("java -jar magyarlanc.jar -mode morphparse -input " + inputFilePath + " -output " + magyarlancOutputFile).waitFor();
+            Magyarlanc.parse(input, output);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-        var magyarlancOutput = Files.readString(magyarlancOutputPath);
-
-        Files.delete(magyarlancOutputPath);
-
-        return Arrays.stream(magyarlancOutput.split("\n\n"))
-                     .map(MagyarlancSentence::new)
-                     .toArray(MagyarlancSentence[]::new);
+        System.out.println("Done with file: " + inputFile);
     }
 }
