@@ -1,5 +1,5 @@
 {
-  "POSCounts": {
+  "posCounts": {
     "PUNCT": 15567,
     "DET": 9315,
     "NOUN": 22288,
@@ -16,5 +16,135 @@
     "X": 57,
     "INTJ": 46,
     "AUX": 2
+  },
+  "topWords": {
+    ",": {
+      "count": 6461,
+      "pos": "PUNCT"
+    },
+    "a": {
+      "count": 5588,
+      "pos": "DET"
+    },
+    ".": {
+      "count": 2970,
+      "pos": "PUNCT"
+    },
+    "az": {
+      "count": 1724,
+      "pos": "DET"
+    },
+    "A": {
+      "count": 1403,
+      "pos": "DET"
+    }
+  },
+  "topWordsPerPOS": {
+    "PUNCT": {
+      ",": 6461,
+      ".": 2970,
+      "-": 946,
+      "?": 945,
+      ":": 856
+    },
+    "DET": {
+      "a": 5584,
+      "az": 1627,
+      "A": 1394,
+      "Az": 355,
+      "egy": 322
+    },
+    "NOUN": {
+      "vers": 224,
+      "szöveg": 127,
+      "költő": 116,
+      "romantika": 95,
+      "mű": 90
+    },
+    "ADJ": {
+      "című": 245,
+      "első": 164,
+      "magyar": 163,
+      "nagy": 105,
+      "költői": 81
+    },
+    "ADV": {
+      "nem": 368,
+      "el": 246,
+      "ki": 180,
+      "fel": 120,
+      "már": 116
+    },
+    "VERB": {
+      "volt": 106,
+      "van": 83,
+      "Olvasd": 77,
+      "kell": 66,
+      "lehet": 62
+    },
+    "CONJ": {
+      "és": 1293,
+      "is": 703,
+      "s": 196,
+      "vagy": 195,
+      "de": 180
+    },
+    "PRON": {
+      "Milyen": 217,
+      "e": 141,
+      "amely": 129,
+      "ez": 125,
+      "egyik": 101
+    },
+    "ADP": {
+      "után": 78,
+      "szerint": 67,
+      "között": 64,
+      "közül": 47,
+      "számára": 44
+    },
+    "SCONJ": {
+      "hogy": 435,
+      "mint": 133,
+      "ha": 60,
+      "mintha": 31,
+      "mert": 31
+    },
+    "NUM": {
+      "két": 149,
+      "több": 68,
+      "három": 49,
+      "egy-egy": 43,
+      "1": 41
+    },
+    "PROPN": {
+      "Petőfi": 105,
+      "Bánk": 90,
+      "Kölcsey": 86,
+      "Vörösmarty": 69,
+      "W": 63
+    },
+    "PART": {
+      "meg": 435,
+      "Meg": 3,
+      "utol": 1
+    },
+    "X": {
+      "c": 12,
+      "ars": 7,
+      "in": 3,
+      "XX": 2,
+      "Me": 2
+    },
+    "INTJ": {
+      "igen": 6,
+      "Ah": 4,
+      "ó": 3,
+      "Oh": 3,
+      "Nem": 3
+    },
+    "AUX": {
+      "vala": 2
+    }
   }
 }

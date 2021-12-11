@@ -1,5 +1,5 @@
 {
-  "POSCounts": {
+  "posCounts": {
     "NOUN": 31285,
     "DET": 12269,
     "ADJ": 14389,
@@ -17,5 +17,143 @@
     "SYM": 23,
     "X": 372,
     "AUX": 6
+  },
+  "topWords": {
+    ",": {
+      "count": 9622,
+      "pos": "PUNCT"
+    },
+    "a": {
+      "count": 7189,
+      "pos": "DET"
+    },
+    ".": {
+      "count": 4098,
+      "pos": "PUNCT"
+    },
+    "az": {
+      "count": 2506,
+      "pos": "DET"
+    },
+    "és": {
+      "count": 1910,
+      "pos": "CONJ"
+    }
+  },
+  "topWordsPerPOS": {
+    "NOUN": {
+      "vers": 189,
+      "szöveg": 141,
+      "ember": 120,
+      "mű": 115,
+      "költő": 103
+    },
+    "DET": {
+      "a": 7187,
+      "az": 2383,
+      "A": 1718,
+      "Az": 532,
+      "egy": 414
+    },
+    "ADJ": {
+      "című": 414,
+      "első": 186,
+      "magyar": 176,
+      "irodalmi": 121,
+      "költői": 106
+    },
+    "PUNCT": {
+      ",": 9622,
+      ".": 4098,
+      ")": 1225,
+      "?": 1193,
+      ":": 1184
+    },
+    "VERB": {
+      "volt": 185,
+      "van": 145,
+      "Olvasd": 91,
+      "jelent": 73,
+      "kell": 68
+    },
+    "ADV": {
+      "nem": 589,
+      "el": 341,
+      "ki": 220,
+      "fel": 207,
+      "csak": 189
+    },
+    "PRON": {
+      "Milyen": 199,
+      "e": 192,
+      "amely": 167,
+      "milyen": 151,
+      "ez": 151
+    },
+    "CONJ": {
+      "és": 1910,
+      "is": 924,
+      "s": 273,
+      "vagy": 272,
+      "de": 177
+    },
+    "ADP": {
+      "után": 111,
+      "között": 87,
+      "által": 68,
+      "számára": 65,
+      "szerint": 65
+    },
+    "PROPN": {
+      "Ady": 161,
+      "W": 120,
+      "Kosztolányi": 86,
+      "Arany": 75,
+      "János": 75
+    },
+    "NUM": {
+      "két": 211,
+      "1": 78,
+      "három": 55,
+      "0": 54,
+      "több": 52
+    },
+    "SCONJ": {
+      "hogy": 629,
+      "mint": 201,
+      "ha": 101,
+      "mert": 46,
+      "Ha": 45
+    },
+    "PART": {
+      "meg": 775,
+      "Meg": 2
+    },
+    "INTJ": {
+      "TENVÁ": 13,
+      "igen": 12,
+      "ja": 7,
+      "Ó": 6,
+      "sz": 5
+    },
+    "SYM": {
+      "oszk.hu": 3,
+      "szu": 1,
+      "korznuéu": 1,
+      "Zí": 1,
+      "alakf": 1
+    },
+    "X": {
+      "_": 84,
+      "ars": 21,
+      "c": 18,
+      "en": 10,
+      "I": 9
+    },
+    "AUX": {
+      "fogsz": 3,
+      "vala": 2,
+      "fogod": 1
+    }
   }
 }

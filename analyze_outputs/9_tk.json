@@ -1,5 +1,5 @@
 {
-  "POSCounts": {
+  "posCounts": {
     "NOUN": 15536,
     "PUNCT": 9035,
     "DET": 6239,
@@ -17,5 +17,137 @@
     "INTJ": 27,
     "SYM": 1,
     "AUX": 1
+  },
+  "topWords": {
+    ",": {
+      "count": 3729,
+      "pos": "PUNCT"
+    },
+    "a": {
+      "count": 3443,
+      "pos": "DET"
+    },
+    ".": {
+      "count": 2292,
+      "pos": "PUNCT"
+    },
+    "az": {
+      "count": 1358,
+      "pos": "DET"
+    },
+    "és": {
+      "count": 1117,
+      "pos": "CONJ"
+    }
+  },
+  "topWordsPerPOS": {
+    "NOUN": {
+      "szöveg": 119,
+      "ember": 93,
+      "vers": 88,
+      "irodalom": 63,
+      "történet": 55
+    },
+    "PUNCT": {
+      ",": 3729,
+      ".": 2292,
+      ":": 559,
+      "-": 480,
+      "!": 445
+    },
+    "DET": {
+      "a": 3442,
+      "az": 1310,
+      "A": 895,
+      "Az": 348,
+      "egy": 215
+    },
+    "CONJ": {
+      "és": 1117,
+      "is": 406,
+      "vagy": 112,
+      "de": 77,
+      "hanem": 65
+    },
+    "ADJ": {
+      "görög": 125,
+      "című": 115,
+      "első": 105,
+      "magyar": 82,
+      "emberi": 80
+    },
+    "PRON": {
+      "Milyen": 99,
+      "milyen": 91,
+      "amely": 76,
+      "aki": 70,
+      "olyan": 57
+    },
+    "ADV": {
+      "nem": 241,
+      "el": 209,
+      "ki": 101,
+      "fel": 72,
+      "már": 71
+    },
+    "VERB": {
+      "volt": 105,
+      "Olvasd": 76,
+      "van": 48,
+      "Fogalmazd": 40,
+      "utal": 32
+    },
+    "PART": {
+      "meg": 379,
+      "Meg": 1
+    },
+    "SCONJ": {
+      "hogy": 277,
+      "mint": 62,
+      "ha": 26,
+      "mert": 16,
+      "Ha": 10
+    },
+    "NUM": {
+      "két": 91,
+      "három": 42,
+      "több": 26,
+      "egy": 22,
+      "négy": 21
+    },
+    "PROPN": {
+      "Jézus": 91,
+      "Isten": 72,
+      "Kr.": 45,
+      "Szent": 42,
+      "Biblia": 37
+    },
+    "ADP": {
+      "szerint": 61,
+      "által": 45,
+      "után": 45,
+      "között": 43,
+      "körül": 39
+    },
+    "X": {
+      "da": 6,
+      "Jacopone": 4,
+      "ex": 3,
+      "in": 2,
+      "Carpe": 2
+    },
+    "INTJ": {
+      "Ó": 8,
+      "igen": 6,
+      "jaj": 4,
+      "sajnos": 2,
+      "Persze": 1
+    },
+    "SYM": {
+      "tu": 1
+    },
+    "AUX": {
+      "fogsz": 1
+    }
   }
 }
