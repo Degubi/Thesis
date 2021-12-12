@@ -13,11 +13,9 @@ public final class Main {
     public static void main(String[] args) throws Exception {
         var outputDir = Path.of("../text_extracts");
 
-        Files.walk(outputDir)
-             .sorted(Comparator.reverseOrder())
-             .forEach(Main::deleteFile);
-
-        Files.createDirectory(outputDir);
+        if(!Files.exists(outputDir)) {
+            Files.createDirectory(outputDir);
+        }
 
         var inputPDFPaths = listPDFs();
         var tesseract = ThreadLocal.withInitial(Main::createTesseract);
@@ -82,14 +80,6 @@ public final class Main {
         tesseract.setPageSegMode(1);
         tesseract.setLanguage("hun");
         return tesseract;
-    }
-
-    private static void deleteFile(Path file) {
-        try {
-            Files.delete(file);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     record ExtractResult(String content, int page) {}

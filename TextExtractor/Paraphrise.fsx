@@ -6,9 +6,6 @@ let paraphriseFileContent filePath =
                                |> Seq.map(fun k -> k.Replace("-\n", "").Replace("\n", " "))
                                |> fun k -> String.Join("\n", k)
 
-if Directory.Exists("paraphrised_extracts") then
-    Directory.Delete("paraphrised_extracts", true)
-
 Directory.CreateDirectory("paraphrised_extracts")
 Directory.GetFiles("text_extracts") |> Seq.map(fun k -> (k, paraphriseFileContent(k)))
                                     |> Seq.iter(fun (path, content) -> File.WriteAllText($"paraphrised_extracts/{Path.GetFileName(path)}", content))
