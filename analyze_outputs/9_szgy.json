@@ -19,17 +19,9 @@
     "SYM": 1
   },
   "topWords": {
-    ",": {
-      "count": 11181,
-      "pos": "PUNCT"
-    },
     "a": {
       "count": 5299,
       "pos": "DET"
-    },
-    ".": {
-      "count": 4113,
-      "pos": "PUNCT"
     },
     "és": {
       "count": 2069,
@@ -38,6 +30,194 @@
     "az": {
       "count": 2033,
       "pos": "DET"
+    },
+    "hogy": {
+      "count": 1107,
+      "pos": "SCONJ"
+    },
+    "s": {
+      "count": 1022,
+      "pos": "CONJ"
+    },
+    "nem": {
+      "count": 820,
+      "pos": "ADV"
+    },
+    "is": {
+      "count": 692,
+      "pos": "CONJ"
+    },
+    "A": {
+      "count": 497,
+      "pos": "DET"
+    },
+    "meg": {
+      "count": 488,
+      "pos": "PART"
+    },
+    "egy": {
+      "count": 451,
+      "pos": "DET"
+    },
+    "volt": {
+      "count": 408,
+      "pos": "VERB"
+    },
+    "el": {
+      "count": 317,
+      "pos": "ADV"
+    },
+    "pedig": {
+      "count": 300,
+      "pos": "CONJ"
+    },
+    "ki": {
+      "count": 290,
+      "pos": "ADV"
+    },
+    "de": {
+      "count": 288,
+      "pos": "CONJ"
+    },
+    "mint": {
+      "count": 281,
+      "pos": "SCONJ"
+    },
+    "ha": {
+      "count": 279,
+      "pos": "SCONJ"
+    },
+    "így": {
+      "count": 267,
+      "pos": "ADV"
+    },
+    "csak": {
+      "count": 248,
+      "pos": "ADV"
+    },
+    "mert": {
+      "count": 248,
+      "pos": "SCONJ"
+    },
+    "Az": {
+      "count": 246,
+      "pos": "DET"
+    },
+    "már": {
+      "count": 243,
+      "pos": "ADV"
+    },
+    "sem": {
+      "count": 238,
+      "pos": "ADV"
+    },
+    "még": {
+      "count": 232,
+      "pos": "ADV"
+    },
+    "én": {
+      "count": 230,
+      "pos": "PRON"
+    },
+    "ez": {
+      "count": 222,
+      "pos": "PRON"
+    },
+    "vagy": {
+      "count": 214,
+      "pos": "CONJ"
+    },
+    "nagy": {
+      "count": 211,
+      "pos": "ADJ"
+    },
+    "ő": {
+      "count": 203,
+      "pos": "PRON"
+    },
+    "aki": {
+      "count": 192,
+      "pos": "PRON"
+    },
+    "azt": {
+      "count": 187,
+      "pos": "PRON"
+    },
+    "És": {
+      "count": 186,
+      "pos": "CONJ"
+    },
+    "van": {
+      "count": 182,
+      "pos": "VERB"
+    },
+    "ne": {
+      "count": 179,
+      "pos": "ADV"
+    },
+    "ezt": {
+      "count": 177,
+      "pos": "PRON"
+    },
+    "úgy": {
+      "count": 171,
+      "pos": "ADV"
+    },
+    "minden": {
+      "count": 169,
+      "pos": "PRON"
+    },
+    "te": {
+      "count": 167,
+      "pos": "PRON"
+    },
+    "e": {
+      "count": 161,
+      "pos": "PRON"
+    },
+    "szólt": {
+      "count": 159,
+      "pos": "VERB"
+    },
+    "ott": {
+      "count": 144,
+      "pos": "ADV"
+    },
+    "S": {
+      "count": 144,
+      "pos": "CONJ"
+    },
+    "Isten": {
+      "count": 138,
+      "pos": "PROPN"
+    },
+    "De": {
+      "count": 135,
+      "pos": "CONJ"
+    },
+    "neki": {
+      "count": 135,
+      "pos": "PRON"
+    },
+    "most": {
+      "count": 133,
+      "pos": "ADV"
+    },
+    "majd": {
+      "count": 128,
+      "pos": "CONJ"
+    },
+    "ember": {
+      "count": 127,
+      "pos": "NOUN"
+    },
+    "mondta": {
+      "count": 113,
+      "pos": "VERB"
+    },
+    "mind": {
+      "count": 113,
+      "pos": "PRON"
     }
   },
   "topWordsPerPOS": {

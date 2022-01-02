@@ -18,17 +18,9 @@
     "AUX": 2
   },
   "topWords": {
-    ",": {
-      "count": 6461,
-      "pos": "PUNCT"
-    },
     "a": {
       "count": 5588,
       "pos": "DET"
-    },
-    ".": {
-      "count": 2970,
-      "pos": "PUNCT"
     },
     "az": {
       "count": 1724,
@@ -37,6 +29,194 @@
     "A": {
       "count": 1403,
       "pos": "DET"
+    },
+    "és": {
+      "count": 1293,
+      "pos": "CONJ"
+    },
+    "is": {
+      "count": 769,
+      "pos": "CONJ"
+    },
+    "meg": {
+      "count": 441,
+      "pos": "PART"
+    },
+    "hogy": {
+      "count": 435,
+      "pos": "SCONJ"
+    },
+    "nem": {
+      "count": 368,
+      "pos": "ADV"
+    },
+    "Az": {
+      "count": 359,
+      "pos": "DET"
+    },
+    "egy": {
+      "count": 356,
+      "pos": "DET"
+    },
+    "el": {
+      "count": 246,
+      "pos": "ADV"
+    },
+    "című": {
+      "count": 245,
+      "pos": "ADJ"
+    },
+    "vers": {
+      "count": 224,
+      "pos": "NOUN"
+    },
+    "Milyen": {
+      "count": 221,
+      "pos": "PRON"
+    },
+    "s": {
+      "count": 196,
+      "pos": "CONJ"
+    },
+    "vagy": {
+      "count": 195,
+      "pos": "CONJ"
+    },
+    "ki": {
+      "count": 189,
+      "pos": "ADV"
+    },
+    "de": {
+      "count": 182,
+      "pos": "CONJ"
+    },
+    "első": {
+      "count": 164,
+      "pos": "ADJ"
+    },
+    "magyar": {
+      "count": 163,
+      "pos": "ADJ"
+    },
+    "két": {
+      "count": 149,
+      "pos": "NUM"
+    },
+    "e": {
+      "count": 141,
+      "pos": "PRON"
+    },
+    "mint": {
+      "count": 139,
+      "pos": "SCONJ"
+    },
+    "amely": {
+      "count": 129,
+      "pos": "PRON"
+    },
+    "szöveg": {
+      "count": 127,
+      "pos": "NOUN"
+    },
+    "ez": {
+      "count": 125,
+      "pos": "PRON"
+    },
+    "fel": {
+      "count": 120,
+      "pos": "ADV"
+    },
+    "hanem": {
+      "count": 118,
+      "pos": "CONJ"
+    },
+    "már": {
+      "count": 116,
+      "pos": "ADV"
+    },
+    "költő": {
+      "count": 116,
+      "pos": "NOUN"
+    },
+    "volt": {
+      "count": 106,
+      "pos": "VERB"
+    },
+    "nagy": {
+      "count": 105,
+      "pos": "ADJ"
+    },
+    "Petőfi": {
+      "count": 105,
+      "pos": "PROPN"
+    },
+    "egyik": {
+      "count": 101,
+      "pos": "PRON"
+    },
+    "csak": {
+      "count": 99,
+      "pos": "ADV"
+    },
+    "pedig": {
+      "count": 95,
+      "pos": "CONJ"
+    },
+    "romantika": {
+      "count": 95,
+      "pos": "NOUN"
+    },
+    "még": {
+      "count": 94,
+      "pos": "ADV"
+    },
+    "Hogyan": {
+      "count": 92,
+      "pos": "ADV"
+    },
+    "például": {
+      "count": 91,
+      "pos": "ADV"
+    },
+    "mű": {
+      "count": 90,
+      "pos": "NOUN"
+    },
+    "Bánk": {
+      "count": 90,
+      "pos": "PROPN"
+    },
+    "Kölcsey": {
+      "count": 86,
+      "pos": "PROPN"
+    },
+    "azt": {
+      "count": 85,
+      "pos": "PRON"
+    },
+    "itt": {
+      "count": 85,
+      "pos": "ADV"
+    },
+    "Mi": {
+      "count": 84,
+      "pos": "PRON"
+    },
+    "össze": {
+      "count": 83,
+      "pos": "ADV"
+    },
+    "van": {
+      "count": 83,
+      "pos": "VERB"
+    },
+    "költői": {
+      "count": 81,
+      "pos": "ADJ"
+    },
+    "majd": {
+      "count": 78,
+      "pos": "CONJ"
     }
   },
   "topWordsPerPOS": {
