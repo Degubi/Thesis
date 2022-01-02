@@ -6,6 +6,10 @@ let paraphriseFileContent filePath =
                                |> Seq.map(fun k -> k.Replace("-\n", "").Replace("\n", " "))
                                |> fun k -> String.Join("\n", k)
 
-Directory.CreateDirectory("paraphrised_extracts")
-Directory.GetFiles("text_extracts") |> Seq.map(fun k -> (k, paraphriseFileContent(k)))
-                                    |> Seq.iter(fun (path, content) -> File.WriteAllText($"paraphrised_extracts/{Path.GetFileName(path)}", content))
+let mainDir = Directory.GetParent(__SOURCE_DIRECTORY__).FullName
+let inputDir = $"{mainDir}/outputs/text/raw"
+let outputDir = $"{mainDir}/outputs/text/paraphrised"
+
+Directory.CreateDirectory(outputDir)
+Directory.GetFiles(inputDir) |> Seq.map(fun k -> (k, paraphriseFileContent(k)))
+                             |> Seq.iter(fun (path, content) -> File.WriteAllText($"{outputDir}/{Path.GetFileName(path)}", content))

@@ -11,7 +11,7 @@ import org.apache.pdfbox.rendering.*;
 public final class Main {
 
     public static void main(String[] args) throws Exception {
-        var outputDir = Path.of("../text_extracts");
+        var outputDir = Path.of("../outputs/text/raw");
 
         if(!Files.exists(outputDir)) {
             Files.createDirectory(outputDir);
@@ -51,7 +51,7 @@ public final class Main {
 
 
     private static Path[] listPDFs() {
-        try(var folder = Files.list(Path.of("pdfs"))) {
+        try(var folder = Files.list(Path.of("../pdfs"))) {
             return folder.toArray(Path[]::new);
         } catch (IOException e) {
             e.printStackTrace();

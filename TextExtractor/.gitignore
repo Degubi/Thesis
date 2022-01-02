@@ -2,7 +2,6 @@
 /target/
 /pdfs/
 /tessdata/
-/.ionide/
 
 .classpath
 .project
