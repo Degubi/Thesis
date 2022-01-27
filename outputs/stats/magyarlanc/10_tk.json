@@ -217,6 +217,206 @@
     "majd": {
       "count": 78,
       "pos": "CONJ"
+    },
+    "milyen": {
+      "count": 78,
+      "pos": "PRON"
+    },
+    "után": {
+      "count": 78,
+      "pos": "ADP"
+    },
+    "Olvasd": {
+      "count": 77,
+      "pos": "VERB"
+    },
+    "aki": {
+      "count": 77,
+      "pos": "PRON"
+    },
+    "költemény": {
+      "count": 76,
+      "pos": "NOUN"
+    },
+    "minden": {
+      "count": 75,
+      "pos": "PRON"
+    },
+    "irodalmi": {
+      "count": 74,
+      "pos": "ADJ"
+    },
+    "romantikus": {
+      "count": 74,
+      "pos": "ADJ"
+    },
+    "alapján": {
+      "count": 73,
+      "pos": "NOUN"
+    },
+    "ember": {
+      "count": 72,
+      "pos": "NOUN"
+    },
+    "azonban": {
+      "count": 72,
+      "pos": "CONJ"
+    },
+    "regény": {
+      "count": 70,
+      "pos": "NOUN"
+    },
+    "Vörösmarty": {
+      "count": 69,
+      "pos": "PROPN"
+    },
+    "század": {
+      "count": 68,
+      "pos": "NOUN"
+    },
+    "több": {
+      "count": 68,
+      "pos": "NUM"
+    },
+    "alábbi": {
+      "count": 68,
+      "pos": "ADJ"
+    },
+    "második": {
+      "count": 67,
+      "pos": "ADJ"
+    },
+    "szerint": {
+      "count": 67,
+      "pos": "ADP"
+    },
+    "Miért": {
+      "count": 67,
+      "pos": "ADV"
+    },
+    "kell": {
+      "count": 66,
+      "pos": "VERB"
+    },
+    "nemzeti": {
+      "count": 66,
+      "pos": "ADJ"
+    },
+    "utolsó": {
+      "count": 65,
+      "pos": "ADJ"
+    },
+    "versszak": {
+      "count": 65,
+      "pos": "NOUN"
+    },
+    "saját": {
+      "count": 64,
+      "pos": "PRON"
+    },
+    "között": {
+      "count": 64,
+      "pos": "ADP"
+    },
+    "amikor": {
+      "count": 64,
+      "pos": "ADV"
+    },
+    "felvilágosodás": {
+      "count": 63,
+      "pos": "NOUN"
+    },
+    "új": {
+      "count": 63,
+      "pos": "ADJ"
+    },
+    "W": {
+      "count": 63,
+      "pos": "PROPN"
+    },
+    "így": {
+      "count": 63,
+      "pos": "CONJ"
+    },
+    "elbeszélő": {
+      "count": 63,
+      "pos": "ADJ"
+    },
+    "lehet": {
+      "count": 62,
+      "pos": "VERB"
+    },
+    "Irány": {
+      "count": 61,
+      "pos": "NOUN"
+    },
+    "Fogalmak": {
+      "count": 61,
+      "pos": "NOUN"
+    },
+    "be": {
+      "count": 61,
+      "pos": "ADV"
+    },
+    "való": {
+      "count": 60,
+      "pos": "ADJ"
+    },
+    "ha": {
+      "count": 60,
+      "pos": "SCONJ"
+    },
+    "Berzsenyi": {
+      "count": 60,
+      "pos": "ADJ"
+    },
+    "sem": {
+      "count": 59,
+      "pos": "ADV"
+    },
+    "ő": {
+      "count": 58,
+      "pos": "PRON"
+    },
+    "ezt": {
+      "count": 56,
+      "pos": "PRON"
+    },
+    "olyan": {
+      "count": 56,
+      "pos": "ADV"
+    },
+    "De": {
+      "count": 56,
+      "pos": "CONJ"
+    },
+    "versben": {
+      "count": 56,
+      "pos": "NOUN"
+    },
+    "valamint": {
+      "count": 55,
+      "pos": "CONJ"
+    },
+    "Mit": {
+      "count": 55,
+      "pos": "PRON"
+    },
+    "szerelem": {
+      "count": 55,
+      "pos": "NOUN"
+    },
+    "jelent": {
+      "count": 54,
+      "pos": "VERB"
+    },
+    "más": {
+      "count": 54,
+      "pos": "PRON"
+    },
+    "társadalmi": {
+      "count": 54,
+      "pos": "ADJ"
     }
   },
   "topWordsPerPOS": {

@@ -218,6 +218,206 @@
     "én": {
       "count": 111,
       "pos": "PRON"
+    },
+    "így": {
+      "count": 109,
+      "pos": "CONJ"
+    },
+    "költői": {
+      "count": 106,
+      "pos": "ADJ"
+    },
+    "azt": {
+      "count": 104,
+      "pos": "PRON"
+    },
+    "költő": {
+      "count": 103,
+      "pos": "NOUN"
+    },
+    "azonban": {
+      "count": 101,
+      "pos": "CONJ"
+    },
+    "élet": {
+      "count": 101,
+      "pos": "NOUN"
+    },
+    "ha": {
+      "count": 101,
+      "pos": "SCONJ"
+    },
+    "O": {
+      "count": 100,
+      "pos": "NOUN"
+    },
+    "saját": {
+      "count": 97,
+      "pos": "PRON"
+    },
+    "regény": {
+      "count": 94,
+      "pos": "NOUN"
+    },
+    "Arany": {
+      "count": 93,
+      "pos": "PROPN"
+    },
+    "Olvasd": {
+      "count": 91,
+      "pos": "VERB"
+    },
+    "Babits": {
+      "count": 89,
+      "pos": "NOUN"
+    },
+    "úgy": {
+      "count": 88,
+      "pos": "ADV"
+    },
+    "való": {
+      "count": 88,
+      "pos": "ADJ"
+    },
+    "Ez": {
+      "count": 88,
+      "pos": "PRON"
+    },
+    "között": {
+      "count": 87,
+      "pos": "ADP"
+    },
+    "pedig": {
+      "count": 87,
+      "pos": "CONJ"
+    },
+    "Kosztolányi": {
+      "count": 86,
+      "pos": "PROPN"
+    },
+    "Toldi": {
+      "count": 86,
+      "pos": "ADJ"
+    },
+    "számára": {
+      "count": 85,
+      "pos": "ADP"
+    },
+    "nagy": {
+      "count": 84,
+      "pos": "ADJ"
+    },
+    "hogyan": {
+      "count": 84,
+      "pos": "ADV"
+    },
+    "_": {
+      "count": 84,
+      "pos": "X"
+    },
+    "Mi": {
+      "count": 84,
+      "pos": "PRON"
+    },
+    "költemény": {
+      "count": 81,
+      "pos": "NOUN"
+    },
+    "1": {
+      "count": 79,
+      "pos": "NUM"
+    },
+    "le": {
+      "count": 78,
+      "pos": "ADV"
+    },
+    "utolsó": {
+      "count": 76,
+      "pos": "ADJ"
+    },
+    "ő": {
+      "count": 76,
+      "pos": "PRON"
+    },
+    "novella": {
+      "count": 76,
+      "pos": "NOUN"
+    },
+    "János": {
+      "count": 75,
+      "pos": "PROPN"
+    },
+    "elbeszélő": {
+      "count": 75,
+      "pos": "ADJ"
+    },
+    "jelent": {
+      "count": 75,
+      "pos": "VERB"
+    },
+    "valamint": {
+      "count": 74,
+      "pos": "CONJ"
+    },
+    "Esti": {
+      "count": 74,
+      "pos": "PROPN"
+    },
+    "annak": {
+      "count": 73,
+      "pos": "PRON"
+    },
+    "második": {
+      "count": 72,
+      "pos": "ADJ"
+    },
+    "egyes": {
+      "count": 72,
+      "pos": "ADJ"
+    },
+    "Mit": {
+      "count": 72,
+      "pos": "PRON"
+    },
+    "ezt": {
+      "count": 69,
+      "pos": "PRON"
+    },
+    "alapján": {
+      "count": 68,
+      "pos": "NOUN"
+    },
+    "kell": {
+      "count": 68,
+      "pos": "VERB"
+    },
+    "itt": {
+      "count": 68,
+      "pos": "ADV"
+    },
+    "mi": {
+      "count": 68,
+      "pos": "PRON"
+    },
+    "által": {
+      "count": 68,
+      "pos": "ADP"
+    },
+    "új": {
+      "count": 67,
+      "pos": "ADJ"
+    },
+    "Fogalmak": {
+      "count": 67,
+      "pos": "NOUN"
+    },
+    "szó": {
+      "count": 67,
+      "pos": "NOUN"
+    },
+    "fontos": {
+      "count": 67,
+      "pos": "ADJ"
     }
   },
   "topWordsPerPOS": {

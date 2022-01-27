@@ -218,6 +218,206 @@
     "Fogalmak": {
       "count": 51,
       "pos": "NOUN"
+    },
+    "költő": {
+      "count": 50,
+      "pos": "NOUN"
+    },
+    "szöveggyűjteményben": {
+      "count": 49,
+      "pos": "NOUN"
+    },
+    "antik": {
+      "count": 49,
+      "pos": "ADJ"
+    },
+    "lírai": {
+      "count": 49,
+      "pos": "ADJ"
+    },
+    "van": {
+      "count": 48,
+      "pos": "VERB"
+    },
+    "Irány": {
+      "count": 48,
+      "pos": "NOUN"
+    },
+    "mű": {
+      "count": 47,
+      "pos": "NOUN"
+    },
+    "Kr.": {
+      "count": 47,
+      "pos": "PROPN"
+    },
+    "istenek": {
+      "count": 47,
+      "pos": "NOUN"
+    },
+    "világ": {
+      "count": 46,
+      "pos": "NOUN"
+    },
+    "azt": {
+      "count": 45,
+      "pos": "PRON"
+    },
+    "által": {
+      "count": 45,
+      "pos": "ADP"
+    },
+    "ez": {
+      "count": 45,
+      "pos": "PRON"
+    },
+    "után": {
+      "count": 45,
+      "pos": "ADP"
+    },
+    "új": {
+      "count": 44,
+      "pos": "ADJ"
+    },
+    "például": {
+      "count": 44,
+      "pos": "ADV"
+    },
+    "műfaj": {
+      "count": 43,
+      "pos": "NOUN"
+    },
+    "között": {
+      "count": 43,
+      "pos": "ADP"
+    },
+    "v": {
+      "count": 42,
+      "pos": "NOUN"
+    },
+    "tehát": {
+      "count": 42,
+      "pos": "CONJ"
+    },
+    "három": {
+      "count": 42,
+      "pos": "NUM"
+    },
+    "Szent": {
+      "count": 42,
+      "pos": "PROPN"
+    },
+    "középkori": {
+      "count": 42,
+      "pos": "ADJ"
+    },
+    "majd": {
+      "count": 41,
+      "pos": "CONJ"
+    },
+    "be": {
+      "count": 41,
+      "pos": "ADV"
+    },
+    "e.": {
+      "count": 41,
+      "pos": "NOUN"
+    },
+    "Fogalmazd": {
+      "count": 40,
+      "pos": "VERB"
+    },
+    "sem": {
+      "count": 40,
+      "pos": "ADV"
+    },
+    "latin": {
+      "count": 40,
+      "pos": "ADJ"
+    },
+    "még": {
+      "count": 40,
+      "pos": "ADV"
+    },
+    "nagy": {
+      "count": 39,
+      "pos": "ADJ"
+    },
+    "körül": {
+      "count": 39,
+      "pos": "ADP"
+    },
+    "ókori": {
+      "count": 39,
+      "pos": "ADJ"
+    },
+    "isteni": {
+      "count": 39,
+      "pos": "ADJ"
+    },
+    "Ez": {
+      "count": 38,
+      "pos": "PRON"
+    },
+    "csak": {
+      "count": 38,
+      "pos": "ADV"
+    },
+    "király": {
+      "count": 38,
+      "pos": "PROPN"
+    },
+    "Biblia": {
+      "count": 37,
+      "pos": "PROPN"
+    },
+    "mellett": {
+      "count": 36,
+      "pos": "ADP"
+    },
+    "Mit": {
+      "count": 36,
+      "pos": "PRON"
+    },
+    "Antigoné": {
+      "count": 36,
+      "pos": "NOUN"
+    },
+    "maga": {
+      "count": 35,
+      "pos": "PRON"
+    },
+    "számára": {
+      "count": 35,
+      "pos": "ADP"
+    },
+    "híres": {
+      "count": 35,
+      "pos": "ADJ"
+    },
+    "p": {
+      "count": 34,
+      "pos": "NOUN"
+    },
+    "alapján": {
+      "count": 34,
+      "pos": "NOUN"
+    },
+    "római": {
+      "count": 34,
+      "pos": "ADJ"
+    },
+    "második": {
+      "count": 34,
+      "pos": "ADJ"
+    },
+    "Dante": {
+      "count": 34,
+      "pos": "PROPN"
+    },
+    "élet": {
+      "count": 33,
+      "pos": "NOUN"
     }
   },
   "topWordsPerPOS": {

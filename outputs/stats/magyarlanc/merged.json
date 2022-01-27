@@ -219,6 +219,206 @@
     "volna": {
       "count": 784,
       "pos": "VERB"
+    },
+    "itt": {
+      "count": 776,
+      "pos": "ADV"
+    },
+    "magyar": {
+      "count": 769,
+      "pos": "ADJ"
+    },
+    "se": {
+      "count": 750,
+      "pos": "ADV"
+    },
+    "mi": {
+      "count": 745,
+      "pos": "PRON"
+    },
+    "most": {
+      "count": 735,
+      "pos": "ADV"
+    },
+    "vers": {
+      "count": 726,
+      "pos": "NOUN"
+    },
+    "1": {
+      "count": 712,
+      "pos": "NUM"
+    },
+    "ezt": {
+      "count": 709,
+      "pos": "PRON"
+    },
+    "ott": {
+      "count": 690,
+      "pos": "ADV"
+    },
+    "egyik": {
+      "count": 674,
+      "pos": "PRON"
+    },
+    "be": {
+      "count": 670,
+      "pos": "ADV"
+    },
+    "akkor": {
+      "count": 651,
+      "pos": "ADV"
+    },
+    "után": {
+      "count": 636,
+      "pos": "ADP"
+    },
+    "ne": {
+      "count": 631,
+      "pos": "ADV"
+    },
+    "hanem": {
+      "count": 620,
+      "pos": "CONJ"
+    },
+    "Egy": {
+      "count": 590,
+      "pos": "DET"
+    },
+    "te": {
+      "count": 590,
+      "pos": "PRON"
+    },
+    "milyen": {
+      "count": 573,
+      "pos": "PRON"
+    },
+    "mit": {
+      "count": 569,
+      "pos": "PRON"
+    },
+    "jó": {
+      "count": 568,
+      "pos": "ADJ"
+    },
+    "le": {
+      "count": 560,
+      "pos": "ADV"
+    },
+    "egész": {
+      "count": 559,
+      "pos": "ADJ"
+    },
+    "mely": {
+      "count": 554,
+      "pos": "PRON"
+    },
+    "Ez": {
+      "count": 552,
+      "pos": "PRON"
+    },
+    "szöveg": {
+      "count": 552,
+      "pos": "NOUN"
+    },
+    "mondta": {
+      "count": 533,
+      "pos": "VERB"
+    },
+    "át": {
+      "count": 531,
+      "pos": "ADV"
+    },
+    "maga": {
+      "count": 525,
+      "pos": "PRON"
+    },
+    "között": {
+      "count": 517,
+      "pos": "ADP"
+    },
+    "lehet": {
+      "count": 513,
+      "pos": "VERB"
+    },
+    "új": {
+      "count": 511,
+      "pos": "ADJ"
+    },
+    "azonban": {
+      "count": 501,
+      "pos": "CONJ"
+    },
+    "össze": {
+      "count": 500,
+      "pos": "ADV"
+    },
+    "amikor": {
+      "count": 493,
+      "pos": "ADV"
+    },
+    "neki": {
+      "count": 485,
+      "pos": "PRON"
+    },
+    "Ha": {
+      "count": 484,
+      "pos": "SCONJ"
+    },
+    "kis": {
+      "count": 483,
+      "pos": "ADJ"
+    },
+    "költő": {
+      "count": 481,
+      "pos": "NOUN"
+    },
+    "amit": {
+      "count": 467,
+      "pos": "PRON"
+    },
+    "más": {
+      "count": 450,
+      "pos": "PRON"
+    },
+    "lesz": {
+      "count": 447,
+      "pos": "VERB"
+    },
+    "szerint": {
+      "count": 444,
+      "pos": "ADP"
+    },
+    "való": {
+      "count": 438,
+      "pos": "ADJ"
+    },
+    "alatt": {
+      "count": 435,
+      "pos": "ADP"
+    },
+    "Hogyan": {
+      "count": 432,
+      "pos": "ADV"
+    },
+    "saját": {
+      "count": 430,
+      "pos": "PRON"
+    },
+    "szép": {
+      "count": 429,
+      "pos": "ADJ"
+    },
+    "rá": {
+      "count": 426,
+      "pos": "PRON"
+    },
+    "O": {
+      "count": 426,
+      "pos": "NOUN"
+    },
+    "aztán": {
+      "count": 423,
+      "pos": "ADV"
     }
   },
   "topWordsPerPOS": {

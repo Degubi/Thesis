@@ -217,6 +217,206 @@
     "minden": {
       "count": 103,
       "pos": "PRON"
+    },
+    "pedig": {
+      "count": 103,
+      "pos": "CONJ"
+    },
+    "között": {
+      "count": 101,
+      "pos": "ADP"
+    },
+    "még": {
+      "count": 101,
+      "pos": "ADV"
+    },
+    "sem": {
+      "count": 100,
+      "pos": "ADV"
+    },
+    "van": {
+      "count": 99,
+      "pos": "VERB"
+    },
+    "való": {
+      "count": 98,
+      "pos": "ADJ"
+    },
+    "regény": {
+      "count": 98,
+      "pos": "NOUN"
+    },
+    "irodalom": {
+      "count": 97,
+      "pos": "NOUN"
+    },
+    "hanem": {
+      "count": 96,
+      "pos": "CONJ"
+    },
+    "saját": {
+      "count": 96,
+      "pos": "PRON"
+    },
+    "utolsó": {
+      "count": 93,
+      "pos": "ADJ"
+    },
+    "olyan": {
+      "count": 92,
+      "pos": "PRON"
+    },
+    "második": {
+      "count": 91,
+      "pos": "ADJ"
+    },
+    "W": {
+      "count": 90,
+      "pos": "PROPN"
+    },
+    "Attila": {
+      "count": 90,
+      "pos": "PROPN"
+    },
+    "jelent": {
+      "count": 89,
+      "pos": "VERB"
+    },
+    "által": {
+      "count": 89,
+      "pos": "ADP"
+    },
+    "nagy": {
+      "count": 86,
+      "pos": "ADJ"
+    },
+    "azt": {
+      "count": 81,
+      "pos": "PRON"
+    },
+    "költemény": {
+      "count": 81,
+      "pos": "NOUN"
+    },
+    "Egy": {
+      "count": 81,
+      "pos": "DET"
+    },
+    "több": {
+      "count": 79,
+      "pos": "NUM"
+    },
+    "új": {
+      "count": 79,
+      "pos": "ADJ"
+    },
+    "20.": {
+      "count": 78,
+      "pos": "ADJ"
+    },
+    "számára": {
+      "count": 78,
+      "pos": "ADP"
+    },
+    "aki": {
+      "count": 77,
+      "pos": "PRON"
+    },
+    "költészet": {
+      "count": 77,
+      "pos": "NOUN"
+    },
+    "át": {
+      "count": 77,
+      "pos": "ADV"
+    },
+    "író": {
+      "count": 77,
+      "pos": "NOUN"
+    },
+    "László": {
+      "count": 75,
+      "pos": "PROPN"
+    },
+    "század": {
+      "count": 74,
+      "pos": "NOUN"
+    },
+    "szerint": {
+      "count": 74,
+      "pos": "ADP"
+    },
+    "ember": {
+      "count": 74,
+      "pos": "NOUN"
+    },
+    "évek": {
+      "count": 73,
+      "pos": "NOUN"
+    },
+    "jelenik": {
+      "count": 72,
+      "pos": "VERB"
+    },
+    "alapján": {
+      "count": 71,
+      "pos": "NOUN"
+    },
+    "vált": {
+      "count": 70,
+      "pos": "VERB"
+    },
+    "mely": {
+      "count": 70,
+      "pos": "PRON"
+    },
+    "valamint": {
+      "count": 69,
+      "pos": "CONJ"
+    },
+    "Radnóti": {
+      "count": 68,
+      "pos": "PROPN"
+    },
+    "modern": {
+      "count": 67,
+      "pos": "ADJ"
+    },
+    "t": {
+      "count": 67,
+      "pos": "NOUN"
+    },
+    "mi": {
+      "count": 66,
+      "pos": "PRON"
+    },
+    "ezt": {
+      "count": 66,
+      "pos": "PRON"
+    },
+    "alábbi": {
+      "count": 66,
+      "pos": "ADJ"
+    },
+    "ha": {
+      "count": 65,
+      "pos": "SCONJ"
+    },
+    "Fogalmak": {
+      "count": 65,
+      "pos": "NOUN"
+    },
+    "hogyan": {
+      "count": 65,
+      "pos": "ADV"
+    },
+    "annak": {
+      "count": 65,
+      "pos": "PRON"
+    },
+    "itt": {
+      "count": 65,
+      "pos": "ADV"
     }
   },
   "topWordsPerPOS": {

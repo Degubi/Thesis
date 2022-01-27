@@ -19,7 +19,7 @@ let createAnalysisStat lines =
                              |> Seq.groupBy(fun k -> k.word)
                              |> Seq.map(fun (word, stats) -> (word, {| count = stats |> Seq.length; pos = stats |> Seq.head |> fun k -> k.pos |}))
                              |> Seq.sortByDescending(fun (_, k) -> k.count)
-                             |> Seq.truncate 50
+                             |> Seq.truncate 100
 
     let topWordsPerPOS = fileStats |> Seq.groupBy(fun k -> k.pos)
                                    |> Seq.map(fun (pos, stats) -> (pos, stats |> Seq.countBy(fun k -> k.word) |> Seq.sortByDescending(fun (_, frequency) -> frequency) |> Seq.truncate 5 |> dict))
@@ -54,3 +54,7 @@ let mergedStats = inputFiles |> Seq.map(File.ReadLines)
 
 File.WriteAllText($"{analyzeOutputDir}/merged.json", JsonSerializer.Serialize(mergedStats, jsonSettings))
 writeWordCloud mergedStats.topWords $"{wordCloudOutputDir}/merged.jpg"
+
+File.ReadLines $"{mainDir}/outputs/analyze/mnsz.txt"
+|> createAnalysisStat
+|> fun k -> writeWordCloud k.topWords $"{wordCloudOutputDir}/mnsz.jpg"

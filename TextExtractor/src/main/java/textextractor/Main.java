@@ -40,7 +40,7 @@ public final class Main {
                 var pdfEndTime = System.currentTimeMillis();
                 var inputFileName = inputPDFPath.getFileName().toString();
 
-                Files.writeString(Path.of(outputDir + inputFileName.substring(0, inputFileName.lastIndexOf('.')) + ".txt"), rawExtractedText);
+                Files.writeString(Path.of(outputDir + "/" + inputFileName.substring(0, inputFileName.lastIndexOf('.')) + ".txt"), rawExtractedText);
                 System.out.println("PDF done in " + (pdfEndTime - pdfStartTime) + "ms!\n");
             }
         }
@@ -51,7 +51,7 @@ public final class Main {
 
 
     private static Path[] listPDFs() {
-        try(var folder = Files.list(Path.of("../pdfs"))) {
+        try(var folder = Files.list(Path.of("pdfs"))) {
             return folder.toArray(Path[]::new);
         } catch (IOException e) {
             e.printStackTrace();
