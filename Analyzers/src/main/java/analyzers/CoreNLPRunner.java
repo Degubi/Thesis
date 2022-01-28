@@ -7,6 +7,7 @@ import edu.stanford.nlp.util.*;
 import java.io.*;
 import java.nio.charset.*;
 import java.nio.file.*;
+import java.util.*;
 
 public final class CoreNLPRunner {
 
@@ -27,15 +28,22 @@ public final class CoreNLPRunner {
                 "ner.useSUTime", "false")
         );
 
-        try(var inputFiles = Files.list(Path.of("../outputs/text/paraphrised"))) {
-            inputFiles.forEach(k -> analyzeWithCoreNLP(k, outputDirPath, pipeline));
-        }
+        var filesToAnalyze = Files.list(Path.of("../outputs/text/paraphrised")).toArray(Path[]::new);
+        var totalStartTime = System.currentTimeMillis();
+
+        System.out.println("Analyzing " + filesToAnalyze.length + " files\n");
+
+        Arrays.stream(filesToAnalyze).parallel()
+              .forEach(k -> analyzeWithCoreNLP(k, outputDirPath, pipeline));
+
+        var totalEndTime = System.currentTimeMillis();
+        System.out.println("\nAll done in " + (totalEndTime - totalStartTime) + "ms!");
     }
 
     private static void analyzeWithCoreNLP(Path inputFile, Path outputDirPath, StanfordCoreNLP pipeline) {
-        System.out.println("\nAnalyzing file: " + inputFile);
+        System.out.println("Analyzing file: " + inputFile);
 
-        try(var output = Files.newBufferedWriter(Path.of(outputDirPath.toString() + inputFile.getFileName()), StandardCharsets.UTF_8, TRUNCATE_EXISTING, CREATE)) {
+        try(var output = Files.newBufferedWriter(Path.of(outputDirPath.toString() + '/' + inputFile.getFileName()), StandardCharsets.UTF_8, TRUNCATE_EXISTING, CREATE)) {
             var document = new CoreDocument(Files.readString(inputFile));
             pipeline.annotate(document);
 

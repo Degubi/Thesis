@@ -5,6 +5,7 @@ import java.nio.file.*;
 import java.util.*;
 import java.util.stream.*;
 import net.sourceforge.tess4j.*;
+import net.sourceforge.tess4j.ITessAPI.*;
 import org.apache.pdfbox.pdmodel.*;
 import org.apache.pdfbox.rendering.*;
 
@@ -21,7 +22,7 @@ public final class Main {
         var tesseract = ThreadLocal.withInitial(Main::createTesseract);
         var totalStartTime = System.currentTimeMillis();
 
-        System.out.println("Extracting " + inputPDFPaths.length + " pdf files");
+        System.out.println("Extracting " + inputPDFPaths.length + " pdf files\n");
 
         for(var inputPDFPath : inputPDFPaths) {
             try(var inputPDFDocument = PDDocument.load(inputPDFPath.toFile())) {
@@ -30,23 +31,23 @@ public final class Main {
                 var imageRenderer = new PDFRenderer(inputPDFDocument);
                 var pdfStartTime = System.currentTimeMillis();
 
-                var rawExtractedText = IntStream.rangeClosed(1, inputPDFDocument.getNumberOfPages() - 1)
-                                                .parallel()
-                                                .mapToObj(i -> extractTextFromPage(imageRenderer, tesseract, i))
-                                                .sorted(Comparator.comparingInt(ExtractResult::page))
-                                                .map(ExtractResult::content)
-                                                .collect(Collectors.joining());
+                var extractedText = IntStream.range(0, inputPDFDocument.getNumberOfPages())
+                                             .parallel()
+                                             .mapToObj(i -> extractTextFromPage(imageRenderer, tesseract.get(), i))
+                                             .sorted(Comparator.comparingInt(ExtractResult::page))
+                                             .map(ExtractResult::content)
+                                             .collect(Collectors.joining());
 
                 var pdfEndTime = System.currentTimeMillis();
                 var inputFileName = inputPDFPath.getFileName().toString();
 
-                Files.writeString(Path.of(outputDir + "/" + inputFileName.substring(0, inputFileName.lastIndexOf('.')) + ".txt"), rawExtractedText);
+                Files.writeString(Path.of(outputDir + "/" + inputFileName.substring(0, inputFileName.lastIndexOf('.')) + ".txt"), extractedText);
                 System.out.println("PDF done in " + (pdfEndTime - pdfStartTime) + "ms!\n");
             }
         }
 
         var totalEndTime = System.currentTimeMillis();
-        System.out.println("All done in " + (totalEndTime - totalStartTime) + "ms!");
+        System.out.println("\nAll done in " + (totalEndTime - totalStartTime) + "ms!");
     }
 
 
@@ -59,14 +60,14 @@ public final class Main {
         }
     }
 
-    private static ExtractResult extractTextFromPage(PDFRenderer imageRenderer, ThreadLocal<Tesseract> tesseract, int page) {
+    private static ExtractResult extractTextFromPage(PDFRenderer imageRenderer, Tesseract tesseract, int page) {
         System.out.println("Extracting page: " + page);
 
         try {
             var image = imageRenderer.renderImageWithDPI(page, 300);
             var croppedImage = image.getSubimage(150, 150, image.getWidth() - 300, image.getHeight() - 300);
 
-            return new ExtractResult(tesseract.get().doOCR(croppedImage), page);
+            return new ExtractResult(tesseract.doOCR(croppedImage), page);
         } catch (IOException | TesseractException e) {
             e.printStackTrace();
             return new ExtractResult("", 0);
@@ -77,7 +78,7 @@ public final class Main {
         var tesseract = new Tesseract();
         tesseract.setDatapath(Path.of("tessdata").toAbsolutePath().toString());
         tesseract.setTessVariable("user_defined_dpi", "300");
-        tesseract.setPageSegMode(1);
+        tesseract.setPageSegMode(TessPageSegMode.PSM_AUTO_OSD);
         tesseract.setLanguage("hun");
         return tesseract;
     }

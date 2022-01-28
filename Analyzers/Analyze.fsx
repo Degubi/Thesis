@@ -1,10 +1,12 @@
 #r "nuget: WordCloud"
+#r "nuget: FSharp.Collections.ParallelSeq"
 
 open System
 open System.Collections.Generic
 open System.IO
 open System.Text.Encodings.Web
 open System.Text.Json
+open FSharp.Collections.ParallelSeq
 open WordCloud
 
 let ignoredPOSes = [| "PUNCT" |]
@@ -22,7 +24,10 @@ let createAnalysisStat lines =
                              |> Seq.truncate 100
 
     let topWordsPerPOS = fileStats |> Seq.groupBy(fun k -> k.pos)
-                                   |> Seq.map(fun (pos, stats) -> (pos, stats |> Seq.countBy(fun k -> k.word) |> Seq.sortByDescending(fun (_, frequency) -> frequency) |> Seq.truncate 5 |> dict))
+                                   |> Seq.map(fun (pos, stats) -> (pos, stats |> Seq.countBy(fun k -> k.word)
+                                                                              |> Seq.sortByDescending(fun (_, frequency) -> frequency)
+                                                                              |> Seq.truncate 5
+                                                                              |> dict))
     {|
         posCounts = fileStats |> Seq.countBy(fun k -> k.pos) |> dict
         topWords = topWords |> dict
@@ -38,6 +43,7 @@ let jsonSettings = JsonSerializerOptions(WriteIndented = true, Encoder = JavaScr
 let inputFiles = Directory.GetFiles $"{mainDir}/outputs/analyze/magyarlanc"
 let analyzeOutputDir = $"{mainDir}/outputs/stats/magyarlanc"
 let wordCloudOutputDir = $"{mainDir}/outputs/word_cloud/magyarlanc"
+let beginTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()
 
 Directory.CreateDirectory analyzeOutputDir
 Directory.CreateDirectory wordCloudOutputDir
@@ -46,7 +52,7 @@ let perBookStats = inputFiles |> Seq.map(fun k -> (Path.GetFileNameWithoutExtens
                               |> Seq.toArray
 
 perBookStats |> Seq.iter(fun (fileName, stats) -> File.WriteAllText($"{analyzeOutputDir}/{fileName}.json", JsonSerializer.Serialize(stats, jsonSettings)))
-perBookStats |> Seq.iter(fun (fileName, stats) -> writeWordCloud stats.topWords $"{wordCloudOutputDir}/{fileName}.jpg")
+perBookStats |> PSeq.iter(fun (fileName, stats) -> writeWordCloud stats.topWords $"{wordCloudOutputDir}/{fileName}.jpg")
 
 let mergedStats = inputFiles |> Seq.map(File.ReadLines)
                              |> Seq.concat
@@ -58,3 +64,6 @@ writeWordCloud mergedStats.topWords $"{wordCloudOutputDir}/merged.jpg"
 File.ReadLines $"{mainDir}/outputs/analyze/mnsz.txt"
 |> createAnalysisStat
 |> fun k -> writeWordCloud k.topWords $"{wordCloudOutputDir}/mnsz.jpg"
+
+let endTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()
+printfn "All done in %dms" (endTime - beginTime)
