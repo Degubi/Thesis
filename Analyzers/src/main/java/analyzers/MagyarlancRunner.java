@@ -36,8 +36,15 @@ public final class MagyarlancRunner {
 
         try(var output = Files.newBufferedWriter(Path.of(outputDirPath.toString() + '/' + inputFile.getFileName()), StandardCharsets.UTF_8, TRUNCATE_EXISTING, CREATE)) {
             var input = SafeReader.read(inputFile.toString(), StandardCharsets.UTF_8.name());
+            var sentences = Magyarlanc.morphParse(input);
 
-            Magyarlanc.morphParse(input, output);
+            for(var sentence : sentences) {
+                for(var tags : sentence) {
+                    output.write(tags[0] + '\t' + tags[1] + '\t' + tags[2] + '\n');
+                }
+
+                output.write('\n');
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }

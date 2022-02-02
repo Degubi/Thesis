@@ -51,7 +51,7 @@ public final class CoreNLPRunner {
                 var posTags = sentence.posTags();
 
                 for(var token : sentence.tokens()) {
-                    output.write(token.word() + "\t" + token.lemma() + "\t" + posTags.get(token.index() - 1) + "\n");
+                    output.write(token.word() + '\t' + token.lemma() + '\t' + posTags.get(token.index() - 1) + '\n');
                 }
 
                 output.append('\n');
