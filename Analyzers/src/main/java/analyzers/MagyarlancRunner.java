@@ -17,6 +17,14 @@ public final class MagyarlancRunner {
             Files.createDirectory(outputDirPath);
         }
 
+        /*ByteBuddyAgent.install();
+
+        new ByteBuddy().redefine(CustomPatternReplacer.class)
+                       .name(PatternReplacer.class.getName())
+                       .make()
+                       .load(PatternReplacer.class.getClassLoader(), ClassReloadingStrategy.fromInstalledAgent());
+        */
+
         Magyarlanc.morphInit();
 
         var filesToAnalyze = Files.list(Path.of("../outputs/text/paraphrised")).toArray(Path[]::new);
