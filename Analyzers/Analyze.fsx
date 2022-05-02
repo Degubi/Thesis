@@ -34,8 +34,10 @@ let createAnalysisStat lines =
         topWordsPerPOS = topWordsPerPOS |> dict
     |}
 
-let writeWordCloud(topWords: IDictionary<string, {| count: int; pos: string |}>) (filePath: string) =
-    WordCloud(1024, 768, true).Draw(topWords.Keys |> List, topWords |> Seq.map(fun k -> k.Value.count) |> List).Save(filePath)
+let writeWordCloud(topWords: IDictionary<string, {| count: int; pos: string |}>) (posEs: string[]) (filePath: string) =
+    let topWordsToWrite = if posEs.Length = 0 then topWords else topWords |> Seq.filter(fun k -> Array.contains k.Value.pos posEs) |> Seq.map(fun k -> (k.Key, k.Value)) |> dict
+
+    WordCloud(1024, 768, true).Draw(topWordsToWrite.Keys |> List, topWordsToWrite |> Seq.map(fun k -> k.Value.count) |> List).Save(filePath)
 
 
 let mainDir = Directory.GetParent(__SOURCE_DIRECTORY__).FullName
@@ -43,27 +45,33 @@ let jsonSettings = JsonSerializerOptions(WriteIndented = true, Encoder = JavaScr
 let inputFiles = Directory.GetFiles $"{mainDir}/outputs/analyze/magyarlanc"
 let analyzeOutputDir = $"{mainDir}/outputs/stats/magyarlanc"
 let wordCloudOutputDir = $"{mainDir}/outputs/word_cloud/magyarlanc"
+let customWordcloudPOSes = [| "NOUN"; "VERB"; "ADJ"; "ADP"; "PROPN"; "V"; "N"; "A"; "NU" |]
 let beginTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()
 
 Directory.CreateDirectory analyzeOutputDir
 Directory.CreateDirectory wordCloudOutputDir
 
-let perBookStats = inputFiles |> Seq.map(fun k -> (Path.GetFileNameWithoutExtension k, k |> File.ReadLines |> createAnalysisStat))
-                              |> Seq.toArray
-
-perBookStats |> Seq.iter(fun (fileName, stats) -> File.WriteAllText($"{analyzeOutputDir}/{fileName}.json", JsonSerializer.Serialize(stats, jsonSettings)))
-perBookStats |> PSeq.iter(fun (fileName, stats) -> writeWordCloud stats.topWords $"{wordCloudOutputDir}/{fileName}.jpg")
+inputFiles |> PSeq.map(fun k -> (Path.GetFileNameWithoutExtension k, k |> File.ReadLines |> createAnalysisStat))
+           |> PSeq.iter(fun (fileName, stats) ->
+                File.WriteAllText($"{analyzeOutputDir}/{fileName}.json", JsonSerializer.Serialize(stats, jsonSettings))
+                writeWordCloud stats.topWords Array.empty $"{wordCloudOutputDir}/{fileName}_all.jpg"
+                writeWordCloud stats.topWords customWordcloudPOSes $"{wordCloudOutputDir}/{fileName}_filtered.jpg"
+           )
 
 let mergedStats = inputFiles |> Seq.map(File.ReadLines)
                              |> Seq.concat
                              |> createAnalysisStat
 
 File.WriteAllText($"{analyzeOutputDir}/merged.json", JsonSerializer.Serialize(mergedStats, jsonSettings))
-writeWordCloud mergedStats.topWords $"{wordCloudOutputDir}/merged.jpg"
+writeWordCloud mergedStats.topWords Array.empty $"{wordCloudOutputDir}/merged_all.jpg"
+writeWordCloud mergedStats.topWords customWordcloudPOSes $"{wordCloudOutputDir}/merged_filtered.jpg"
 
-File.ReadLines $"{mainDir}/outputs/analyze/mnsz.txt"
-|> createAnalysisStat
-|> fun k -> writeWordCloud k.topWords $"{wordCloudOutputDir}/mnsz.jpg"
+let mnszTopWords = File.ReadLines $"{mainDir}/outputs/analyze/mnsz.txt" |> Seq.map(fun k -> k.Split '\t')
+                                                                        |> Seq.map(fun k -> (k.[0], {| count = int k.[2]; pos = k.[1] |}))
+                                                                        |> dict
+
+writeWordCloud mnszTopWords Array.empty $"{wordCloudOutputDir}/mnsz_all.jpg"
+writeWordCloud mnszTopWords customWordcloudPOSes $"{wordCloudOutputDir}/mnsz_filtered.jpg"
 
 let endTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()
 printfn "All done in %dms" (endTime - beginTime)
