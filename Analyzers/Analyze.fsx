@@ -1,4 +1,4 @@
-#r "nuget: WordCloud"
+#r "nuget: KnowledgePicker.WordCloud"
 #r "nuget: FSharp.Collections.ParallelSeq"
 
 open System
@@ -7,7 +7,13 @@ open System.IO
 open System.Text.Encodings.Web
 open System.Text.Json
 open FSharp.Collections.ParallelSeq
-open WordCloud
+open KnowledgePicker.WordCloud
+open KnowledgePicker.WordCloud.Coloring
+open KnowledgePicker.WordCloud.Drawing
+open KnowledgePicker.WordCloud.Layouts
+open KnowledgePicker.WordCloud.Primitives
+open KnowledgePicker.WordCloud.Sizers
+open SkiaSharp
 
 let ignoredPOSes = [| "PUNCT" |]
 
@@ -37,7 +43,22 @@ let createAnalysisStat lines =
 let writeWordCloud(topWords: IDictionary<string, {| count: int; pos: string |}>) (posEs: string[]) (filePath: string) =
     let topWordsToWrite = if posEs.Length = 0 then topWords else topWords |> Seq.filter(fun k -> Array.contains k.Value.pos posEs) |> Seq.map(fun k -> (k.Key, k.Value)) |> dict
 
-    WordCloud(1024, 768, true).Draw(topWordsToWrite.Keys |> List, topWordsToWrite |> Seq.map(fun k -> k.Value.count) |> List).Save(filePath)
+    let wordCloud = WordCloudInput(topWordsToWrite |> Seq.map(fun k -> WordCloudEntry(k.Key, k.Value.count)))
+    wordCloud.Width <- 800
+    wordCloud.Height <- 600
+    wordCloud.MinFontSize <- 12
+    wordCloud.MaxFontSize <- 96
+
+    use engine = new SkGraphicEngine(LogSizer(wordCloud), wordCloud)
+    let wcg = WordCloudGenerator<SKBitmap>(wordCloud, engine, SpiralLayout(wordCloud), RandomColorizer())
+
+    use final = new SKBitmap(wordCloud.Width, wordCloud.Height)
+    use canvas = new SKCanvas(final)
+    canvas.Clear(SKColors.White)
+    canvas.DrawBitmap(wcg.Draw(), SKPoint(0F, 0F))
+
+    use data = final.Encode(SKEncodedImageFormat.Jpeg, 100)
+    data.SaveTo(File.Open(filePath, FileMode.Open))
 
 
 let mainDir = Directory.GetParent(__SOURCE_DIRECTORY__).FullName
