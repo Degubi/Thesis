@@ -6,6 +6,7 @@ open System.Collections.Generic
 open System.IO
 open System.Text.Encodings.Web
 open System.Text.Json
+open System.Text.RegularExpressions
 open FSharp.Collections.ParallelSeq
 open KnowledgePicker.WordCloud
 open KnowledgePicker.WordCloud.Coloring
@@ -59,17 +60,16 @@ let truncateStat(stat: AnalysisStat) = {|
 |}
 
 
-let writeWordCloud(topWords: IDictionary<string, {| count: int; pos: string |}>) (posEs: string[]) (filePath: string) =
-    let topWordsToWrite = if posEs.Length = 0 then topWords
-                          else topWords |> Seq.filter(fun k -> Array.contains k.Value.pos posEs) |> Seq.map(fun k -> (k.Key, k.Value)) |> dict
+let writeWordCloud(topWords: IDictionary<string, {| count: int; pos: string |}>) (pos: string) (baseFilePath: string) =
+    let filePostfix = if pos = null then "" else $"_{pos}"
+    let filteredWords = if pos = null then topWords
+                        else topWords |> Seq.filter(fun k -> k.Value.pos = pos) |> Seq.map(fun k -> (k.Key, k.Value)) |> dict
 
-    let wordCloud = WordCloudInput(topWordsToWrite |> Seq.map(fun k -> WordCloudEntry(k.Key, k.Value.count)),
-        Width = 1920,
-        Height = 1080,
-        MinFontSize = 1,
-        MaxFontSize = 84
-    )
+    let topWordsToWrite = filteredWords |> Seq.sortByDescending(fun k -> k.Value.count)
+                                        |> Seq.truncate 500
+                                        |> Seq.map(fun k -> WordCloudEntry(k.Key, k.Value.count))
 
+    let wordCloud = WordCloudInput(topWordsToWrite, Width = 1920, Height = 1080, MinFontSize = 1, MaxFontSize = 84)
     use engine = new SkGraphicEngine(LogSizer(wordCloud), wordCloud)
     let generator = WordCloudGenerator<SKBitmap>(wordCloud, engine, SpiralLayout(wordCloud), RandomColorizer())
 
@@ -79,25 +79,31 @@ let writeWordCloud(topWords: IDictionary<string, {| count: int; pos: string |}>)
     canvas.DrawBitmap(generator.Draw(), SKPoint(0F, 0F))
 
     use image = bitmap.Encode(SKEncodedImageFormat.Jpeg, 100)
-    image.SaveTo(File.Open(filePath, FileMode.Open))
+    image.SaveTo(File.Open($"{baseFilePath}{filePostfix}.jpg", FileMode.Create))
+
+let writeWordClouds(topWords: IDictionary<string, {| count: int; pos: string |}>) (baseFilePath: string) =
+    writeWordCloud topWords null baseFilePath
+    writeWordCloud topWords "NOUN" baseFilePath
+    writeWordCloud topWords "VERB" baseFilePath
+    writeWordCloud topWords "ADJ" baseFilePath
 
 
 let mainDir = Directory.GetParent(__SOURCE_DIRECTORY__).FullName
 let jsonSettings = JsonSerializerOptions(WriteIndented = true, Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping)
 let inputFiles = Directory.GetFiles $"{mainDir}/outputs/analyze/magyarlanc"
 let analyzeOutputDir = $"{mainDir}/outputs/stats/magyarlanc"
-let wordCloudOutputDir = $"{mainDir}/outputs/word_cloud/magyarlanc"
-let customWordcloudPOSes = [| "NOUN"; "VERB"; "ADJ"; "ADP"; "PROPN"; "N"; "V"; "A"; "NU" |]
+let wordCloudOutputDir = $"{mainDir}/outputs/word_cloud"
+let magyarlancWordCloudOutputDir = wordCloudOutputDir + "/magyarlanc"
+let mnszFilePath = $"{mainDir}/outputs/analyze/mnsz.txt"
 let beginTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()
 
 Directory.CreateDirectory analyzeOutputDir
-Directory.CreateDirectory wordCloudOutputDir
+Directory.CreateDirectory magyarlancWordCloudOutputDir
 
 inputFiles |> PSeq.map(fun k -> (Path.GetFileNameWithoutExtension k, k |> File.ReadLines |> createAnalysisStat))
            |> PSeq.iter(fun (fileName, stats) ->
                 File.WriteAllText($"{analyzeOutputDir}/{fileName}.json", JsonSerializer.Serialize(stats |> truncateStat, jsonSettings))
-                writeWordCloud stats.topWords Array.empty $"{wordCloudOutputDir}/{fileName}_all.jpg"
-                writeWordCloud stats.topWords customWordcloudPOSes $"{wordCloudOutputDir}/{fileName}_filtered.jpg"
+                writeWordClouds stats.topWords $"{magyarlancWordCloudOutputDir}/{fileName}"
            )
 
 let mergedStats = inputFiles |> Seq.map(File.ReadLines)
@@ -105,15 +111,23 @@ let mergedStats = inputFiles |> Seq.map(File.ReadLines)
                              |> createAnalysisStat
 
 File.WriteAllText($"{analyzeOutputDir}/merged.json", JsonSerializer.Serialize(mergedStats |> truncateStat, jsonSettings))
-writeWordCloud mergedStats.topWords Array.empty $"{wordCloudOutputDir}/merged_all.jpg"
-writeWordCloud mergedStats.topWords customWordcloudPOSes $"{wordCloudOutputDir}/merged_filtered.jpg"
+writeWordClouds mergedStats.topWords $"{magyarlancWordCloudOutputDir}/merged"
 
-let mnszTopWords = File.ReadLines $"{mainDir}/outputs/analyze/mnsz.txt" |> Seq.map(fun k -> k.Split '\t')
-                                                                        |> Seq.map(fun k -> (k.[0], {| count = int k.[2]; pos = k.[1] |}))
-                                                                        |> dict
+if File.Exists mnszFilePath then
+    let noGibberishWordFilter = Regex("^[a-zA-Z0-9]*$")
+    let posTransformer = function
+        | "N" -> "NOUN"
+        | "V" -> "VERB"
+        | "A" -> "ADJ"
+        | k -> k
 
-writeWordCloud mnszTopWords Array.empty $"{wordCloudOutputDir}/mnsz_all.jpg"
-writeWordCloud mnszTopWords customWordcloudPOSes $"{wordCloudOutputDir}/mnsz_filtered.jpg"
+    let mnszWords = File.ReadLines mnszFilePath |> Seq.map(fun k -> k.Split '\t')
+                                                |> Seq.filter(fun k -> noGibberishWordFilter.IsMatch k.[0])
+                                                |> Seq.map(fun k -> (k.[0], {| count = int k.[7]; pos = posTransformer k.[3] |}))
+                                                |> dict
+
+    writeWordClouds mnszWords $"{wordCloudOutputDir}/mnsz"
+
 
 let endTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()
 printfn "All done in %dms" (endTime - beginTime)
