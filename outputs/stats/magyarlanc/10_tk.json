@@ -1,5 +1,5 @@
 {
-  "posCounts": {
+  "posFrequencies": {
     "NOUN": 22288,
     "PUNCT": 15567,
     "ADJ": 10744,

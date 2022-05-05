@@ -18,7 +18,7 @@ open KnowledgePicker.WordCloud.Sizers
 open SkiaSharp
 
 type AnalysisStat = {|
-    posCounts: IDictionary<string, int>
+    posFrequencies: IDictionary<string, int>
     topWords: IDictionary<string, {| count: int; pos: string |}>
     topWordsPerPOS: IDictionary<string, IDictionary<string, int>>
 |}
@@ -35,8 +35,30 @@ let mnszFilePath = $"{mainDir}/outputs/analyze/mnsz.txt"
 let posChartIgnoresPOSes = [| "PART"; "X"; "INTJ"; "SYM"; "AUX"; "PUNCT" |]
 let topWordsIgnoredPOSes = [| "PUNCT" |]
 
-let createAnalysisStat lines =
-    let fileStats = lines |> Seq.filter(fun k -> k <> String.Empty)
+
+let mergeDictionary<'V, 'K when 'K: equality>(dict1: IDictionary<'K, 'V>) (dict2: IDictionary<'K, 'V>) (valueMerger: seq<KeyValuePair<'K,'V>> -> 'V) =
+    Seq.append dict1 dict2 |> Seq.groupBy(fun k -> k.Key)
+                           |> Seq.map(fun (key, values) -> (key, valueMerger values))
+
+let mergeAnalysisStats(stat1: AnalysisStat) (stat2: AnalysisStat) =
+    let mergeTopWordStat(accumulator: {| count: int; pos: string |}) (element: {| count: int; pos: string |}) = {|
+        count = element.count + accumulator.count
+        pos = if accumulator.pos = null then element.pos else accumulator.pos
+    |}
+
+    let mergeTopWordsPerPOSStat accumulator element = mergeDictionary accumulator element (Seq.sumBy(fun k -> k.Value)) |> dict
+
+    {|
+        posFrequencies = mergeDictionary stat1.posFrequencies stat2.posFrequencies (Seq.sumBy(fun k -> k.Value)) |> Seq.sortByDescending(fun (_, count) -> count) |> dict
+        topWords = mergeDictionary stat1.topWords stat2.topWords (fun k -> k |> Seq.map(fun k -> k.Value)
+                                                                             |> Seq.fold mergeTopWordStat {| count = 0; pos = null |}) |> dict
+        topWordsPerPOS = mergeDictionary stat1.topWordsPerPOS stat2.topWordsPerPOS (fun k -> k |> Seq.map(fun k -> k.Value)
+                                                                                               |> Seq.fold mergeTopWordsPerPOSStat (dict [])) |> dict
+    |}
+
+let createAnalysisStat file =
+    let fileStats = file |> File.ReadLines
+                          |> Seq.filter(fun k -> k <> String.Empty)
                           |> Seq.map(fun k -> k.Split '\t')
                           |> Seq.map(fun k -> {| word = k.[0]; pos = k.[2] |})
                           |> Seq.toArray
@@ -52,13 +74,13 @@ let createAnalysisStat lines =
                                    |> Seq.map(fun (pos, stats) ->
                                         (pos, stats |> Seq.countBy(fun k -> k.word) |> dict))
     {|
-        posCounts = fileStats |> Seq.countBy(fun k -> k.pos) |> Seq.sortByDescending(fun (_, count) -> count) |> dict
+        posFrequencies = fileStats |> Seq.countBy(fun k -> k.pos) |> Seq.sortByDescending(fun (_, count) -> count) |> dict
         topWords = topWords |> dict
         topWordsPerPOS = topWordsPerPOS |> dict
     |}
 
 let truncateAnalysisStat(stat: AnalysisStat) = {|
-    posCounts = stat.posCounts
+    posFrequencies = stat.posFrequencies
     topWords = stat.topWords |> Seq.sortByDescending(fun k -> k.Value.count)
                              |> Seq.truncate 100
                              |> Seq.map(fun k -> (k.Key, k.Value))
@@ -114,35 +136,34 @@ let writePosChart(posCounts: IDictionary<string, int>) (filePath: string) =
 let writeAnalysisStat(fileName: string) (stats: AnalysisStat) =
     File.WriteAllText($"{analyzeOutputDir}/{fileName}.json", JsonSerializer.Serialize(stats |> truncateAnalysisStat, statJsonSettings))
     writeWordClouds stats.topWords $"{magyarlancWordCloudOutputDir}/{fileName}"
-    writePosChart stats.posCounts $"{magyarlancPosDistributionChartOutputDir}/{fileName}.png"
+    writePosChart stats.posFrequencies $"{magyarlancPosDistributionChartOutputDir}/{fileName}.png"
 
 
+let emptyStats = {| posFrequencies = dict([]); topWords = dict([]); topWordsPerPOS = dict([]) |}
 let beginTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()
 
 Directory.CreateDirectory analyzeOutputDir
 Directory.CreateDirectory magyarlancWordCloudOutputDir
 Directory.CreateDirectory magyarlancPosDistributionChartOutputDir
 
+let perBookStats = inputFiles |> PSeq.map(fun k -> (Path.GetFileNameWithoutExtension k, createAnalysisStat k))
+                              |> PSeq.toArray
 
-inputFiles |> PSeq.map(fun k -> (Path.GetFileNameWithoutExtension k, k |> File.ReadLines |> createAnalysisStat))
-           |> PSeq.iter(fun (fileName, stats) -> writeAnalysisStat fileName stats)
+let szgyStats = perBookStats |> Seq.filter(fun (fileName, _) -> fileName.EndsWith "_szgy")
+                             |> Seq.map(fun (_, stats) -> stats)
+                             |> Seq.fold mergeAnalysisStats emptyStats
 
-inputFiles |> Seq.filter(fun k -> k.EndsWith "_szgy.txt")
-           |> Seq.map(File.ReadLines)
-           |> Seq.concat
-           |> createAnalysisStat
-           |> writeAnalysisStat "szgy_merged"
+let tkStats = perBookStats |> Seq.filter(fun (fileName, _) -> fileName.EndsWith "_tk")
+                           |> Seq.map(fun (_, stats) -> stats)
+                           |> Seq.fold mergeAnalysisStats emptyStats
 
-inputFiles |> Seq.filter(fun k -> k.EndsWith "_tk.txt")
-           |> Seq.map(File.ReadLines)
-           |> Seq.concat
-           |> createAnalysisStat
-           |> writeAnalysisStat "tk_merged"
+let mergedStats = mergeAnalysisStats szgyStats tkStats
 
-inputFiles |> Seq.map(File.ReadLines)
-           |> Seq.concat
-           |> createAnalysisStat
-           |> writeAnalysisStat "merged"
+perBookStats |> PSeq.iter(fun (fileName, stats) -> writeAnalysisStat fileName stats)
+
+writeAnalysisStat "szgy_merged" szgyStats
+writeAnalysisStat "tk_merged" tkStats
+writeAnalysisStat "merged" mergedStats
 
 if File.Exists mnszFilePath then
     let noGibberishWordFilter = Regex("^[a-zA-Z0-9]*$")

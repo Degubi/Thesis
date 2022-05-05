@@ -1,5 +1,5 @@
 {
-  "posCounts": {
+  "posFrequencies": {
     "NOUN": 194822,
     "PUNCT": 162614,
     "VERB": 93166,
@@ -540,10 +540,10 @@
     },
     "SYM": {
       "oszk.hu": 5,
-      "tu": 2,
       "perdu": 2,
-      "szu": 1,
-      "korznuéu": 1
+      "tu": 2,
+      "görg": 1,
+      "VÍ": 1
     }
   }
 }
