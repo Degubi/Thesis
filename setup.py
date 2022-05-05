@@ -38,5 +38,6 @@ download_file_to('https://www.tankonyvkatalogus.hu/pdf/FI-501021201_1__teljes.pd
 
 call('mvn install:install-file -Dfile=magyarlanc.jar -DgeneratePom=true -Dversion=3.0 -Dpackaging=jar -DgroupId=rgai.inf.u.szeged.hu -DartifactId=magyarlanc -Dsources=magyarlanc_src.zip')
 remove('magyarlanc.jar')
+call('pip install matplotlib')
 
 print('Done!')

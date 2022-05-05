@@ -1,22 +1,22 @@
 {
   "posCounts": {
-    "ADJ": 8419,
     "NOUN": 20794,
     "PUNCT": 19159,
-    "NUM": 1355,
-    "DET": 7526,
     "VERB": 12569,
-    "SCONJ": 2167,
-    "PRON": 6382,
     "ADV": 8950,
+    "ADJ": 8419,
+    "DET": 7526,
+    "PRON": 6382,
     "CONJ": 4672,
-    "PART": 318,
-    "ADP": 872,
     "PROPN": 2457,
+    "SCONJ": 2167,
+    "NUM": 1355,
+    "ADP": 872,
     "INTJ": 354,
-    "": 3,
+    "PART": 318,
     "X": 120,
-    "AUX": 18
+    "AUX": 18,
+    "": 3
   },
   "topWords": {
     "a": {
