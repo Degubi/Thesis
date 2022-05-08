@@ -1,629 +1,560 @@
 {
   "posFrequencies": {
-    "UNKNOWNTAG": 1153294,
-    "NOUN": 265782,
-    "VERB": 178428,
-    "UNKNOWN": 97990,
-    "ADJ": 61954,
-    "DIG": 33149,
-    "Adv": 9862,
-    "MIB": 8824,
-    "V V": 6389,
-    "Num": 3309,
-    "Pro": 3066,
-    "N N": 1743,
-    "Con": 720,
-    "S": 340,
-    "Int": 309,
-    "Abb": 239,
-    "Det": 203,
-    "NU": 195,
-    "Pre": 142,
-    "A N": 46,
-    "V V V": 33,
-    "Adv Adv": 23,
-    "ELO": 20,
-    "A MIB": 20,
-    "Pro Pro": 4,
-    "DATUM": 3,
-    "A A": 2,
-    "Pre Pre": 2,
-    "UNKNOWNTAG-EMPTY": 2,
-    "Num Num": 2,
-    "NU NU": 1
+    "Det": 21450971,
+    "NOUN": 12589409,
+    "VERB": 11666099,
+    "Con": 10022048,
+    "Pro": 8628396,
+    "Adv": 8155240,
+    "ADJ": 6883109,
+    "UNKNOWNTAG": 5017685,
+    "DIG": 4040440,
+    "Pre": 2349545,
+    "Num": 2023239,
+    "NU": 1102400,
+    "MIB": 811440,
+    "UNKNOWN": 463805,
+    "V V": 366370,
+    "Abb": 203618,
+    "S": 123156,
+    "Int": 100796,
+    "N N": 89080,
+    "A N": 8223,
+    "Adv Adv": 6870,
+    "Pro Pro": 4530,
+    "V V V": 3939,
+    "ELO": 2694,
+    "A A": 2228,
+    "A MIB": 668,
+    "Pre Pre": 418,
+    "DATUM": 122,
+    "NU NU": 25,
+    "UNKNOWNTAG-EMPTY": 11,
+    "Num Num": 2
   },
-  "wordStats": {
-    "ifm": {
-      "count": 3338,
-      "pos": "UNKNOWNTAG"
+  "wordFrequencies": {
+    "a": {
+      "Det": 13604313
     },
-    "HONTAI": {
-      "count": 1165,
-      "pos": "UNKNOWNTAG"
+    "az": {
+      "Det": 4476582,
+      "Pro": 480648
     },
-    "szinkr": {
-      "count": 823,
-      "pos": "UNKNOWNTAG"
+    "hogy": {
+      "Con": 2619977
     },
-    "KOZG": {
-      "count": 781,
-      "pos": "UNKNOWNTAG"
-    },
-    "BENDER": {
-      "count": 703,
-      "pos": "UNKNOWNTAG"
-    },
-    "Lakki": {
-      "count": 551,
-      "pos": "ADJ"
+    "A": {
+      "Det": 2504021
     },
     "is": {
-      "count": 524,
-      "pos": "Con"
-    },
-    "JAKSA": {
-      "count": 518,
-      "pos": "UNKNOWNTAG"
-    },
-    "tervlapon": {
-      "count": 459,
-      "pos": "NOUN"
-    },
-    "kisr": {
-      "count": 433,
-      "pos": "UNKNOWNTAG"
-    },
-    "szink": {
-      "count": 432,
-      "pos": "UNKNOWNTAG"
-    },
-    "RENDELETEI": {
-      "count": 426,
-      "pos": "NOUN"
-    },
-    "MAGY": {
-      "count": 421,
-      "pos": "UNKNOWNTAG"
-    },
-    "gejza": {
-      "count": 417,
-      "pos": "UNKNOWNTAG"
-    },
-    "supportEmptyParas": {
-      "count": 414,
-      "pos": "UNKNOWNTAG"
-    },
-    "CSORJA": {
-      "count": 412,
-      "pos": "UNKNOWNTAG"
-    },
-    "VEGY": {
-      "count": 399,
-      "pos": "UNKNOWNTAG"
-    },
-    "ouml": {
-      "count": 395,
-      "pos": "UNKNOWNTAG"
-    },
-    "Zicska": {
-      "count": 386,
-      "pos": "UNKNOWNTAG"
-    },
-    "Zsf": {
-      "count": 379,
-      "pos": "UNKNOWNTAG"
-    },
-    "SEPSEY": {
-      "count": 363,
-      "pos": "UNKNOWNTAG"
-    },
-    "f11": {
-      "count": 358,
-      "pos": "UNKNOWNTAG"
-    },
-    "VANDA": {
-      "count": 358,
-      "pos": "NOUN"
-    },
-    "SACI": {
-      "count": 356,
-      "pos": "UNKNOWNTAG"
-    },
-    "TORT": {
-      "count": 356,
-      "pos": "NOUN"
-    },
-    "RENATO": {
-      "count": 348,
-      "pos": "UNKNOWNTAG"
-    },
-    "SCHRATT": {
-      "count": 348,
-      "pos": "UNKNOWNTAG"
-    },
-    "PTM": {
-      "count": 338,
-      "pos": "UNKNOWNTAG"
-    },
-    "ARABELLA": {
-      "count": 337,
-      "pos": "NOUN"
-    },
-    "summ": {
-      "count": 335,
-      "pos": "UNKNOWNTAG"
-    },
-    "BIOT": {
-      "count": 328,
-      "pos": "UNKNOWNTAG"
-    },
-    "MAKICS": {
-      "count": 325,
-      "pos": "UNKNOWNTAG"
-    },
-    "szln": {
-      "count": 315,
-      "pos": "UNKNOWNTAG"
-    },
-    "CZIRMOS": {
-      "count": 306,
-      "pos": "UNKNOWNTAG"
-    },
-    "Kehi": {
-      "count": 305,
-      "pos": "ADJ"
-    },
-    "oacute": {
-      "count": 303,
-      "pos": "UNKNOWNTAG"
-    },
-    "BADARI": {
-      "count": 294,
-      "pos": "UNKNOWNTAG"
-    },
-    "n11": {
-      "count": 294,
-      "pos": "UNKNOWNTAG"
-    },
-    "RAVELSZKI": {
-      "count": 293,
-      "pos": "UNKNOWNTAG"
-    },
-    "SOPHOKLES": {
-      "count": 286,
-      "pos": "UNKNOWNTAG"
-    },
-    "KMIK": {
-      "count": 267,
-      "pos": "UNKNOWNTAG"
-    },
-    "t741": {
-      "count": 264,
-      "pos": "UNKNOWNTAG"
-    },
-    "inetimologikus": {
-      "count": 261,
-      "pos": "UNKNOWNTAG"
-    },
-    "h11": {
-      "count": 251,
-      "pos": "UNKNOWNTAG"
-    },
-    "KUPPER": {
-      "count": 249,
-      "pos": "UNKNOWNTAG"
-    },
-    "szn": {
-      "count": 246,
-      "pos": "UNKNOWNTAG"
-    },
-    "gray100": {
-      "count": 245,
-      "pos": "UNKNOWNTAG"
-    },
-    "grey100": {
-      "count": 245,
-      "pos": "UNKNOWNTAG"
-    },
-    "VACLAV": {
-      "count": 244,
-      "pos": "UNKNOWNTAG"
-    },
-    "fasc": {
-      "count": 239,
-      "pos": "UNKNOWNTAG"
-    },
-    "QUIJOTE": {
-      "count": 237,
-      "pos": "NOUN"
-    },
-    "KOLHAAS": {
-      "count": 234,
-      "pos": "UNKNOWNTAG"
-    },
-    "i02": {
-      "count": 233,
-      "pos": "UNKNOWNTAG"
-    },
-    "INFT": {
-      "count": 233,
-      "pos": "UNKNOWNTAG"
-    },
-    "frsz": {
-      "count": 228,
-      "pos": "UNKNOWNTAG"
-    },
-    "COLONEL": {
-      "count": 219,
-      "pos": "UNKNOWNTAG"
-    },
-    "GONZALVE": {
-      "count": 210,
-      "pos": "UNKNOWNTAG"
-    },
-    "CZIEGLER": {
-      "count": 209,
-      "pos": "UNKNOWNTAG"
-    },
-    "ORESTES": {
-      "count": 209,
-      "pos": "UNKNOWNTAG"
-    },
-    "KUNDI": {
-      "count": 208,
-      "pos": "ADJ"
-    },
-    "IMRUS": {
-      "count": 202,
-      "pos": "NOUN"
-    },
-    "JULIUSZ": {
-      "count": 200,
-      "pos": "UNKNOWNTAG"
-    },
-    "EMBERFI": {
-      "count": 196,
-      "pos": "UNKNOWNTAG"
-    },
-    "a": {
-      "count": 193,
-      "pos": "Det"
-    },
-    "LINKJE": {
-      "count": 192,
-      "pos": "ADJ"
-    },
-    "OLAJGATE": {
-      "count": 192,
-      "pos": "UNKNOWNTAG"
-    },
-    "IOKASZTE": {
-      "count": 189,
-      "pos": "UNKNOWNTAG"
-    },
-    "BALSAY": {
-      "count": 185,
-      "pos": "UNKNOWNTAG"
-    },
-    "aSk": {
-      "count": 184,
-      "pos": "UNKNOWNTAG"
-    },
-    "ferch": {
-      "count": 183,
-      "pos": "UNKNOWNTAG"
-    },
-    "MNBCD": {
-      "count": 182,
-      "pos": "UNKNOWNTAG"
-    },
-    "HEKTOR": {
-      "count": 181,
-      "pos": "NOUN"
-    },
-    "ESTELLA": {
-      "count": 180,
-      "pos": "UNKNOWNTAG"
-    },
-    "deszkriptor": {
-      "count": 178,
-      "pos": "UNKNOWNTAG"
-    },
-    "ANCSA": {
-      "count": 174,
-      "pos": "NOUN"
-    },
-    "ANCSIKA": {
-      "count": 174,
-      "pos": "UNKNOWNTAG"
-    },
-    "szlk": {
-      "count": 173,
-      "pos": "UNKNOWNTAG"
-    },
-    "iacute": {
-      "count": 173,
-      "pos": "UNKNOWNTAG"
-    },
-    "prgprg": {
-      "count": 173,
-      "pos": "UNKNOWNTAG"
-    },
-    "theo": {
-      "count": 173,
-      "pos": "UNKNOWNTAG"
-    },
-    "terembura": {
-      "count": 172,
-      "pos": "NOUN"
-    },
-    "KORT": {
-      "count": 169,
-      "pos": "NOUN"
-    },
-    "n12": {
-      "count": 169,
-      "pos": "UNKNOWNTAG"
-    },
-    "f12": {
-      "count": 168,
-      "pos": "UNKNOWNTAG"
-    },
-    "METRESSZ": {
-      "count": 168,
-      "pos": "NOUN"
-    },
-    "rosszlandi": {
-      "count": 168,
-      "pos": "UNKNOWNTAG"
-    },
-    "zlj": {
-      "count": 168,
-      "pos": "UNKNOWNTAG"
-    },
-    "BARKA": {
-      "count": 165,
-      "pos": "NOUN"
-    },
-    "n8": {
-      "count": 165,
-      "pos": "UNKNOWNTAG"
-    },
-    "n9": {
-      "count": 165,
-      "pos": "UNKNOWNTAG"
-    },
-    "PANZA": {
-      "count": 163,
-      "pos": "UNKNOWNTAG"
-    },
-    "TIRI": {
-      "count": 161,
-      "pos": "UNKNOWNTAG"
-    },
-    "VAGYONALAP": {
-      "count": 160,
-      "pos": "NOUN"
-    },
-    "AHMED": {
-      "count": 158,
-      "pos": "NOUN"
-    },
-    "ksjlk": {
-      "count": 158,
-      "pos": "UNKNOWNTAG"
-    },
-    "MUVM": {
-      "count": 158,
-      "pos": "UNKNOWNTAG"
-    },
-    "gyv": {
-      "count": 157,
-      "pos": "UNKNOWNTAG"
-    },
-    "Khajmor": {
-      "count": 156,
-      "pos": "UNKNOWNTAG"
-    },
-    "FIZT": {
-      "count": 155,
-      "pos": "UNKNOWNTAG"
-    },
-    "RImgy": {
-      "count": 154,
-      "pos": "UNKNOWNTAG"
+      "Con": 2108457
+    },
+    "nem": {
+      "Adv": 2090164
+    },
+    "egy": {
+      "Num": 1107891
+    },
+    "Az": {
+      "Det": 857630,
+      "Pro": 63206
+    },
+    "meg": {
+      "Con": 83199,
+      "Pre": 733616
+    },
+    "volt": {
+      "MIB": 20335,
+      "VERB": 622203
+    },
+    "csak": {
+      "Adv": 613436
+    },
+    "de": {
+      "Adv": 193,
+      "Con": 588152
+    },
+    "s": {
+      "Abb": 174,
+      "Con": 538158
+    },
+    "azt": {
+      "Pro": 513069
+    },
+    "ha": {
+      "Con": 501562,
+      "Int": 31
+    },
+    "van": {
+      "VERB": 495636
+    },
+    "mint": {
+      "Adv": 1652,
+      "Con": 486866
+    },
+    "vagy": {
+      "Adv": 59,
+      "Con": 464000,
+      "VERB": 17010
+    },
+    "ez": {
+      "Pro": 458486
+    },
+    "el": {
+      "Pre": 446984
+    },
+    "kell": {
+      "VERB": 435047
+    },
+    "sem": {
+      "Adv": 413546
+    },
+    "szerint": {
+      "NU": 401557
+    },
+    "ki": {
+      "Pre": 374989,
+      "Pro": 20834
+    },
+    "mert": {
+      "Con": 325512,
+      "MIB": 1,
+      "VERB": 784
+    },
+    "akkor": {
+      "Pro": 306077
+    },
+    "magyar": {
+      "ADJ": 294722,
+      "NOUN": 60
+    },
+    "olyan": {
+      "Pro": 274185
+    },
+    "lehet": {
+      "VERB": 265303
+    },
+    "pedig": {
+      "Con": 259422
+    },
+    "Nem": {
+      "Adv": 253194
+    },
+    "ezt": {
+      "Pro": 246202
+    },
+    "minden": {
+      "Pro": 236142
+    },
+    "volna": {
+      "VERB": 227936
+    },
+    "aki": {
+      "Pro": 222418
+    },
+    "majd": {
+      "Adv": 215316
+    },
+    "most": {
+      "Adv": 214709
+    },
+    "nagy": {
+      "ADJ": 214396
+    },
+    "be": {
+      "Pre": 211291
+    },
+    "00": {
+      "DIG": 206666
+    },
+    "Ez": {
+      "Pro": 202162
+    },
+    "fel": {
+      "Adv": 32,
+      "Pre": 201547
+    },
+    "De": {
+      "Adv": 821,
+      "Con": 198917
+    },
+    "hanem": {
+      "Con": 188201
+    },
+    "amely": {
+      "Pro": 187564
+    },
+    "lesz": {
+      "VERB": 187330
+    },
+    "Ha": {
+      "Con": 181416,
+      "Int": 443
+    },
+    "azonban": {
+      "Con": 178930
+    },
+    "arra": {
+      "Pro": 175951
+    },
+    "itt": {
+      "Adv": 174171
+    },
+    "1": {
+      "DIG": 168676
+    },
+    "mi": {
+      "Pro": 165245
+    },
+    "amikor": {
+      "Adv": 31067,
+      "Con": 125168
+    },
+    "ami": {
+      "Pro": 156014
+    },
+    "99": {
+      "DIG": 154638
+    },
+    "egyik": {
+      "Pro": 154101
+    },
+    "nincs": {
+      "VERB": 145126
+    },
+    "ilyen": {
+      "Adv": 577,
+      "Pro": 143688
+    },
+    "nagyon": {
+      "Adv": 141946,
+      "ADJ": 1
+    },
+    "ott": {
+      "Adv": 138161
+    },
+    "illetve": {
+      "Con": 135608,
+      "VERB": 2
+    },
+    "amit": {
+      "Pro": 134000
+    },
+    "2": {
+      "DIG": 133501
+    },
+    "annak": {
+      "Pro": 132011
+    },
+    "ne": {
+      "Adv": 130345
+    },
+    "miatt": {
+      "NU": 128858
+    },
+    "98": {
+      "DIG": 128698
+    },
+    "alatt": {
+      "Adv": 2,
+      "NU": 128081
+    },
+    "mondta": {
+      "VERB": 124652
+    },
+    "le": {
+      "Pre": 122889
+    },
+    "e": {
+      "Pro": 119988
+    },
+    "ember": {
+      "NOUN": 117163
+    },
+    "Magyar": {
+      "ADJ": 116586,
+      "NOUN": 540
+    },
+    "akik": {
+      "Pro": 116715
+    },
+    "10": {
+      "DIG": 112289
+    },
+    "mellett": {
+      "NU": 110797
+    },
+    "ahol": {
+      "Adv": 110613
+    },
+    "Egy": {
+      "Num": 109712
+    },
+    "sok": {
+      "Num": 105809
+    },
+    "mindig": {
+      "Adv": 105482
+    },
+    "hiszen": {
+      "Con": 104612
+    },
+    "ma": {
+      "Adv": 103753,
+      "NOUN": 11
+    },
+    "viszont": {
+      "Con": 101678,
+      "Pre": 93
+    },
+    "politikai": {
+      "ADJ": 100666
+    },
+    "lett": {
+      "ADJ": 75,
+      "MIB": 941,
+      "VERB": 97981
+    },
+    "kis": {
+      "ADJ": 98449
+    },
+    "3": {
+      "DIG": 98211
+    },
+    "lenne": {
+      "VERB": 97331
+    },
+    "igen": {
+      "Adv": 80003,
+      "NOUN": 15477
+    },
+    "valamint": {
+      "Con": 94421
+    },
+    "11": {
+      "DIG": 89242
+    },
+    "maga": {
+      "Pro": 87913
+    },
+    "ennek": {
+      "Pro": 87713
+    },
+    "mit": {
+      "Pro": 87104
+    },
+    "ugyanis": {
+      "Con": 86538
+    },
+    "vagyok": {
+      "VERB": 85972
+    },
+    "ezer": {
+      "Num": 85244
+    },
+    "vannak": {
+      "VERB": 84975
+    },
+    "kellett": {
+      "MIB": 15,
+      "VERB": 84698
+    },
+    "milyen": {
+      "Pro": 84554
     }
   },
   "wordFrequenciesPerPOS": {
-    "Det": {
-      "a": 193,
-      "A": 9,
-      "sZ": 1
-    },
-    "Pro": {
-      "ez": 101,
-      "azt": 93,
-      "akkor": 80,
-      "ezt": 55,
-      "mely": 43
-    },
-    "Con": {
-      "is": 524,
-      "hanem": 23,
-      "azonban": 21,
-      "MISZERINT": 18,
-      "hanemha": 14
-    },
-    "Adv": {
-      "Kortalanul": 63,
-      "fodrosan": 52,
-      "lomposan": 30,
-      "erkolcsileg": 25,
-      "mindig": 24
-    },
-    "Num": {
-      "Felekre": 36,
-      "DCI": 26,
-      "Felekkel": 23,
-      "Hetvenhetek": 19,
-      "Anynyit": 17
-    },
-    "NU": {
-      "miatt": 13,
-      "mellett": 13,
-      "felett": 12,
-      "szerint": 9,
-      "teszerinted": 5
-    },
-    "Abb": {
-      "lm": 22,
-      "CLT": 10,
-      "cos": 6,
-      "kV": 6,
-      "vgmk": 4
-    },
-    "MIB": {
-      "hallottal": 56,
-      "lettunk": 30,
-      "LEPOROLT": 29,
-      "korlatolt": 18,
-      "HIVATKOZOTTAK": 14
-    },
-    "Pre": {
-      "le": 22,
-      "be": 13,
-      "vissza": 8,
-      "ide": 5,
-      "felbe": 5
-    },
     "DIG": {
-      "251100980000607": 148,
-      "9112": 144,
-      "8403": 102,
-      "5171": 73,
-      "5525": 68
-    },
-    "VERB": {
-      "ihassatok": 131,
-      "Vonna": 96,
-      "Szerkesztve": 63,
-      "lehet": 62,
-      "gomolyogva": 62
-    },
-    "Int": {
-      "NINI": 53,
-      "hajahaj": 12,
-      "heh": 12,
-      "HUH": 9,
-      "Ihajla": 9
-    },
-    "NOUN": {
-      "tervlapon": 459,
-      "RENDELETEI": 426,
-      "VANDA": 358,
-      "TORT": 356,
-      "ARABELLA": 337
-    },
-    "ADJ": {
-      "Lakki": 551,
-      "Kehi": 305,
-      "KUNDI": 208,
-      "LINKJE": 192,
-      "VIGYORI": 120
+      "00": 206666,
+      "1": 168676,
+      "99": 154638,
+      "2": 133501,
+      "98": 128698
     },
     "UNKNOWNTAG": {
-      "ifm": 3338,
-      "HONTAI": 1165,
-      "szinkr": 823,
-      "KOZG": 781,
-      "BENDER": 703
-    },
-    "V V": {
-      "visszaejtette": 36,
-      "Eleresztette": 16,
-      "porolja": 15,
-      "dermesztette": 12,
-      "elutazniuk": 10
-    },
-    "S": {
-      "promptja": 20,
-      "PSZT": 19,
-      "promptot": 17,
-      "kaputjaiban": 12,
-      "persze": 5
-    },
-    "N N": {
-      "Varjuk": 12,
-      "alaplappal": 11,
-      "centereket": 9,
-      "markommal": 7,
-      "szervereket": 6
+      "o": 14613,
+      "i": 12351,
+      "en": 11253,
+      "d": 10345,
+      "szam": 8089
     },
     "UNKNOWN": {
-      "ffffcc": 132,
-      "komplexbildning": 108,
-      "BAGAR": 80,
-      "fasta": 72,
-      "finns": 72
+      "to": 8548,
+      "for": 3428,
+      "on": 2701,
+      "der": 2587,
+      "or": 2459
     },
-    "A N": {
-      "legokosabbak": 3,
-      "Legokosabb": 2,
-      "legmagasabbja": 2,
-      "Legokosabbat": 2,
-      "legokosabbat": 2
+    "Num": {
+      "egy": 1107891,
+      "Egy": 109712,
+      "sok": 105809,
+      "ezer": 85244,
+      "sokkal": 40944
     },
-    "A A": {
-      "kubai": 1,
-      "Kubai": 1
+    "Adv": {
+      "nem": 2090164,
+      "csak": 613436,
+      "sem": 413546,
+      "Nem": 253194,
+      "majd": 215316
     },
-    "Pro Pro": {
-      "mindennek": 2,
-      "Mindennek": 1,
-      "MINDENNEK": 1
+    "NOUN": {
+      "ember": 117163,
+      "forint": 63094,
+      "semmi": 55399,
+      "emberek": 54145,
+      "esetben": 52937
     },
-    "ELO": {
-      "Sztereo": 4,
-      "bel": 1,
-      "Geo": 1,
-      "GEO": 1,
-      "mikro": 1
+    "ADJ": {
+      "magyar": 294722,
+      "nagy": 214396,
+      "Magyar": 116586,
+      "politikai": 100666,
+      "kis": 98449
     },
-    "V V V": {
-      "Megteremtettek": 2,
-      "teremtette": 1,
-      "megteremtette": 1,
-      "kellettem": 1,
-      "teremtettem": 1
+    "VERB": {
+      "volt": 622203,
+      "van": 495636,
+      "kell": 435047,
+      "lehet": 265303,
+      "volna": 227936
     },
-    "Adv Adv": {
-      "elmenet": 3,
-      "beljebbre": 2,
-      "lentebbre": 2,
-      "tavalyom": 2,
-      "messzebbre": 1
+    "Abb": {
+      "F": 14805,
+      "t": 13215,
+      "m": 12336,
+      "Ft": 12170,
+      "T": 11980
     },
-    "A MIB": {
-      "legmegalapozottabb": 2,
-      "legelvontabbakat": 2,
-      "legelterjedtebb": 1,
-      "legelvontabb": 1,
-      "legelterjedtebbek": 1
+    "MIB": {
+      "adott": 36836,
+      "ismert": 20778,
+      "volt": 20335,
+      "tervezett": 19966,
+      "tartott": 18995
+    },
+    "Pro": {
+      "azt": 513069,
+      "az": 480648,
+      "ez": 458486,
+      "akkor": 306077,
+      "olyan": 274185
+    },
+    "Pre": {
+      "meg": 733616,
+      "el": 446984,
+      "ki": 374989,
+      "be": 211291,
+      "fel": 201547
+    },
+    "V V": {
+      "jelentette": 31172,
+      "veszi": 17174,
+      "kijelentette": 15206,
+      "dolgozik": 11638,
+      "dolgozott": 11586
+    },
+    "N N": {
+      "lapunknak": 15211,
+      "fia": 7048,
+      "lapunk": 6281,
+      "fiam": 6039,
+      "sikert": 4886
+    },
+    "Det": {
+      "a": 13604313,
+      "az": 4476582,
+      "A": 2504021,
+      "Az": 857630,
+      "AZ": 6507
+    },
+    "Int": {
+      "Na": 30167,
+      "No": 12821,
+      "na": 9586,
+      "no": 7759,
+      "Ja": 7756
+    },
+    "S": {
+      "persze": 55762,
+      "Persze": 25865,
+      "Nos": 9747,
+      "la": 3650,
+      "Sziasztok": 3433
+    },
+    "NU": {
+      "szerint": 401557,
+      "miatt": 128858,
+      "alatt": 128081,
+      "mellett": 110797,
+      "ellen": 81811
+    },
+    "Con": {
+      "hogy": 2619977,
+      "is": 2108457,
+      "de": 588152,
+      "s": 538158,
+      "ha": 501562
     },
     "Pre Pre": {
-      "Bele": 1,
-      "BELE": 1
+      "Bele": 397,
+      "BELE": 21
+    },
+    "ELO": {
+      "bel": 1247,
+      "Geo": 326,
+      "mikro": 315,
+      "GEO": 217,
+      "makro": 151
+    },
+    "Adv Adv": {
+      "bizonnyal": 5893,
+      "messzebbre": 552,
+      "legmesszebbre": 113,
+      "legalul": 104,
+      "Bizonnyal": 67
     },
     "DATUM": {
-      "DATE": 2,
+      "DATE": 121,
       "DATEAGK": 1
     },
+    "V V V": {
+      "teremtette": 1695,
+      "megteremtette": 729,
+      "teremtettek": 686,
+      "kellettek": 415,
+      "kellettem": 103
+    },
     "NU NU": {
-      "felibe": 1
+      "felibe": 25
+    },
+    "A A": {
+      "kubai": 2108,
+      "Kubai": 120
+    },
+    "A N": {
+      "legmagasabb": 7381,
+      "legokosabb": 331,
+      "legmagasabbra": 133,
+      "legbizalmasabb": 88,
+      "legmagasabbak": 80
+    },
+    "A MIB": {
+      "legelterjedtebb": 542,
+      "legelvontabb": 46,
+      "legelterjedtebbek": 24,
+      "Legelterjedtebb": 14,
+      "legkiforrottabb": 12
     },
     "UNKNOWNTAG-EMPTY": {
-      "legesleg": 1,
+      "legesleg": 10,
       "Legesleg": 1
+    },
+    "Pro Pro": {
+      "mindennek": 3260,
+      "Mindennek": 1266,
+      "MINDENNEK": 4
     },
     "Num Num": {
       "nemzetlenedtek": 2

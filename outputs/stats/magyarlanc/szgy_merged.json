@@ -1,7 +1,6 @@
 {
   "posFrequencies": {
     "NOUN": 93388,
-    "PUNCT": 93234,
     "VERB": 62529,
     "ADV": 44427,
     "DET": 39329,
@@ -14,411 +13,381 @@
     "ADP": 4283,
     "PART": 1634,
     "INTJ": 1509,
-    "X": 437,
-    "AUX": 117,
-    "": 12,
-    "SYM": 4
+    "AUX": 117
   },
-  "wordStats": {
+  "wordFrequencies": {
     "a": {
-      "count": 24609,
-      "pos": "DET"
+      "DET": 24607,
+      "PRON": 1,
+      "PROPN": 1
     },
     "az": {
-      "count": 8454,
-      "pos": "PRON"
+      "PRON": 754,
+      "DET": 7699,
+      "PROPN": 1
     },
     "és": {
-      "count": 7088,
-      "pos": "CONJ"
+      "CONJ": 7083,
+      "INTJ": 5
     },
     "hogy": {
-      "count": 4589,
-      "pos": "SCONJ"
+      "SCONJ": 4559,
+      "ADV": 27,
+      "CONJ": 3
     },
     "nem": {
-      "count": 4360,
-      "pos": "ADV"
+      "ADV": 4349,
+      "INTJ": 10,
+      "PROPN": 1
     },
     "s": {
-      "count": 3778,
-      "pos": "CONJ"
+      "CONJ": 3778
     },
     "is": {
-      "count": 3398,
-      "pos": "CONJ"
+      "CONJ": 2574,
+      "ADV": 806,
+      "SCONJ": 17,
+      "PROPN": 1
     },
     "A": {
-      "count": 3214,
-      "pos": "DET"
+      "DET": 3209,
+      "PROPN": 3,
+      "NOUN": 1
     },
     "egy": {
-      "count": 2523,
-      "pos": "DET"
+      "DET": 2254,
+      "NUM": 266,
+      "ADV": 2,
+      "PRON": 1
     },
     "volt": {
-      "count": 1972,
-      "pos": "VERB"
+      "VERB": 1964,
+      "ADJ": 7,
+      "NOUN": 1
     },
     "meg": {
-      "count": 1965,
-      "pos": "PART"
+      "PART": 1585,
+      "CONJ": 379,
+      "PROPN": 1
     },
     "mint": {
-      "count": 1615,
-      "pos": "SCONJ"
+      "SCONJ": 1604,
+      "ADV": 11
     },
     "csak": {
-      "count": 1585,
-      "pos": "ADV"
+      "ADV": 1578,
+      "CONJ": 7
     },
     "már": {
-      "count": 1477,
-      "pos": "ADV"
+      "ADV": 1476,
+      "CONJ": 1
     },
     "de": {
-      "count": 1460,
-      "pos": "CONJ"
+      "CONJ": 1456,
+      "ADV": 1,
+      "PROPN": 1
     },
     "Az": {
-      "count": 1292,
-      "pos": "DET"
+      "DET": 1181,
+      "PRON": 111
     },
     "még": {
-      "count": 1276,
-      "pos": "ADV"
+      "ADV": 1276
     },
     "ha": {
-      "count": 1241,
-      "pos": "SCONJ"
+      "SCONJ": 1228,
+      "CONJ": 11,
+      "INTJ": 2
     },
     "el": {
-      "count": 1152,
-      "pos": "ADV"
+      "ADV": 1152
     },
     "S": {
-      "count": 1143,
-      "pos": "CONJ"
+      "CONJ": 1134,
+      "PROPN": 9
     },
     "ki": {
-      "count": 1104,
-      "pos": "ADV"
+      "ADV": 908,
+      "PRON": 196
     },
     "vagy": {
-      "count": 1046,
-      "pos": "CONJ"
+      "CONJ": 899,
+      "VERB": 141,
+      "ADV": 6
     },
     "van": {
-      "count": 1000,
-      "pos": "VERB"
+      "VERB": 1000
     },
     "én": {
-      "count": 979,
-      "pos": "PRON"
+      "PRON": 979
     },
     "azt": {
-      "count": 955,
-      "pos": "PRON"
+      "PRON": 955
     },
     "mert": {
-      "count": 928,
-      "pos": "SCONJ"
+      "SCONJ": 914,
+      "VERB": 14
     },
     "ez": {
-      "count": 915,
-      "pos": "PRON"
+      "PRON": 915
     },
     "De": {
-      "count": 863,
-      "pos": "CONJ"
+      "CONJ": 862,
+      "ADV": 1
     },
     "sem": {
-      "count": 858,
-      "pos": "ADV"
+      "ADV": 699,
+      "CONJ": 159
     },
     "És": {
-      "count": 849,
-      "pos": "CONJ"
+      "CONJ": 848,
+      "INTJ": 1
     },
     "Nem": {
-      "count": 799,
-      "pos": "ADV"
+      "ADV": 718,
+      "INTJ": 81
     },
     "nagy": {
-      "count": 762,
-      "pos": "ADJ"
+      "ADJ": 753,
+      "ADV": 9
     },
     "minden": {
-      "count": 757,
-      "pos": "PRON"
+      "PRON": 757
     },
     "úgy": {
-      "count": 730,
-      "pos": "ADV"
+      "ADV": 730
     },
     "volna": {
-      "count": 708,
-      "pos": "VERB"
+      "VERB": 708
     },
     "se": {
-      "count": 698,
-      "pos": "ADV"
+      "ADV": 519,
+      "CONJ": 179
     },
     "aki": {
-      "count": 685,
-      "pos": "PRON"
+      "PRON": 685
     },
     "most": {
-      "count": 653,
-      "pos": "ADV"
+      "ADV": 653
     },
     "ő": {
-      "count": 620,
-      "pos": "PRON"
+      "PRON": 618,
+      "NOUN": 2
     },
     "így": {
-      "count": 605,
-      "pos": "CONJ"
+      "CONJ": 126,
+      "ADV": 479
     },
     "ott": {
-      "count": 605,
-      "pos": "ADV"
+      "ADV": 605
     },
     "pedig": {
-      "count": 587,
-      "pos": "CONJ"
+      "CONJ": 584,
+      "SCONJ": 3
     },
     "kell": {
-      "count": 581,
-      "pos": "VERB"
+      "VERB": 581
     },
     "ne": {
-      "count": 567,
-      "pos": "ADV"
+      "ADV": 565,
+      "INTJ": 2
     },
     "akkor": {
-      "count": 556,
-      "pos": "ADV"
+      "ADV": 556
     },
     "mi": {
-      "count": 552,
-      "pos": "PRON"
+      "PRON": 548,
+      "INTJ": 4
     },
     "ember": {
-      "count": 548,
-      "pos": "NOUN"
+      "NOUN": 548
     },
     "te": {
-      "count": 543,
-      "pos": "PRON"
+      "PRON": 541,
+      "PROPN": 2
     },
     "itt": {
-      "count": 535,
-      "pos": "ADV"
+      "ADV": 535
     },
     "mondta": {
-      "count": 519,
-      "pos": "VERB"
+      "VERB": 519
     },
     "e": {
-      "count": 513,
-      "pos": "PRON"
+      "PRON": 512,
+      "NOUN": 1
     },
     "ezt": {
-      "count": 492,
-      "pos": "PRON"
+      "PRON": 492
     },
     "olyan": {
-      "count": 484,
-      "pos": "ADV"
+      "ADV": 76,
+      "PRON": 408
     },
     "1": {
-      "count": 471,
-      "pos": "NUM"
+      "NUM": 464,
+      "PROPN": 7
     },
     "majd": {
-      "count": 457,
-      "pos": "CONJ"
+      "CONJ": 169,
+      "ADV": 288
     },
     "két": {
-      "count": 443,
-      "pos": "NUM"
+      "NUM": 443
     },
     "jó": {
-      "count": 439,
-      "pos": "ADJ"
+      "ADJ": 404,
+      "ADV": 23,
+      "INTJ": 10,
+      "NOUN": 2
     },
     "kis": {
-      "count": 433,
-      "pos": "ADJ"
+      "ADJ": 433
     },
     "neki": {
-      "count": 423,
-      "pos": "PRON"
+      "PRON": 423
     },
     "mit": {
-      "count": 417,
-      "pos": "PRON"
+      "PRON": 417
     },
     "Egy": {
-      "count": 406,
-      "pos": "DET"
+      "DET": 359,
+      "NUM": 44,
+      "ADV": 1,
+      "PROPN": 2
     },
     "fel": {
-      "count": 392,
-      "pos": "ADV"
+      "ADV": 392
     },
     "egész": {
-      "count": 386,
-      "pos": "ADJ"
+      "ADJ": 346,
+      "ADV": 21,
+      "NOUN": 19
     },
     "Ha": {
-      "count": 384,
-      "pos": "SCONJ"
+      "SCONJ": 382,
+      "CONJ": 1,
+      "INTJ": 1
     },
     "aztán": {
-      "count": 379,
-      "pos": "ADV"
+      "ADV": 322,
+      "CONJ": 57
     },
     "amit": {
-      "count": 365,
-      "pos": "PRON"
+      "PRON": 365
     },
     "szép": {
-      "count": 365,
-      "pos": "ADJ"
+      "ADJ": 358,
+      "ADV": 7
     },
     "le": {
-      "count": 364,
-      "pos": "ADV"
+      "ADV": 364
     },
     "hát": {
-      "count": 363,
-      "pos": "ADV"
+      "ADV": 262,
+      "CONJ": 100,
+      "NOUN": 1
     },
     "lesz": {
-      "count": 358,
-      "pos": "VERB"
+      "VERB": 358
     },
     "mely": {
-      "count": 354,
-      "pos": "PRON"
+      "PRON": 354
     },
     "vagyok": {
-      "count": 350,
-      "pos": "VERB"
+      "VERB": 350
     },
     "amikor": {
-      "count": 340,
-      "pos": "ADV"
+      "ADV": 340
     },
     "be": {
-      "count": 340,
-      "pos": "ADV"
+      "ADV": 340
     },
     "mintha": {
-      "count": 337,
-      "pos": "SCONJ"
+      "SCONJ": 337
     },
     "sok": {
-      "count": 331,
-      "pos": "NUM"
+      "NUM": 331
     },
     "át": {
-      "count": 327,
-      "pos": "ADV"
+      "ADV": 175,
+      "ADP": 152
     },
     "előtt": {
-      "count": 318,
-      "pos": "ADP"
+      "ADP": 318
     },
     "Ez": {
-      "count": 316,
-      "pos": "PRON"
+      "PRON": 316
     },
     "Csak": {
-      "count": 316,
-      "pos": "ADV"
+      "ADV": 316
     },
     "maga": {
-      "count": 313,
-      "pos": "PRON"
+      "PRON": 313
     },
     "nap": {
-      "count": 306,
-      "pos": "NOUN"
+      "NOUN": 230,
+      "ADV": 76
     },
     "rá": {
-      "count": 306,
-      "pos": "PRON"
+      "PRON": 306
     },
     "lehet": {
-      "count": 303,
-      "pos": "VERB"
+      "VERB": 303
     },
     "mind": {
-      "count": 301,
-      "pos": "PRON"
+      "PRON": 105,
+      "CONJ": 185,
+      "ADV": 11
     },
     "valami": {
-      "count": 300,
-      "pos": "ADJ"
+      "ADJ": 173,
+      "PRON": 113,
+      "ADV": 14
     },
     "mindig": {
-      "count": 299,
-      "pos": "ADV"
+      "ADV": 299
     },
     "lett": {
-      "count": 294,
-      "pos": "VERB"
+      "VERB": 293,
+      "NOUN": 1
     },
     "mikor": {
-      "count": 291,
-      "pos": "ADV"
+      "ADV": 288,
+      "SCONJ": 3
     },
     "alatt": {
-      "count": 289,
-      "pos": "ADP"
+      "ADP": 289
     },
     "ami": {
-      "count": 281,
-      "pos": "PRON"
+      "PRON": 281
     },
     "őket": {
-      "count": 278,
-      "pos": "PRON"
+      "PRON": 278
     },
     "nincs": {
-      "count": 275,
-      "pos": "VERB"
+      "VERB": 275
     },
     "után": {
-      "count": 275,
-      "pos": "ADP"
+      "ADP": 275
     },
     "szólt": {
-      "count": 273,
-      "pos": "VERB"
+      "VERB": 273
     },
     "Isten": {
-      "count": 269,
-      "pos": "PROPN"
+      "PROPN": 268,
+      "NOUN": 1
     },
     "Én": {
-      "count": 265,
-      "pos": "PRON"
+      "PRON": 265
     },
     "más": {
-      "count": 259,
-      "pos": "PRON"
+      "PRON": 259
     },
     "nagyon": {
-      "count": 259,
-      "pos": "ADV"
+      "ADV": 259
     },
     "új": {
-      "count": 258,
-      "pos": "ADJ"
+      "ADJ": 258
     }
   },
   "wordFrequenciesPerPOS": {
@@ -436,13 +405,6 @@
       "asszony": 188,
       "világ": 173
     },
-    "PUNCT": {
-      ",": 47198,
-      ".": 20924,
-      "-": 6317,
-      ":": 3788,
-      "!": 3123
-    },
     "NUM": {
       "1": 464,
       "két": 443,
@@ -456,6 +418,13 @@
       "A": 3209,
       "egy": 2254,
       "Az": 1181
+    },
+    "PROPN": {
+      "Isten": 268,
+      "Szent": 135,
+      "Úr": 113,
+      "Jézus": 85,
+      "János": 79
     },
     "VERB": {
       "volt": 1964,
@@ -471,13 +440,6 @@
       "mert": 914,
       "Ha": 382
     },
-    "PRON": {
-      "én": 979,
-      "azt": 955,
-      "ez": 915,
-      "minden": 757,
-      "az": 754
-    },
     "ADV": {
       "nem": 4349,
       "csak": 1578,
@@ -492,6 +454,20 @@
       "de": 1456,
       "S": 1134
     },
+    "PRON": {
+      "én": 979,
+      "azt": 955,
+      "ez": 915,
+      "minden": 757,
+      "az": 754
+    },
+    "INTJ": {
+      "Ó": 125,
+      "No": 95,
+      "ó": 90,
+      "Nem": 81,
+      "jaj": 65
+    },
     "PART": {
       "meg": 1585,
       "Meg": 46,
@@ -504,45 +480,12 @@
       "közt": 253,
       "között": 222
     },
-    "PROPN": {
-      "Isten": 268,
-      "Szent": 135,
-      "Úr": 113,
-      "Jézus": 85,
-      "János": 79
-    },
-    "INTJ": {
-      "Ó": 125,
-      "No": 95,
-      "ó": 90,
-      "Nem": 81,
-      "jaj": 65
-    },
-    "": {
-      "széjjel": 8,
-      "utól": 2,
-      "torkig": 1,
-      "zokon": 1
-    },
-    "X": {
-      "HAPPY": 39,
-      "óh": 14,
-      "the": 11,
-      "in": 10,
-      "you": 10
-    },
     "AUX": {
       "vala": 70,
       "fogsz": 29,
       "fogod": 6,
       "fogtok": 5,
       "fogjátok": 3
-    },
-    "SYM": {
-      "görg": 1,
-      "perdu": 1,
-      "VÍ": 1,
-      "gyorsjárásu": 1
     }
   }
 }

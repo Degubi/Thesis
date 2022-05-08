@@ -17,10 +17,10 @@ open KnowledgePicker.WordCloud.Primitives
 open KnowledgePicker.WordCloud.Sizers
 open SkiaSharp
 
-type WordStat = { count: int; pos: string }
+type WordFrequenciesStat = IDictionary<string, IDictionary<string, int>>
 type AnalysisStat = {
     posFrequencies: IDictionary<string, int>
-    wordStats: IDictionary<string, WordStat>
+    wordFrequencies: WordFrequenciesStat
     wordFrequenciesPerPOS: IDictionary<string, IDictionary<string, int>>
 }
 
@@ -40,32 +40,56 @@ let statJsonSettings = JsonSerializerOptions(WriteIndented = true, Encoder = Jav
 let posChartIgnoresPOSes = [| "PART"; "X"; "INTJ"; "SYM"; "AUX"; "PUNCT" |]
 let perGradeUsedPOSes = [| "NOUN"; "VERB" |]
 let wordCloudPOSes = [| ""; "NOUN"; "VERB"; "ADJ" |]
-let analysisIgnoredPOSes = [| "PUNCT" |]
+let magyarlancAnalysisIgnoredPOSes = [| "PUNCT"; ""; "SYM"; "X" |]
 
 
-let createAnalysisStat file =
-    let fileStats = file |> File.ReadLines
-                         |> Seq.filter(fun k -> k <> String.Empty)
-                         |> Seq.map(fun k -> k.Split '\t')
-                         |> Seq.map(fun k -> {| word = k.[0]; pos = k.[2] |})
-                         |> Seq.toArray
+let parseMagyarlancWordFrequencies file =
+    let calculatePOSCounts(args: seq<string[]>) = args |> Seq.countBy(fun k -> k.[2]) |> dict
 
-    let posFrequencies = fileStats |> Seq.countBy(fun k -> k.pos)
-                                   |> Seq.sortByDescending(fun (_, count) -> count)
+    file |> File.ReadLines
+         |> Seq.filter(fun k -> k <> String.Empty)
+         |> Seq.map(fun k -> k.Split '\t')
+         |> Seq.filter(fun k -> not(Array.contains k.[2] magyarlancAnalysisIgnoredPOSes))
+         |> Seq.groupBy(fun k -> k.[0])
+         |> Seq.map(fun (word, args) -> {| word = word; posCounts = calculatePOSCounts args |})
+         |> Seq.toArray
 
-    let wordStats = fileStats |> Seq.filter(fun k -> not(Array.contains k.pos analysisIgnoredPOSes))
-                              |> Seq.groupBy(fun k -> k.word)
-                              |> Seq.map(fun (word, stats) -> (word, {
-                                  count = stats |> Seq.length
-                                  pos = stats |> Seq.head |> fun k -> k.pos
-                              }))
+let parseMNSZWordFrequencies file =
+    let noGibberishWordFilter = Regex("^[a-zA-Z0-9]*$")
+    let posTransformer = function
+        | "N" -> "NOUN"
+        | "V" -> "VERB"
+        | "A" -> "ADJ"
+        | k -> k
 
-    let wordFrequenciesPerPOS = fileStats |> Seq.groupBy(fun k -> k.pos)
-                                          |> Seq.map(fun (pos, stats) ->
-                                            (pos, stats |> Seq.countBy(fun k -> k.word) |> dict))
+    let calculatePOSCounts(args: seq<string[]>) =
+        args |> Seq.groupBy(fun k -> posTransformer k.[3])
+             |> Seq.map(fun (pos, statsForPOS) -> (pos, statsForPOS |> Seq.sumBy(fun k -> int k.[7])))
+             |> dict
+
+    file |> File.ReadLines
+         |> Seq.map(fun k -> k.Split '\t')
+         |> Seq.filter(fun k -> noGibberishWordFilter.IsMatch k.[0])
+         |> Seq.groupBy(fun k -> k.[0])
+         |> Seq.map(fun (word, args) -> {| word = word; posCounts = calculatePOSCounts args |})
+         |> Seq.toArray
+
+let createAnalysisStat(wordFrequencies: {| word: string; posCounts: IDictionary<string, int> |}[]) =
+    let posFrequencies = wordFrequencies |> Seq.collect(fun k -> k.posCounts)
+                                         |> Seq.groupBy(fun k -> k.Key)
+                                         |> Seq.map(fun (pos, counts) -> (pos, counts |> Seq.sumBy(fun k -> k.Value)))
+                                         |> Seq.sortByDescending(fun (_, count) -> count)
+
+    let getCountsForPOS(pos: string) = wordFrequencies |> Seq.filter(fun k -> k.posCounts.ContainsKey pos)
+                                                       |> Seq.map(fun k -> (k.word, k.posCounts.[pos]))
+                                                       |> Seq.sortByDescending(fun (_, count) -> count)
+
+    let wordFrequenciesPerPOS = wordFrequencies |> Seq.collect(fun k -> k.posCounts.Keys)
+                                                |> Seq.distinct
+                                                |> Seq.map(fun pos -> (pos, getCountsForPOS pos |> dict))
     {
         posFrequencies = posFrequencies |> dict
-        wordStats = wordStats |> dict
+        wordFrequencies = wordFrequencies |> Seq.map(fun k -> (k.word, k.posCounts)) |> dict
         wordFrequenciesPerPOS = wordFrequenciesPerPOS |> dict
     }
 
@@ -74,15 +98,12 @@ let mergeDictionary<'V, 'K when 'K: equality>(dict1: IDictionary<'K, 'V>) (dict2
                            |> Seq.map(fun (key, values) -> (key, valueMerger values))
 
 let mergeAnalysisStats s1 s2 =
-    let mergeWordStat accumulator element = {
-        count = element.count + accumulator.count
-        pos = if accumulator.pos = null then element.pos else accumulator.pos
-    }
+    let mergeWordStat accumulator element = mergeDictionary accumulator element (Seq.sumBy(fun k -> k.Value)) |> dict
 
     let mergeWordFrqsPerPOSStat accumulator element = mergeDictionary accumulator element (Seq.sumBy(fun k -> k.Value)) |> dict
-    let wordStatsDictMerger(k: seq<KeyValuePair<string, WordStat>>) =
+    let wordStatsDictMerger(k: seq<KeyValuePair<string, IDictionary<string, int>>>) =
         k |> Seq.map(fun k -> k.Value)
-          |> Seq.fold mergeWordStat { count = 0; pos = null }
+          |> Seq.fold mergeWordStat (dict([]))
 
     let wordFrqsPerPOSMerger(k: seq<KeyValuePair<string, IDictionary<string, int>>>) =
         k |> Seq.map(fun k -> k.Value)
@@ -90,37 +111,38 @@ let mergeAnalysisStats s1 s2 =
 
     {
         posFrequencies = mergeDictionary s1.posFrequencies s2.posFrequencies (Seq.sumBy(fun k -> k.Value)) |> Seq.sortByDescending(fun (_, count) -> count) |> dict
-        wordStats = mergeDictionary s1.wordStats s2.wordStats wordStatsDictMerger |> dict
+        wordFrequencies = mergeDictionary s1.wordFrequencies s2.wordFrequencies wordStatsDictMerger |> dict
         wordFrequenciesPerPOS = mergeDictionary s1.wordFrequenciesPerPOS s2.wordFrequenciesPerPOS wordFrqsPerPOSMerger |> dict
     }
 
 let truncateAnalysisStat stat =
-    let truncatedWordStats = stat.wordStats |> Seq.sortByDescending(fun k -> k.Value.count)
-                                            |> Seq.truncate 100
-                                            |> Seq.map(fun k -> (k.Key, k.Value))
+    let truncatedWordFrequencies = stat.wordFrequencies |> Seq.sortByDescending(fun k -> k.Value.Values |> Seq.sum)
+                                                        |> Seq.truncate 100
+                                                        |> Seq.map(fun k -> (k.Key, k.Value))
 
-    let wordFrqsPerPOS = stat.wordFrequenciesPerPOS |> Seq.map(fun k -> (k.Key, k.Value |> Seq.sortByDescending(fun m -> m.Value)
-                                                                                        |> Seq.truncate 5
-                                                                                        |> Seq.map(fun k -> (k.Key, k.Value))
-                                                                                        |> dict))
+    let truncatedwordFrqsPerPOS = stat.wordFrequenciesPerPOS |> Seq.map(fun k -> (k.Key, k.Value |> Seq.sortByDescending(fun m -> m.Value)
+                                                                                                 |> Seq.truncate 5
+                                                                                                 |> Seq.map(fun k -> (k.Key, k.Value))
+                                                                                                 |> dict))
     {
         posFrequencies = stat.posFrequencies
-        wordStats = truncatedWordStats |> dict
-        wordFrequenciesPerPOS = wordFrqsPerPOS |> dict
+        wordFrequencies = truncatedWordFrequencies |> dict
+        wordFrequenciesPerPOS = truncatedwordFrqsPerPOS |> dict
     }
 
 let getBookType(fileName: string) = fileName.[fileName.IndexOf '_' + 1 ..]
 let getBookGrade(fileName: string) = fileName.[.. (fileName.IndexOf '_' - 1)]
 let writeChart chartData = Process.Start("python", [| "genChart.py"; JsonSerializer.Serialize(chartData) |]).WaitForExit()
 
-let writeWordCloud(wordStats: IDictionary<string, WordStat>) (baseFilePath: string) (pos: string) =
-    let filePostfix = if pos = "" then "" else $"_{pos}"
-    let filteredWords = if pos = "" then wordStats
-                        else wordStats |> Seq.filter(fun k -> k.Value.pos = pos) |> Seq.map(fun k -> (k.Key, k.Value)) |> dict
+let writeWordCloud(wordFrequencies: WordFrequenciesStat) (baseFilePath: string) (pos: string) =
+    let calculateWordCountBasedOnPOS(posCounts: IDictionary<string, int>) = if posCounts.ContainsKey pos then posCounts.[pos] else 0
+    let calculateTotalWordCount(posCounts: IDictionary<string, int>) = posCounts |> Seq.sumBy(fun k -> k.Value)
+    let wordFrequencyCalculator = if pos = "" then calculateTotalWordCount else calculateWordCountBasedOnPOS
 
-    let topWordsToWrite = filteredWords |> Seq.sortByDescending(fun k -> k.Value.count)
-                                        |> Seq.truncate 500
-                                        |> Seq.map(fun k -> WordCloudEntry(k.Key, k.Value.count))
+    let topWordsToWrite = wordFrequencies |> Seq.map(fun k -> (k.Key, wordFrequencyCalculator k.Value))
+                                          |> Seq.sortByDescending(fun (_, count) -> count)
+                                          |> Seq.truncate 500
+                                          |> Seq.map(WordCloudEntry)
 
     let wordCloud = WordCloudInput(topWordsToWrite, Width = 1920, Height = 1080, MinFontSize = 1, MaxFontSize = 84)
     use engine = new SkGraphicEngine(LogSizer(wordCloud), wordCloud)
@@ -131,6 +153,7 @@ let writeWordCloud(wordStats: IDictionary<string, WordStat>) (baseFilePath: stri
     canvas.Clear(SKColors.White)
     canvas.DrawBitmap(generator.Draw(), SKPoint(0F, 0F))
 
+    let filePostfix = if pos = "" then "" else $"_{pos}"
     use image = bitmap.Encode(SKEncodedImageFormat.Jpeg, 100)
     image.SaveTo(File.Open($"{baseFilePath}{filePostfix}.jpg", FileMode.Create))
 
@@ -152,7 +175,7 @@ let writeAnalysisStat fileName stats =
     let wordCloudBaseFilePath = $"{magyarlancWordCloudOutputDir}/{fileName}"
 
     File.WriteAllText($"{magyarlancStatsOutputDir}/{fileName}.json", JsonSerializer.Serialize(stats |> truncateAnalysisStat, statJsonSettings))
-    wordCloudPOSes |> Seq.iter(writeWordCloud stats.wordStats wordCloudBaseFilePath)
+    wordCloudPOSes |> Seq.iter(writeWordCloud stats.wordFrequencies wordCloudBaseFilePath)
     stats.posFrequencies |> Seq.filter(fun k -> not(Array.contains k.Key posChartIgnoresPOSes))
                          |> Seq.map(fun k -> (k.Key, k.Value))
                          |> dict
@@ -160,10 +183,10 @@ let writeAnalysisStat fileName stats =
 
 
 let beginTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()
-let emptyStats = { posFrequencies = dict([]); wordStats = dict([]); wordFrequenciesPerPOS = dict([]) }
+let emptyStats = { posFrequencies = dict([]); wordFrequencies = dict([]); wordFrequenciesPerPOS = dict([]) }
 
 let perBookStats = Directory.GetFiles magyarlancOutputDir
-                 |> PSeq.map(fun k -> (Path.GetFileNameWithoutExtension k, createAnalysisStat k))
+                 |> PSeq.map(fun k -> (Path.GetFileNameWithoutExtension k, k |> parseMagyarlancWordFrequencies |> createAnalysisStat))
                  |> PSeq.toArray
 
 let perBookTypeStats = perBookStats |> Seq.groupBy(fun (fileName, _) -> getBookType fileName)
@@ -200,37 +223,10 @@ writeAnalysisStat "merged" mergedStats
 
 
 if File.Exists mnszDataFilePath then
-    let noGibberishWordFilter = Regex("^[a-zA-Z0-9]*$")
-    let mnszWordCloudOutputDir = $"{wordCloudOutputDir}/mnsz"
-    let posTransformer = function
-        | "N" -> "NOUN"
-        | "V" -> "VERB"
-        | "A" -> "ADJ"
-        | k -> k
-
-    let mnszWordStats = mnszDataFilePath |> File.ReadLines
-                                         |> Seq.map(fun k -> k.Split '\t')
-                                         |> Seq.filter(fun k -> noGibberishWordFilter.IsMatch k.[0])
-                                         |> Seq.map(fun k -> (k.[0], { count = int k.[7]; pos = posTransformer k.[3] }))
-                                         |> Seq.sortByDescending(fun (_, stats) -> stats.count)
-                                         |> dict
-
-    let mnszPosFrequencies = mnszWordStats.Values |> Seq.groupBy(fun k -> k.pos)
-                                                  |> Seq.map(fun (pos, stats) -> (pos, stats |> Seq.sumBy(fun k -> k.count)))
-                                                  |> Seq.sortByDescending(fun (_, count) -> count)
-
-    let mnszwordFrequenciesPerPOS = mnszWordStats |> Seq.groupBy(fun k -> k.Value.pos)
-                                                  |> Seq.map(fun (pos, stats) ->
-                                                    (pos, stats |> Seq.map(fun k -> (k.Key, k.Value.count)) |> dict))
-    let mnszAnalysisStat = {
-        posFrequencies = mnszPosFrequencies |> dict
-        wordStats = mnszWordStats
-        wordFrequenciesPerPOS = mnszwordFrequenciesPerPOS |> dict
-    }
+    let mnszAnalysisStat = mnszDataFilePath |> parseMNSZWordFrequencies |> createAnalysisStat
 
     File.WriteAllText($"{statsOutputDir}/mnsz.json", JsonSerializer.Serialize(mnszAnalysisStat |> truncateAnalysisStat, statJsonSettings))
-    wordCloudPOSes |> Seq.iter(writeWordCloud mnszWordStats mnszWordCloudOutputDir)
-
+    wordCloudPOSes |> Seq.iter(writeWordCloud mnszAnalysisStat.wordFrequencies $"{wordCloudOutputDir}/mnsz")
 
 let endTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()
 printfn "All done in %dms" (endTime - beginTime)
