@@ -18,7 +18,7 @@
     "X": 64,
     "SYM": 1
   },
-  "topWords": {
+  "wordStats": {
     "a": {
       "count": 5299,
       "pos": "DET"
@@ -420,7 +420,7 @@
       "pos": "ADJ"
     }
   },
-  "topWordsPerPOS": {
+  "wordFrequenciesPerPOS": {
     "ADJ": {
       "nagy": 209,
       "egész": 97,

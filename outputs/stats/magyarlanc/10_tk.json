@@ -17,7 +17,7 @@
     "INTJ": 46,
     "AUX": 2
   },
-  "topWords": {
+  "wordStats": {
     "a": {
       "count": 5588,
       "pos": "DET"
@@ -419,7 +419,7 @@
       "pos": "ADJ"
     }
   },
-  "topWordsPerPOS": {
+  "wordFrequenciesPerPOS": {
     "PUNCT": {
       ",": 6461,
       ".": 2970,

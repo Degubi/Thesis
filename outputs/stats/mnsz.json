@@ -1,0 +1,632 @@
+{
+  "posFrequencies": {
+    "UNKNOWNTAG": 1153294,
+    "NOUN": 265782,
+    "VERB": 178428,
+    "UNKNOWN": 97990,
+    "ADJ": 61954,
+    "DIG": 33149,
+    "Adv": 9862,
+    "MIB": 8824,
+    "V V": 6389,
+    "Num": 3309,
+    "Pro": 3066,
+    "N N": 1743,
+    "Con": 720,
+    "S": 340,
+    "Int": 309,
+    "Abb": 239,
+    "Det": 203,
+    "NU": 195,
+    "Pre": 142,
+    "A N": 46,
+    "V V V": 33,
+    "Adv Adv": 23,
+    "ELO": 20,
+    "A MIB": 20,
+    "Pro Pro": 4,
+    "DATUM": 3,
+    "A A": 2,
+    "Pre Pre": 2,
+    "UNKNOWNTAG-EMPTY": 2,
+    "Num Num": 2,
+    "NU NU": 1
+  },
+  "wordStats": {
+    "ifm": {
+      "count": 3338,
+      "pos": "UNKNOWNTAG"
+    },
+    "HONTAI": {
+      "count": 1165,
+      "pos": "UNKNOWNTAG"
+    },
+    "szinkr": {
+      "count": 823,
+      "pos": "UNKNOWNTAG"
+    },
+    "KOZG": {
+      "count": 781,
+      "pos": "UNKNOWNTAG"
+    },
+    "BENDER": {
+      "count": 703,
+      "pos": "UNKNOWNTAG"
+    },
+    "Lakki": {
+      "count": 551,
+      "pos": "ADJ"
+    },
+    "is": {
+      "count": 524,
+      "pos": "Con"
+    },
+    "JAKSA": {
+      "count": 518,
+      "pos": "UNKNOWNTAG"
+    },
+    "tervlapon": {
+      "count": 459,
+      "pos": "NOUN"
+    },
+    "kisr": {
+      "count": 433,
+      "pos": "UNKNOWNTAG"
+    },
+    "szink": {
+      "count": 432,
+      "pos": "UNKNOWNTAG"
+    },
+    "RENDELETEI": {
+      "count": 426,
+      "pos": "NOUN"
+    },
+    "MAGY": {
+      "count": 421,
+      "pos": "UNKNOWNTAG"
+    },
+    "gejza": {
+      "count": 417,
+      "pos": "UNKNOWNTAG"
+    },
+    "supportEmptyParas": {
+      "count": 414,
+      "pos": "UNKNOWNTAG"
+    },
+    "CSORJA": {
+      "count": 412,
+      "pos": "UNKNOWNTAG"
+    },
+    "VEGY": {
+      "count": 399,
+      "pos": "UNKNOWNTAG"
+    },
+    "ouml": {
+      "count": 395,
+      "pos": "UNKNOWNTAG"
+    },
+    "Zicska": {
+      "count": 386,
+      "pos": "UNKNOWNTAG"
+    },
+    "Zsf": {
+      "count": 379,
+      "pos": "UNKNOWNTAG"
+    },
+    "SEPSEY": {
+      "count": 363,
+      "pos": "UNKNOWNTAG"
+    },
+    "f11": {
+      "count": 358,
+      "pos": "UNKNOWNTAG"
+    },
+    "VANDA": {
+      "count": 358,
+      "pos": "NOUN"
+    },
+    "SACI": {
+      "count": 356,
+      "pos": "UNKNOWNTAG"
+    },
+    "TORT": {
+      "count": 356,
+      "pos": "NOUN"
+    },
+    "RENATO": {
+      "count": 348,
+      "pos": "UNKNOWNTAG"
+    },
+    "SCHRATT": {
+      "count": 348,
+      "pos": "UNKNOWNTAG"
+    },
+    "PTM": {
+      "count": 338,
+      "pos": "UNKNOWNTAG"
+    },
+    "ARABELLA": {
+      "count": 337,
+      "pos": "NOUN"
+    },
+    "summ": {
+      "count": 335,
+      "pos": "UNKNOWNTAG"
+    },
+    "BIOT": {
+      "count": 328,
+      "pos": "UNKNOWNTAG"
+    },
+    "MAKICS": {
+      "count": 325,
+      "pos": "UNKNOWNTAG"
+    },
+    "szln": {
+      "count": 315,
+      "pos": "UNKNOWNTAG"
+    },
+    "CZIRMOS": {
+      "count": 306,
+      "pos": "UNKNOWNTAG"
+    },
+    "Kehi": {
+      "count": 305,
+      "pos": "ADJ"
+    },
+    "oacute": {
+      "count": 303,
+      "pos": "UNKNOWNTAG"
+    },
+    "BADARI": {
+      "count": 294,
+      "pos": "UNKNOWNTAG"
+    },
+    "n11": {
+      "count": 294,
+      "pos": "UNKNOWNTAG"
+    },
+    "RAVELSZKI": {
+      "count": 293,
+      "pos": "UNKNOWNTAG"
+    },
+    "SOPHOKLES": {
+      "count": 286,
+      "pos": "UNKNOWNTAG"
+    },
+    "KMIK": {
+      "count": 267,
+      "pos": "UNKNOWNTAG"
+    },
+    "t741": {
+      "count": 264,
+      "pos": "UNKNOWNTAG"
+    },
+    "inetimologikus": {
+      "count": 261,
+      "pos": "UNKNOWNTAG"
+    },
+    "h11": {
+      "count": 251,
+      "pos": "UNKNOWNTAG"
+    },
+    "KUPPER": {
+      "count": 249,
+      "pos": "UNKNOWNTAG"
+    },
+    "szn": {
+      "count": 246,
+      "pos": "UNKNOWNTAG"
+    },
+    "gray100": {
+      "count": 245,
+      "pos": "UNKNOWNTAG"
+    },
+    "grey100": {
+      "count": 245,
+      "pos": "UNKNOWNTAG"
+    },
+    "VACLAV": {
+      "count": 244,
+      "pos": "UNKNOWNTAG"
+    },
+    "fasc": {
+      "count": 239,
+      "pos": "UNKNOWNTAG"
+    },
+    "QUIJOTE": {
+      "count": 237,
+      "pos": "NOUN"
+    },
+    "KOLHAAS": {
+      "count": 234,
+      "pos": "UNKNOWNTAG"
+    },
+    "i02": {
+      "count": 233,
+      "pos": "UNKNOWNTAG"
+    },
+    "INFT": {
+      "count": 233,
+      "pos": "UNKNOWNTAG"
+    },
+    "frsz": {
+      "count": 228,
+      "pos": "UNKNOWNTAG"
+    },
+    "COLONEL": {
+      "count": 219,
+      "pos": "UNKNOWNTAG"
+    },
+    "GONZALVE": {
+      "count": 210,
+      "pos": "UNKNOWNTAG"
+    },
+    "CZIEGLER": {
+      "count": 209,
+      "pos": "UNKNOWNTAG"
+    },
+    "ORESTES": {
+      "count": 209,
+      "pos": "UNKNOWNTAG"
+    },
+    "KUNDI": {
+      "count": 208,
+      "pos": "ADJ"
+    },
+    "IMRUS": {
+      "count": 202,
+      "pos": "NOUN"
+    },
+    "JULIUSZ": {
+      "count": 200,
+      "pos": "UNKNOWNTAG"
+    },
+    "EMBERFI": {
+      "count": 196,
+      "pos": "UNKNOWNTAG"
+    },
+    "a": {
+      "count": 193,
+      "pos": "Det"
+    },
+    "LINKJE": {
+      "count": 192,
+      "pos": "ADJ"
+    },
+    "OLAJGATE": {
+      "count": 192,
+      "pos": "UNKNOWNTAG"
+    },
+    "IOKASZTE": {
+      "count": 189,
+      "pos": "UNKNOWNTAG"
+    },
+    "BALSAY": {
+      "count": 185,
+      "pos": "UNKNOWNTAG"
+    },
+    "aSk": {
+      "count": 184,
+      "pos": "UNKNOWNTAG"
+    },
+    "ferch": {
+      "count": 183,
+      "pos": "UNKNOWNTAG"
+    },
+    "MNBCD": {
+      "count": 182,
+      "pos": "UNKNOWNTAG"
+    },
+    "HEKTOR": {
+      "count": 181,
+      "pos": "NOUN"
+    },
+    "ESTELLA": {
+      "count": 180,
+      "pos": "UNKNOWNTAG"
+    },
+    "deszkriptor": {
+      "count": 178,
+      "pos": "UNKNOWNTAG"
+    },
+    "ANCSA": {
+      "count": 174,
+      "pos": "NOUN"
+    },
+    "ANCSIKA": {
+      "count": 174,
+      "pos": "UNKNOWNTAG"
+    },
+    "szlk": {
+      "count": 173,
+      "pos": "UNKNOWNTAG"
+    },
+    "iacute": {
+      "count": 173,
+      "pos": "UNKNOWNTAG"
+    },
+    "prgprg": {
+      "count": 173,
+      "pos": "UNKNOWNTAG"
+    },
+    "theo": {
+      "count": 173,
+      "pos": "UNKNOWNTAG"
+    },
+    "terembura": {
+      "count": 172,
+      "pos": "NOUN"
+    },
+    "KORT": {
+      "count": 169,
+      "pos": "NOUN"
+    },
+    "n12": {
+      "count": 169,
+      "pos": "UNKNOWNTAG"
+    },
+    "f12": {
+      "count": 168,
+      "pos": "UNKNOWNTAG"
+    },
+    "METRESSZ": {
+      "count": 168,
+      "pos": "NOUN"
+    },
+    "rosszlandi": {
+      "count": 168,
+      "pos": "UNKNOWNTAG"
+    },
+    "zlj": {
+      "count": 168,
+      "pos": "UNKNOWNTAG"
+    },
+    "BARKA": {
+      "count": 165,
+      "pos": "NOUN"
+    },
+    "n8": {
+      "count": 165,
+      "pos": "UNKNOWNTAG"
+    },
+    "n9": {
+      "count": 165,
+      "pos": "UNKNOWNTAG"
+    },
+    "PANZA": {
+      "count": 163,
+      "pos": "UNKNOWNTAG"
+    },
+    "TIRI": {
+      "count": 161,
+      "pos": "UNKNOWNTAG"
+    },
+    "VAGYONALAP": {
+      "count": 160,
+      "pos": "NOUN"
+    },
+    "AHMED": {
+      "count": 158,
+      "pos": "NOUN"
+    },
+    "ksjlk": {
+      "count": 158,
+      "pos": "UNKNOWNTAG"
+    },
+    "MUVM": {
+      "count": 158,
+      "pos": "UNKNOWNTAG"
+    },
+    "gyv": {
+      "count": 157,
+      "pos": "UNKNOWNTAG"
+    },
+    "Khajmor": {
+      "count": 156,
+      "pos": "UNKNOWNTAG"
+    },
+    "FIZT": {
+      "count": 155,
+      "pos": "UNKNOWNTAG"
+    },
+    "RImgy": {
+      "count": 154,
+      "pos": "UNKNOWNTAG"
+    }
+  },
+  "wordFrequenciesPerPOS": {
+    "Det": {
+      "a": 193,
+      "A": 9,
+      "sZ": 1
+    },
+    "Pro": {
+      "ez": 101,
+      "azt": 93,
+      "akkor": 80,
+      "ezt": 55,
+      "mely": 43
+    },
+    "Con": {
+      "is": 524,
+      "hanem": 23,
+      "azonban": 21,
+      "MISZERINT": 18,
+      "hanemha": 14
+    },
+    "Adv": {
+      "Kortalanul": 63,
+      "fodrosan": 52,
+      "lomposan": 30,
+      "erkolcsileg": 25,
+      "mindig": 24
+    },
+    "Num": {
+      "Felekre": 36,
+      "DCI": 26,
+      "Felekkel": 23,
+      "Hetvenhetek": 19,
+      "Anynyit": 17
+    },
+    "NU": {
+      "miatt": 13,
+      "mellett": 13,
+      "felett": 12,
+      "szerint": 9,
+      "teszerinted": 5
+    },
+    "Abb": {
+      "lm": 22,
+      "CLT": 10,
+      "cos": 6,
+      "kV": 6,
+      "vgmk": 4
+    },
+    "MIB": {
+      "hallottal": 56,
+      "lettunk": 30,
+      "LEPOROLT": 29,
+      "korlatolt": 18,
+      "HIVATKOZOTTAK": 14
+    },
+    "Pre": {
+      "le": 22,
+      "be": 13,
+      "vissza": 8,
+      "ide": 5,
+      "felbe": 5
+    },
+    "DIG": {
+      "251100980000607": 148,
+      "9112": 144,
+      "8403": 102,
+      "5171": 73,
+      "5525": 68
+    },
+    "VERB": {
+      "ihassatok": 131,
+      "Vonna": 96,
+      "Szerkesztve": 63,
+      "lehet": 62,
+      "gomolyogva": 62
+    },
+    "Int": {
+      "NINI": 53,
+      "hajahaj": 12,
+      "heh": 12,
+      "HUH": 9,
+      "Ihajla": 9
+    },
+    "NOUN": {
+      "tervlapon": 459,
+      "RENDELETEI": 426,
+      "VANDA": 358,
+      "TORT": 356,
+      "ARABELLA": 337
+    },
+    "ADJ": {
+      "Lakki": 551,
+      "Kehi": 305,
+      "KUNDI": 208,
+      "LINKJE": 192,
+      "VIGYORI": 120
+    },
+    "UNKNOWNTAG": {
+      "ifm": 3338,
+      "HONTAI": 1165,
+      "szinkr": 823,
+      "KOZG": 781,
+      "BENDER": 703
+    },
+    "V V": {
+      "visszaejtette": 36,
+      "Eleresztette": 16,
+      "porolja": 15,
+      "dermesztette": 12,
+      "elutazniuk": 10
+    },
+    "S": {
+      "promptja": 20,
+      "PSZT": 19,
+      "promptot": 17,
+      "kaputjaiban": 12,
+      "persze": 5
+    },
+    "N N": {
+      "Varjuk": 12,
+      "alaplappal": 11,
+      "centereket": 9,
+      "markommal": 7,
+      "szervereket": 6
+    },
+    "UNKNOWN": {
+      "ffffcc": 132,
+      "komplexbildning": 108,
+      "BAGAR": 80,
+      "fasta": 72,
+      "finns": 72
+    },
+    "A N": {
+      "legokosabbak": 3,
+      "Legokosabb": 2,
+      "legmagasabbja": 2,
+      "Legokosabbat": 2,
+      "legokosabbat": 2
+    },
+    "A A": {
+      "kubai": 1,
+      "Kubai": 1
+    },
+    "Pro Pro": {
+      "mindennek": 2,
+      "Mindennek": 1,
+      "MINDENNEK": 1
+    },
+    "ELO": {
+      "Sztereo": 4,
+      "bel": 1,
+      "Geo": 1,
+      "GEO": 1,
+      "mikro": 1
+    },
+    "V V V": {
+      "Megteremtettek": 2,
+      "teremtette": 1,
+      "megteremtette": 1,
+      "kellettem": 1,
+      "teremtettem": 1
+    },
+    "Adv Adv": {
+      "elmenet": 3,
+      "beljebbre": 2,
+      "lentebbre": 2,
+      "tavalyom": 2,
+      "messzebbre": 1
+    },
+    "A MIB": {
+      "legmegalapozottabb": 2,
+      "legelvontabbakat": 2,
+      "legelterjedtebb": 1,
+      "legelvontabb": 1,
+      "legelterjedtebbek": 1
+    },
+    "Pre Pre": {
+      "Bele": 1,
+      "BELE": 1
+    },
+    "DATUM": {
+      "DATE": 2,
+      "DATEAGK": 1
+    },
+    "NU NU": {
+      "felibe": 1
+    },
+    "UNKNOWNTAG-EMPTY": {
+      "legesleg": 1,
+      "Legesleg": 1
+    },
+    "Num Num": {
+      "nemzetlenedtek": 2
+    }
+  }
+}

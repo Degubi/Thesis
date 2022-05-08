@@ -18,7 +18,7 @@
     "SYM": 1,
     "AUX": 1
   },
-  "topWords": {
+  "wordStats": {
     "a": {
       "count": 3443,
       "pos": "DET"
@@ -420,7 +420,7 @@
       "pos": "NOUN"
     }
   },
-  "topWordsPerPOS": {
+  "wordFrequenciesPerPOS": {
     "NOUN": {
       "szöveg": 119,
       "ember": 93,

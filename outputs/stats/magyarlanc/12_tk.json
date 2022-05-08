@@ -17,7 +17,7 @@
     "INTJ": 115,
     "SYM": 26
   },
-  "topWords": {
+  "wordStats": {
     "a": {
       "count": 7299,
       "pos": "DET"
@@ -419,7 +419,7 @@
       "pos": "ADV"
     }
   },
-  "topWordsPerPOS": {
+  "wordFrequenciesPerPOS": {
     "DET": {
       "a": 7295,
       "az": 2326,

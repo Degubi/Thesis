@@ -19,7 +19,7 @@
     "": 4,
     "SYM": 3
   },
-  "topWords": {
+  "wordStats": {
     "a": {
       "count": 7972,
       "pos": "DET"
@@ -421,7 +421,7 @@
       "pos": "ADV"
     }
   },
-  "topWordsPerPOS": {
+  "wordFrequenciesPerPOS": {
     "NOUN": {
       "ember": 129,
       "BIFF": 73,

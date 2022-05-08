@@ -18,7 +18,7 @@
     "SYM": 23,
     "AUX": 6
   },
-  "topWords": {
+  "wordStats": {
     "a": {
       "count": 7189,
       "pos": "DET"
@@ -420,7 +420,7 @@
       "pos": "ADJ"
     }
   },
-  "topWordsPerPOS": {
+  "wordFrequenciesPerPOS": {
     "NOUN": {
       "vers": 189,
       "szöveg": 141,

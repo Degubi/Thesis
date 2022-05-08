@@ -18,7 +18,7 @@
     "AUX": 19,
     "": 5
   },
-  "topWords": {
+  "wordStats": {
     "a": {
       "count": 6858,
       "pos": "DET"
@@ -420,7 +420,7 @@
       "pos": "ADJ"
     }
   },
-  "topWordsPerPOS": {
+  "wordFrequenciesPerPOS": {
     "ADJ": {
       "nagy": 242,
       "kis": 137,

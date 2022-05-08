@@ -19,7 +19,7 @@
     "SYM": 54,
     "": 12
   },
-  "topWords": {
+  "wordStats": {
     "a": {
       "count": 48128,
       "pos": "DET"
@@ -421,7 +421,7 @@
       "pos": "ADV"
     }
   },
-  "topWordsPerPOS": {
+  "wordFrequenciesPerPOS": {
     "ADJ": {
       "című": 1281,
       "nagy": 1065,
