@@ -99,8 +99,8 @@ let mergeDictionary<'V, 'K when 'K: equality>(dict1: IDictionary<'K, 'V>) (dict2
 
 let mergeAnalysisStats s1 s2 =
     let mergeWordStat accumulator element = mergeDictionary accumulator element (Seq.sumBy(fun k -> k.Value)) |> dict
-
     let mergeWordFrqsPerPOSStat accumulator element = mergeDictionary accumulator element (Seq.sumBy(fun k -> k.Value)) |> dict
+
     let wordStatsDictMerger(k: seq<KeyValuePair<string, IDictionary<string, int>>>) =
         k |> Seq.map(fun k -> k.Value)
           |> Seq.fold mergeWordStat (dict([]))
@@ -137,6 +137,7 @@ let writeChart chartData = Process.Start("python", [| "genChart.py"; JsonSeriali
 let writeWordCloud(wordFrequencies: WordFrequenciesStat) (baseFilePath: string) (pos: string) =
     let calculateWordCountBasedOnPOS(posCounts: IDictionary<string, int>) = if posCounts.ContainsKey pos then posCounts.[pos] else 0
     let calculateTotalWordCount(posCounts: IDictionary<string, int>) = posCounts |> Seq.sumBy(fun k -> k.Value)
+
     let wordFrequencyCalculator = if pos = "" then calculateTotalWordCount else calculateWordCountBasedOnPOS
 
     let topWordsToWrite = wordFrequencies |> Seq.map(fun k -> (k.Key, wordFrequencyCalculator k.Value))
