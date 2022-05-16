@@ -1,20 +1,4 @@
 {
-  "posFrequencies": {
-    "NOUN": 22288,
-    "ADJ": 10744,
-    "DET": 9315,
-    "VERB": 6980,
-    "ADV": 4562,
-    "PRON": 4035,
-    "CONJ": 3569,
-    "PROPN": 2738,
-    "NUM": 1311,
-    "SCONJ": 839,
-    "ADP": 819,
-    "PART": 439,
-    "INTJ": 46,
-    "AUX": 2
-  },
   "wordFrequencies": {
     "a": {
       "DET": 5584,
@@ -340,98 +324,298 @@
       "ADJ": 54
     }
   },
-  "wordFrequenciesPerPOS": {
-    "DET": {
-      "a": 5584,
-      "az": 1627,
-      "A": 1394,
-      "Az": 355,
-      "egy": 322
-    },
-    "PROPN": {
-      "Petőfi": 105,
-      "Bánk": 90,
-      "Kölcsey": 86,
-      "Vörösmarty": 69,
-      "W": 63
-    },
+  "wordLengths": {
+    "teljesenújésszabadonkezelhetőtartománykénttárultkielőtte": 56,
+    "Nemvoltrendszeresesztétikaiképzettsége": 38,
+    "NemlehetPetőfirőllehámozniahalála": 33,
+    "irodalomtörténeti-eszmetörténeti": 32,
+    "kulturális-művelődéstörténeti": 29,
+    "Martinovics-összeesküvéshez": 27,
+    "Martinovics-összeesküvéssel": 27,
+    "Martinovics-öszszeesküvés": 25,
+    "szentimentális-romantikus": 25,
+    "mássalhangzó-asszonáncnál": 25,
+    "történelemfilozófiájában": 24,
+    "megkülönböztethetetlenül": 24,
+    "történelemértelmezésében": 24,
+    "megváltoztathatóságának": 23,
+    "naplemente-hasonlatában": 23,
+    "Toleranciarendeletével": 22,
+    "természettudományokban": 22,
+    "természettudományokhoz": 22,
+    "kertmotívum-jelentések": 22,
+    "megvalósíthatatlannak": 21,
+    "jelentésárnyalatokkal": 21,
+    "időhatároz6-szavaknak": 21,
+    "legellenszenvesebbnek": 21,
+    "társadalmi-filozófiai": 21,
+    "irodalomszemléletének": 21,
+    "világpolgár-szemlélet": 21,
+    "lelkiismeret-furdalás": 21,
+    "látomásos-mitologikus": 21,
+    "fantasztikus-groteszk": 21,
+    "szabadságmozgalmakkal": 21,
+    "szentimentalizmusának": 21,
+    "szerepmeghatározásait": 21,
+    "megszerkesztettségben": 21,
+    "megkérdőjelezhetetlen": 21,
+    "hangsúlyeltolódásokat": 21,
+    "tündérmese-vándortéma": 21,
+    "teremtéstörténetekről": 21,
+    "intézményrendszerének": 21,
+    "intézményrendszerében": 21,
+    "képviselő-választáson": 21,
+    "költészetfelfogásában": 21,
+    "kimondhatatlanságáról": 21,
+    "fényképmutatványoknak": 21,
+    "társadalomkritikaként": 21,
+    "társadalmi-kulturális": 21,
+    "professzionalizálódás": 21,
+    "gyümölcsszimbólumokat": 21,
+    "mássalhangzókészletét": 21,
+    "történelemszemléletét": 21,
+    "szám-személyviszonyok": 21
+  },
+  "posStats": {
     "NOUN": {
-      "vers": 224,
-      "szöveg": 127,
-      "költő": 116,
-      "romantika": 95,
-      "mű": 90
+      "frequency": 22288,
+      "averageWordLength": 9.55047821466525,
+      "mostFrequentWords": {
+        "vers": 224,
+        "szöveg": 127,
+        "költő": 116,
+        "romantika": 95,
+        "mű": 90
+      },
+      "longestWords": {
+        "Nemvoltrendszeresesztétikaiképzettsége": 38,
+        "Martinovics-összeesküvéshez": 27,
+        "Martinovics-összeesküvéssel": 27,
+        "Martinovics-öszszeesküvés": 25,
+        "mássalhangzó-asszonáncnál": 25
+      }
     },
     "ADJ": {
-      "című": 245,
-      "első": 164,
-      "magyar": 163,
-      "nagy": 105,
-      "költői": 81
+      "frequency": 10744,
+      "averageWordLength": 8.846031746031747,
+      "mostFrequentWords": {
+        "című": 245,
+        "első": 164,
+        "magyar": 163,
+        "nagy": 105,
+        "költői": 81
+      },
+      "longestWords": {
+        "irodalomtörténeti-eszmetörténeti": 32,
+        "kulturális-művelődéstörténeti": 29,
+        "szentimentális-romantikus": 25,
+        "megkülönböztethetetlenül": 24,
+        "megvalósíthatatlannak": 21
+      }
     },
-    "ADV": {
-      "nem": 368,
-      "el": 246,
-      "ki": 180,
-      "fel": 120,
-      "már": 116
-    },
-    "INTJ": {
-      "igen": 6,
-      "Ah": 4,
-      "Nem": 3,
-      "ó": 3,
-      "Oh": 3
-    },
-    "NUM": {
-      "két": 149,
-      "több": 68,
-      "három": 49,
-      "egy-egy": 43,
-      "1": 41
+    "DET": {
+      "frequency": 9315,
+      "averageWordLength": 2,
+      "mostFrequentWords": {
+        "a": 5584,
+        "az": 1627,
+        "A": 1394,
+        "Az": 355,
+        "egy": 322
+      },
+      "longestWords": {
+        "egy": 3,
+        "Egy": 3,
+        "az": 2,
+        "Az": 2,
+        "aZ": 2
+      }
     },
     "VERB": {
-      "volt": 106,
-      "van": 83,
-      "Olvasd": 77,
-      "kell": 66,
-      "lehet": 62
+      "frequency": 6980,
+      "averageWordLength": 8.365366902057108,
+      "mostFrequentWords": {
+        "volt": 106,
+        "van": 83,
+        "Olvasd": 77,
+        "kell": 66,
+        "lehet": 62
+      },
+      "longestWords": {
+        "teljesenújésszabadonkezelhetőtartománykénttárultkielőtte": 56,
+        "eljelentéktelenítik": 19,
+        "kibontakoztathatja": 18,
+        "szembehelyezkedett": 18,
+        "elbizonytalanodott": 18
+      }
     },
-    "CONJ": {
-      "és": 1293,
-      "is": 703,
-      "s": 196,
-      "vagy": 195,
-      "de": 180
+    "ADV": {
+      "frequency": 4562,
+      "averageWordLength": 7.024460431654676,
+      "mostFrequentWords": {
+        "nem": 368,
+        "el": 246,
+        "ki": 180,
+        "fel": 120,
+        "már": 116
+      },
+      "longestWords": {
+        "versszerkezetileg": 17,
+        "szenvedéIyesebbé": 16,
+        "kiengesztelődve": 15,
+        "szembeszegülve": 14,
+        "tulajdonképpen": 14
+      }
     },
     "PRON": {
-      "Milyen": 217,
-      "e": 141,
-      "amely": 129,
-      "ez": 125,
-      "egyik": 101
+      "frequency": 4035,
+      "averageWordLength": 6.527204502814259,
+      "mostFrequentWords": {
+        "Milyen": 217,
+        "e": 141,
+        "amely": 129,
+        "ez": 125,
+        "egyik": 101
+      },
+      "longestWords": {
+        "szőlőszem-alleAz": 16,
+        "megtarthatják-e": 15,
+        "Rávehetnének-e": 14,
+        "mindegyikében": 13,
+        "Beteljesíti-e": 13
+      }
     },
-    "ADP": {
-      "után": 78,
-      "szerint": 67,
-      "között": 64,
-      "közül": 47,
-      "számára": 44
+    "CONJ": {
+      "frequency": 3569,
+      "averageWordLength": 5.131578947368421,
+      "mostFrequentWords": {
+        "és": 1293,
+        "is": 703,
+        "s": 196,
+        "vagy": 195,
+        "de": 180
+      },
+      "longestWords": {
+        "következésképp": 14,
+        "tudniillik": 10,
+        "úgyszintén": 10,
+        "ugyancsak": 9,
+        "Ugyancsak": 9
+      }
+    },
+    "PROPN": {
+      "frequency": 2738,
+      "averageWordLength": 6.574834437086093,
+      "mostFrequentWords": {
+        "Petőfi": 105,
+        "Bánk": 90,
+        "Kölcsey": 86,
+        "Vörösmarty": 69,
+        "W": 63
+      },
+      "longestWords": {
+        "NemlehetPetőfirőllehámozniahalála": 33,
+        "Franciaországban": 16,
+        "Nyugat-Európában": 16,
+        "Székesfehérváron": 16,
+        "Észak-Amerikában": 16
+      }
+    },
+    "NUM": {
+      "frequency": 1311,
+      "averageWordLength": 6.167676767676768,
+      "mostFrequentWords": {
+        "két": 149,
+        "több": 68,
+        "három": 49,
+        "egy-egy": 43,
+        "1": 41
+      },
+      "longestWords": {
+        "ótaelteltszázhatvan": 19,
+        "1775-1776-ban": 13,
+        "7-táblázatban": 13,
+        "Berzsenyitöbb": 13,
+        "1829-1830-ban": 13
+      }
     },
     "SCONJ": {
-      "hogy": 435,
-      "mint": 133,
-      "ha": 60,
-      "mintha": 31,
-      "mert": 31
+      "frequency": 839,
+      "averageWordLength": 5.583333333333333,
+      "mostFrequentWords": {
+        "hogy": 435,
+        "mint": 133,
+        "ha": 60,
+        "mintha": 31,
+        "mert": 31
+      },
+      "longestWords": {
+        "Amennyiben": 10,
+        "amennyiben": 10,
+        "miszerint": 9,
+        "minthogy": 8,
+        "Jóllehet": 8
+      }
+    },
+    "ADP": {
+      "frequency": 819,
+      "averageWordLength": 5.709677419354839,
+      "mostFrequentWords": {
+        "után": 78,
+        "szerint": 67,
+        "között": 64,
+        "közül": 47,
+        "számára": 44
+      },
+      "longestWords": {
+        "következtében": 13,
+        "ellentétben": 11,
+        "függetlenül": 11,
+        "közepette": 9,
+        "keresztül": 9
+      }
     },
     "PART": {
-      "meg": 435,
-      "Meg": 3,
-      "utol": 1
+      "frequency": 439,
+      "averageWordLength": 3.3333333333333335,
+      "mostFrequentWords": {
+        "meg": 435,
+        "Meg": 3,
+        "utol": 1
+      },
+      "longestWords": {
+        "utol": 4,
+        "meg": 3,
+        "Meg": 3
+      }
+    },
+    "INTJ": {
+      "frequency": 46,
+      "averageWordLength": 3.1785714285714284,
+      "mostFrequentWords": {
+        "igen": 6,
+        "Ah": 4,
+        "Nem": 3,
+        "ó": 3,
+        "Oh": 3
+      },
+      "longestWords": {
+        "sajnos": 6,
+        "jövel": 5,
+        "Előre": 5,
+        "ejnye": 5,
+        "Csend": 5
+      }
     },
     "AUX": {
-      "vala": 2
+      "frequency": 2,
+      "averageWordLength": 4,
+      "mostFrequentWords": {
+        "vala": 2
+      },
+      "longestWords": {
+        "vala": 4
+      }
     }
   }
 }

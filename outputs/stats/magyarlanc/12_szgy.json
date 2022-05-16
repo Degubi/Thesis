@@ -1,20 +1,4 @@
 {
-  "posFrequencies": {
-    "NOUN": 27602,
-    "VERB": 17843,
-    "ADV": 12702,
-    "DET": 12311,
-    "ADJ": 10972,
-    "PRON": 8460,
-    "CONJ": 6696,
-    "SCONJ": 3031,
-    "PROPN": 2899,
-    "NUM": 1733,
-    "ADP": 1326,
-    "PART": 406,
-    "INTJ": 374,
-    "AUX": 9
-  },
   "wordFrequencies": {
     "a": {
       "DET": 7972
@@ -371,100 +355,302 @@
       "ADV": 75
     }
   },
-  "wordFrequenciesPerPOS": {
+  "wordLengths": {
+    "budapest-páris-berlin-kamcsatka-szentpétervár": 45,
+    "Allelujázva-üvöltve-nyögve-káromkodva": 37,
+    "Lihegve-hidegen-ravaszul-kapkodva": 33,
+    "ezerkilencszázhatvanegyben": 26,
+    "Magyar-francia-filozófiai": 25,
+    "Ezerkilencszáznegyvennégy": 25,
+    "ezerkilencszázötvenegyes": 24,
+    "ezerkilencszáznegyvenegy": 24,
+    "Brihadaranjaka-Upanisad": 23,
+    "feltartóztathatatlanul": 22,
+    "pálinka-nagykereskedés": 22,
+    "kínos-lelkiismeretesen": 22,
+    "föltartóztathatatlanul": 22,
+    "szivárvány-szemöldökű,": 22,
+    "harckocsikupola-fejek,": 22,
+    "kiszámíthatatlanságait": 22,
+    "víz-tenger-vízbefúlás": 21,
+    "szerencsétlenségükben": 21,
+    "szentháromságszoborig": 21,
+    "hangulatárnyalatoknak": 21,
+    "megvalósíthatatlannak": 21,
+    "szellemnyilatkozásban": 21,
+    "részvétnyilvánításnak": 21,
+    "búvópatak-tulajdonság": 21,
+    "márványlap-arcélükből": 21,
+    "karácsonyfagyertyával": 21,
+    "vízvezeték-szerelőnek": 21,
+    "lélegzet-visszafojtva": 21,
+    "legistenhátamögöttibb": 21,
+    "arisztokratikusságból": 21,
+    "kovácsandrásferencet,": 21,
+    "közép-franciaországi": 20,
+    "madeleine-darabkának": 20,
+    "kilencvenhét-ötvenbe": 20,
+    "dagerrotip-lemezeket": 20,
+    "csillogott-villogott": 20,
+    "történettudományokat": 20,
+    "Trencsényi-Waldapfel": 20,
+    "augusztus-szeptember": 20,
+    "feltartóztathatatlan": 20,
+    "megszoríttatásunkban": 20,
+    "kaszárnya-számadáson": 20,
+    "kultúrbölcseletemről": 20,
+    "szurokfáklya-fénynél": 20,
+    "hadosztályparancsnok": 20,
+    "vastagbélfekélyemmel": 20,
+    "zuzmara-üstökösökkel": 20,
+    "patyolat-hengereket,": 20,
+    "revolvertáska-kezek,": 20,
+    "akasztottember-színü": 20
+  },
+  "posStats": {
     "NOUN": {
-      "ember": 129,
-      "BIFF": 73,
-      "nap": 66,
-      "világ": 63,
-      "LINDA": 63
-    },
-    "DET": {
-      "a": 7972,
-      "az": 2340,
-      "A": 926,
-      "egy": 644,
-      "Az": 313
-    },
-    "PROPN": {
-      "Szent": 44,
-      "Kiss": 35,
-      "Isten": 30,
-      "Aureliano": 27,
-      "Arcadio": 27
-    },
-    "ADJ": {
-      "nagy": 156,
-      "kis": 119,
-      "szép": 93,
-      "jó": 89,
-      "új": 85
-    },
-    "CONJ": {
-      "és": 2111,
-      "s": 1154,
-      "is": 822,
-      "de": 464,
-      "vagy": 298
-    },
-    "ADV": {
-      "nem": 1288,
-      "már": 509,
-      "csak": 497,
-      "még": 407,
-      "el": 288
-    },
-    "NUM": {
-      "két": 151,
-      "1": 115,
-      "egy": 85,
-      "2": 70,
-      "sok": 68
-    },
-    "PRON": {
-      "azt": 300,
-      "én": 293,
-      "ez": 286,
-      "minden": 229,
-      "az": 210
+      "frequency": 27602,
+      "averageWordLength": 8.431041805715672,
+      "mostFrequentWords": {
+        "ember": 129,
+        "BIFF": 73,
+        "nap": 66,
+        "világ": 63,
+        "LINDA": 63
+      },
+      "longestWords": {
+        "budapest-páris-berlin-kamcsatka-szentpétervár": 45,
+        "ezerkilencszázhatvanegyben": 26,
+        "ezerkilencszáznegyvenegy": 24,
+        "pálinka-nagykereskedés": 22,
+        "kiszámíthatatlanságait": 22
+      }
     },
     "VERB": {
-      "volt": 480,
-      "van": 273,
-      "volna": 203,
-      "mondta": 189,
-      "kell": 166
+      "frequency": 17843,
+      "averageWordLength": 8.324221375756219,
+      "mostFrequentWords": {
+        "volt": 480,
+        "van": 273,
+        "volna": 203,
+        "mondta": 189,
+        "kell": 166
+      },
+      "longestWords": {
+        "csillogott-villogott": 20,
+        "megakadályozhassanak": 20,
+        "disznópásztorkodtam": 19,
+        "szerzsán-legyalázta": 19,
+        "nyitódott-csukódott": 19
+      }
     },
-    "ADP": {
-      "előtt": 115,
-      "alatt": 111,
-      "közt": 80,
-      "után": 80,
-      "között": 67
+    "ADV": {
+      "frequency": 12702,
+      "averageWordLength": 7.3371699390656735,
+      "mostFrequentWords": {
+        "nem": 1288,
+        "már": 509,
+        "csak": 497,
+        "még": 407,
+        "el": 288
+      },
+      "longestWords": {
+        "Allelujázva-üvöltve-nyögve-káromkodva": 37,
+        "Lihegve-hidegen-ravaszul-kapkodva": 33,
+        "lélegzet-visszafojtva": 21,
+        "Kétszer-háromszor": 17,
+        "kétszer-háromszor": 17
+      }
+    },
+    "DET": {
+      "frequency": 12311,
+      "averageWordLength": 2,
+      "mostFrequentWords": {
+        "a": 7972,
+        "az": 2340,
+        "A": 926,
+        "egy": 644,
+        "Az": 313
+      },
+      "longestWords": {
+        "egy": 3,
+        "Egy": 3,
+        "az": 2,
+        "Az": 2,
+        "AZ": 2
+      }
+    },
+    "ADJ": {
+      "frequency": 10972,
+      "averageWordLength": 8.220322131636507,
+      "mostFrequentWords": {
+        "nagy": 156,
+        "kis": 119,
+        "szép": 93,
+        "jó": 89,
+        "új": 85
+      },
+      "longestWords": {
+        "Magyar-francia-filozófiai": 25,
+        "ezerkilencszázötvenegyes": 24,
+        "feltartóztathatatlanul": 22,
+        "kínos-lelkiismeretesen": 22,
+        "föltartóztathatatlanul": 22
+      }
+    },
+    "PRON": {
+      "frequency": 8460,
+      "averageWordLength": 6.6257861635220126,
+      "mostFrequentWords": {
+        "azt": 300,
+        "én": 293,
+        "ez": 286,
+        "minden": 229,
+        "az": 210
+      },
+      "longestWords": {
+        "Föltételezhető-e": 16,
+        "megvalósítható-e": 16,
+        "választottam-e": 14,
+        "mindannyiszor": 13,
+        "elfogadható-e": 13
+      }
+    },
+    "CONJ": {
+      "frequency": 6696,
+      "averageWordLength": 5.02803738317757,
+      "mostFrequentWords": {
+        "és": 2111,
+        "s": 1154,
+        "is": 822,
+        "de": 464,
+        "vagy": 298
+      },
+      "longestWords": {
+        "mindazonáltal": 13,
+        "úgyszintén": 10,
+        "ugyancsak": 9,
+        "aminthogy": 9,
+        "Ugyancsak": 9
+      }
     },
     "SCONJ": {
-      "hogy": 1306,
-      "mint": 548,
-      "ha": 358,
-      "mert": 286,
-      "Ha": 109
+      "frequency": 3031,
+      "averageWordLength": 5.7894736842105265,
+      "mostFrequentWords": {
+        "hogy": 1306,
+        "mint": 548,
+        "ha": 358,
+        "mert": 286,
+        "Ha": 109
+      },
+      "longestWords": {
+        "amennyiben": 10,
+        "bármennyit": 10,
+        "mivelhogy": 9,
+        "Mivelhogy": 9,
+        "miszerint": 9
+      }
     },
-    "INTJ": {
-      "Ó": 31,
-      "ó": 29,
-      "Nem": 26,
-      "Igen": 21,
-      "No": 17
+    "PROPN": {
+      "frequency": 2899,
+      "averageWordLength": 7.199552822806037,
+      "mostFrequentWords": {
+        "Szent": 44,
+        "Kiss": 35,
+        "Isten": 30,
+        "Aureliano": 27,
+        "Arcadio": 27
+      },
+      "longestWords": {
+        "Brihadaranjaka-Upanisad": 23,
+        "szivárvány-szemöldökű,": 22,
+        "harckocsikupola-fejek,": 22,
+        "kovácsandrásferencet,": 21,
+        "patyolat-hengereket,": 20
+      }
+    },
+    "NUM": {
+      "frequency": 1733,
+      "averageWordLength": 6.414432989690722,
+      "mostFrequentWords": {
+        "két": 151,
+        "1": 115,
+        "egy": 85,
+        "2": 70,
+        "sok": 68
+      },
+      "longestWords": {
+        "Ezerkilencszáznegyvennégy": 25,
+        "kilencvenhét-ötvenbe": 20,
+        "háromszázhuszonöt": 17,
+        "Száznegyvenhármat": 17,
+        "tizenegy-tizenkét": 17
+      }
+    },
+    "ADP": {
+      "frequency": 1326,
+      "averageWordLength": 5.684210526315789,
+      "mostFrequentWords": {
+        "előtt": 115,
+        "alatt": 111,
+        "közt": 80,
+        "után": 80,
+        "között": 67
+      },
+      "longestWords": {
+        "következtében": 13,
+        "kivül-belől": 11,
+        "ellenében": 9,
+        "keresztül": 9,
+        "közepette": 9
+      }
     },
     "PART": {
-      "meg": 393,
-      "Meg": 10,
-      "utol": 3
+      "frequency": 406,
+      "averageWordLength": 3.3333333333333335,
+      "mostFrequentWords": {
+        "meg": 393,
+        "Meg": 10,
+        "utol": 3
+      },
+      "longestWords": {
+        "utol": 4,
+        "meg": 3,
+        "Meg": 3
+      }
+    },
+    "INTJ": {
+      "frequency": 374,
+      "averageWordLength": 3.908256880733945,
+      "mostFrequentWords": {
+        "Ó": 31,
+        "ó": 29,
+        "Nem": 26,
+        "Igen": 21,
+        "No": 17
+      },
+      "longestWords": {
+        "dícsértessék": 12,
+        "mindenségit": 11,
+        "bizonyisten": 11,
+        "istenfáját": 10,
+        "figyelem": 8
+      }
     },
     "AUX": {
-      "fogsz": 4,
-      "vala": 3,
-      "fogod": 2
+      "frequency": 9,
+      "averageWordLength": 4.666666666666667,
+      "mostFrequentWords": {
+        "fogsz": 4,
+        "vala": 3,
+        "fogod": 2
+      },
+      "longestWords": {
+        "fogod": 5,
+        "fogsz": 5,
+        "vala": 4
+      }
     }
   }
 }

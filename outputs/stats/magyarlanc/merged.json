@@ -1,20 +1,4 @@
 {
-  "posFrequencies": {
-    "NOUN": 194822,
-    "VERB": 93166,
-    "ADJ": 85206,
-    "DET": 79424,
-    "ADV": 64029,
-    "PRON": 47413,
-    "CONJ": 38544,
-    "PROPN": 24267,
-    "SCONJ": 13889,
-    "NUM": 11584,
-    "ADP": 8043,
-    "PART": 3955,
-    "INTJ": 1814,
-    "AUX": 126
-  },
   "wordFrequencies": {
     "a": {
       "DET": 48115,
@@ -394,102 +378,306 @@
       "CONJ": 64
     }
   },
-  "wordFrequenciesPerPOS": {
-    "ADJ": {
-      "című": 1281,
-      "nagy": 1065,
-      "első": 815,
-      "magyar": 765,
-      "jó": 528
-    },
+  "wordLengths": {
+    "teljesenújésszabadonkezelhetőtartománykénttárultkielőtte": 56,
+    "budapest-páris-berlin-kamcsatka-szentpétervár": 45,
+    "ínyvitorla-szívlapát-lélegzethinta-mérleg": 41,
+    "Nemvoltrendszeresesztétikaiképzettsége": 38,
+    "Allelujázva-üvöltve-nyögve-káromkodva": 37,
+    "Lihegve-hidegen-ravaszul-kapkodva": 33,
+    "NemlehetPetőfirőllehámozniahalála": 33,
+    "ezernyolcszázhetven-egynéhányban": 32,
+    "irodalomtörténeti-eszmetörténeti": 32,
+    "hagyományőrzéshagyománytagadás": 30,
+    "kulturális-művelődéstörténeti": 29,
+    "Csoportmegbeszélés-módszerrel": 29,
+    "csoportmegbeszélés-módszerrel": 29,
+    "magyar-latin-művészettörténet": 29,
+    "kilencszázkilencvenkilencben": 28,
+    "re_:rrxlflllu;lil_lla;i(z)tí": 28,
+    "rzloggrl'iífrezidenciájághoz": 28,
+    "Martinovics-összeesküvéshez": 27,
+    "Martinovics-összeesküvéssel": 27,
+    "tudományos-ismeretterjesztő": 27,
+    "Bastien-Lepage-festményeket": 27,
+    "Északkelet-Franciaországban": 27,
+    "Kosztolányi-filmtörténethez": 27,
+    "Születésnapomra-parafrázist": 27,
+    "Párosmegbeszélés-módszerrel": 27,
+    "Peloponnészoszi-félszigeten": 27,
+    "spinett-szerszámkereskedőt": 26,
+    "ezerkilencszázhatvanegyben": 26,
+    "társadalmilag-kulturálisan": 26,
+    "lapszerkesztői-műkritikusi": 26,
+    "egzisztenciális-filozófiai": 26,
+    "Csoportmegoldás-módszerrel": 26,
+    "aKerekasztal-beszélgetéses": 26,
+    "csoportmegoldás-módszerrel": 26,
+    "megfilmesíthetetlenségének": 26,
+    "félpénz-ismertetőjeleként": 25,
+    "Magyar-francia-filozófiai": 25,
+    "Ezerkilencszáznegyvennégy": 25,
+    "Apokalipszis-magyarázatot": 25,
+    "Martinovics-öszszeesküvés": 25,
+    "szentimentális-romantikus": 25,
+    "mássalhangzó-asszonáncnál": 25,
+    "pusztítással-pusztulással": 25,
+    "történelmiregény-trilógia": 25,
+    "megváltoztathatatlanságát": 25,
+    "művészettörténet-tudomány": 25,
+    "írószerkesztő-kritikussal": 25,
+    "szeretetmegnyilvánulásait": 25,
+    "Peloponnészosz-félsziget": 24,
+    "szálastakarmány-növények": 24
+  },
+  "posStats": {
     "NOUN": {
-      "ember": 907,
-      "vers": 726,
-      "szöveg": 552,
-      "költő": 479,
-      "O": 426
-    },
-    "NUM": {
-      "két": 1063,
-      "1": 701,
-      "sok": 412,
-      "egy": 410,
-      "három": 397
-    },
-    "DET": {
-      "a": 48115,
-      "az": 15345,
-      "A": 8921,
-      "egy": 3593,
-      "Az": 2914
-    },
-    "PROPN": {
-      "Isten": 391,
-      "József": 278,
-      "W": 277,
-      "János": 248,
-      "Ady": 215
+      "frequency": 194822,
+      "averageWordLength": 8.852876179091869,
+      "mostFrequentWords": {
+        "ember": 907,
+        "vers": 726,
+        "szöveg": 552,
+        "költő": 479,
+        "O": 426
+      },
+      "longestWords": {
+        "budapest-páris-berlin-kamcsatka-szentpétervár": 45,
+        "ínyvitorla-szívlapát-lélegzethinta-mérleg": 41,
+        "Nemvoltrendszeresesztétikaiképzettsége": 38,
+        "ezernyolcszázhetven-egynéhányban": 32,
+        "hagyományőrzéshagyománytagadás": 30
+      }
     },
     "VERB": {
-      "volt": 2530,
-      "van": 1375,
-      "kell": 786,
-      "volna": 784,
-      "mondta": 533
+      "frequency": 93166,
+      "averageWordLength": 8.277714620121472,
+      "mostFrequentWords": {
+        "volt": 2530,
+        "van": 1375,
+        "kell": 786,
+        "volna": 784,
+        "mondta": 533
+      },
+      "longestWords": {
+        "teljesenújésszabadonkezelhetőtartománykénttárultkielőtte": 56,
+        "re_:rrxlflllu;lil_lla;i(z)tí": 28,
+        "fölszálltak-leszálltak": 22,
+        "végigbizsenbozsongatta": 22,
+        "vissza-visszavágyott": 20
+      }
     },
-    "SCONJ": {
-      "hogy": 6377,
-      "mint": 2117,
-      "ha": 1480,
-      "mert": 1041,
-      "Ha": 482
+    "ADJ": {
+      "frequency": 85206,
+      "averageWordLength": 8.367098820844038,
+      "mostFrequentWords": {
+        "című": 1281,
+        "nagy": 1065,
+        "első": 815,
+        "magyar": 765,
+        "jó": 528
+      },
+      "longestWords": {
+        "irodalomtörténeti-eszmetörténeti": 32,
+        "kulturális-művelődéstörténeti": 29,
+        "tudományos-ismeretterjesztő": 27,
+        "társadalmilag-kulturálisan": 26,
+        "lapszerkesztői-műkritikusi": 26
+      }
+    },
+    "DET": {
+      "frequency": 79424,
+      "averageWordLength": 2.332244318181818,
+      "mostFrequentWords": {
+        "a": 48115,
+        "az": 15345,
+        "A": 8921,
+        "egy": 3593,
+        "Az": 2914
+      },
+      "longestWords": {
+        "vkorszerűtlena": 14,
+        "komikus-iroAz": 13,
+        "kttkaz": 6,
+        "Ellso": 5,
+        "egy": 3
+      }
     },
     "ADV": {
-      "nem": 6010,
-      "el": 2236,
-      "csak": 2043,
-      "már": 1995,
-      "még": 1630
-    },
-    "CONJ": {
-      "és": 13513,
-      "is": 5456,
-      "s": 4514,
-      "de": 2094,
-      "vagy": 1712
+      "frequency": 64029,
+      "averageWordLength": 7.122666137714061,
+      "mostFrequentWords": {
+        "nem": 6010,
+        "el": 2236,
+        "csak": 2043,
+        "már": 1995,
+        "még": 1630
+      },
+      "longestWords": {
+        "Allelujázva-üvöltve-nyögve-káromkodva": 37,
+        "Lihegve-hidegen-ravaszul-kapkodva": 33,
+        "lélegzet-visszafojtva": 21,
+        "e'ígííllíídgírkolózva": 21,
+        "irodalomtörténetileg": 20
+      }
     },
     "PRON": {
-      "ez": 1363,
-      "azt": 1270,
-      "én": 1205,
-      "az": 1134,
-      "minden": 1113
+      "frequency": 47413,
+      "averageWordLength": 6.470608497005647,
+      "mostFrequentWords": {
+        "ez": 1363,
+        "azt": 1270,
+        "én": 1205,
+        "az": 1134,
+        "minden": 1113
+      },
+      "longestWords": {
+        "Megváltoztatnátok-e": 19,
+        "Megváltoztathatja-e": 19,
+        "megvalósíthatóak-e": 18,
+        "Befolyásolhatja-e": 17,
+        "Használhatnátok-e": 17
+      }
     },
-    "INTJ": {
-      "Ó": 144,
-      "ó": 105,
-      "No": 96,
-      "Nem": 85,
-      "igen": 74
+    "CONJ": {
+      "frequency": 38544,
+      "averageWordLength": 5.302744701787525,
+      "mostFrequentWords": {
+        "és": 13513,
+        "is": 5456,
+        "s": 4514,
+        "de": 2094,
+        "vagy": 1712
+      },
+      "longestWords": {
+        "következésképpen": 16,
+        "következésképp": 14,
+        "feltartoztatha": 14,
+        "megváltoztatha": 14,
+        "Mindazonáltal": 13
+      }
     },
-    "PART": {
-      "meg": 3894,
-      "Meg": 56,
-      "utol": 5
+    "PROPN": {
+      "frequency": 24267,
+      "averageWordLength": 6.963261154846934,
+      "mostFrequentWords": {
+        "Isten": 391,
+        "József": 278,
+        "W": 277,
+        "János": 248,
+        "Ady": 215
+      },
+      "longestWords": {
+        "NemlehetPetőfirőllehámozniahalála": 33,
+        "születésérőlnKoszto%ányi": 24,
+        "Brihadaranjaka-Upanisad": 23,
+        "megváltoztathatatlant,": 22,
+        "szivárvány-szemöldökű,": 22
+      }
+    },
+    "SCONJ": {
+      "frequency": 13889,
+      "averageWordLength": 5.543076936610618,
+      "mostFrequentWords": {
+        "hogy": 6377,
+        "mint": 2117,
+        "ha": 1480,
+        "mert": 1041,
+        "Ha": 482
+      },
+      "longestWords": {
+        "amennyiben": 10,
+        "Meégiscsak": 10,
+        "bármennyit": 10,
+        "Amennyiben": 10,
+        "miszerint": 9
+      }
+    },
+    "NUM": {
+      "frequency": 11584,
+      "averageWordLength": 6.084772998197195,
+      "mostFrequentWords": {
+        "két": 1063,
+        "1": 701,
+        "sok": 412,
+        "egy": 410,
+        "három": 397
+      },
+      "longestWords": {
+        "Ezerkilencszáznegyvennégy": 25,
+        "Tizennyolc-tizenkilenc": 22,
+        "kilencvenhét-ötvenbe": 20,
+        "6bantátOlllőeNTagvar": 20,
+        "ótaelteltszázhatvan": 19
+      }
     },
     "ADP": {
-      "után": 636,
-      "között": 517,
-      "szerint": 444,
-      "alatt": 435,
-      "előtt": 422
+      "frequency": 8043,
+      "averageWordLength": 5.7433485751807565,
+      "mostFrequentWords": {
+        "után": 636,
+        "között": 517,
+        "szerint": 444,
+        "alatt": 435,
+        "előtt": 422
+      },
+      "longestWords": {
+        "következtében": 13,
+        "Következőleg": 12,
+        "ellentétben": 11,
+        "betűszerint": 11,
+        "függetlenül": 11
+      }
+    },
+    "PART": {
+      "frequency": 3955,
+      "averageWordLength": 3.104166666666667,
+      "mostFrequentWords": {
+        "meg": 3894,
+        "Meg": 56,
+        "utol": 5
+      },
+      "longestWords": {
+        "utol": 4,
+        "meg": 3,
+        "Meg": 3
+      }
+    },
+    "INTJ": {
+      "frequency": 1814,
+      "averageWordLength": 3.5488791133492317,
+      "mostFrequentWords": {
+        "Ó": 144,
+        "ó": 105,
+        "No": 96,
+        "Nem": 85,
+        "igen": 74
+      },
+      "longestWords": {
+        "Viszontlátásra": 14,
+        "dícsértessék": 12,
+        "AMdjonisten": 11,
+        "mindenségit": 11,
+        "teremtuccse": 11
+      }
     },
     "AUX": {
-      "vala": 74,
-      "fogsz": 33,
-      "fogod": 7,
-      "fogtok": 5,
-      "fogjátok": 3
+      "frequency": 126,
+      "averageWordLength": 4.918749999999999,
+      "mostFrequentWords": {
+        "vala": 74,
+        "fogsz": 33,
+        "fogod": 7,
+        "fogtok": 5,
+        "fogjátok": 3
+      },
+      "longestWords": {
+        "Fogjátok": 8,
+        "fogjátok": 8,
+        "foglak": 6,
+        "fogtok": 6,
+        "fogsz": 5
+      }
     }
   }
 }

@@ -7,10 +7,10 @@ chart_type = chart_args['chartType']
 data = chart_args['data']
 ax = pyplot.subplots()[1]
 
-if chart_type == 'pos_counts':
+if chart_type == 'pie':
     edges = ax.pie(data.values(), autopct = '%1.0f%%')[0]
     ax.legend(edges, data.keys(), title = chart_args['legendTitle'], loc = 'center left', bbox_to_anchor = (1, 0, 0.5, 1))
-elif chart_type == 'per_grade_pos_counts':
+elif chart_type == 'dotted_line':
     legend_dots = []
 
     for stats in data.values():

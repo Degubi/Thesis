@@ -1,20 +1,4 @@
 {
-  "posFrequencies": {
-    "NOUN": 15536,
-    "ADJ": 7292,
-    "DET": 6239,
-    "VERB": 4522,
-    "ADV": 2623,
-    "PRON": 2413,
-    "CONJ": 2330,
-    "PROPN": 1624,
-    "NUM": 682,
-    "ADP": 619,
-    "SCONJ": 470,
-    "PART": 380,
-    "INTJ": 27,
-    "AUX": 1
-  },
   "wordFrequencies": {
     "a": {
       "DET": 3442
@@ -346,97 +330,296 @@
       "NOUN": 33
     }
   },
-  "wordFrequenciesPerPOS": {
+  "wordLengths": {
+    "Csoportmegbeszélés-módszerrel": 29,
+    "Peloponnészoszi-félszigeten": 27,
+    "Csoportmegoldás-módszerrel": 26,
+    "szeretetmegnyilvánulásait": 25,
+    "lelki-szellemi-gondolati": 24,
+    "Csodaszarvas-ábrázolások": 24,
+    "asztalterítő-technikával": 24,
+    "tudományos-fantasztikus": 23,
+    "Dionüszosz-történeteket": 23,
+    "összehasonlíthatatlanul": 23,
+    "köszönetnyilvánításból": 22,
+    "stilisztikai-retorikai": 22,
+    "csodaszarvas-mítosznak": 22,
+    "kiszolgáltatottságában": 22,
+    "kupaktanács-módszerrel": 22,
+    "megmagyarázhatatlanul": 21,
+    "összefüggésrendszerét": 21,
+    "csodaszarvas-mítoszra": 21,
+    "megkérdőjelezhetetlen": 21,
+    "kiszolgáltatottságára": 21,
+    "erőszakszervezetekhez": 21,
+    "szerelemtapasztalatot": 21,
+    "messiásjövendöléseire": 21,
+    "Olvasmányélményeidben": 21,
+    "teremtéstörténetekkel": 21,
+    "zsoltárparafrázisokat": 21,
+    "megkeresztelkedéséről": 21,
+    "megkeresztelkedésekor": 21,
+    "megkeresztelkedésével": 21,
+    "szenvedéstörténetéről": 21,
+    "összefüggésrendszerbe": 21,
+    "szerencsétlenségekhez": 21,
+    "türvéntelen-biüntelen": 21,
+    "kiszolgáltatottságáig": 21,
+    "teremtéstörténeteivel": 21,
+    "Petrarca-költeményről": 21,
+    "Viszszavonhatatlanul": 20,
+    "filmforgatókönyveket": 20,
+    "Teremtéstörténeteket": 20,
+    "szarvas-csillagképre": 20,
+    "Vadászni-madarászni,": 20,
+    "termékenységvarázsló": 20,
+    "Prométheusz-történet": 20,
+    "Odüsszeusz-ábrázolás": 20,
+    "Trencsényi-Waldapfel": 20,
+    "strófaszerkezeteknek": 20,
+    "megváltoztathatatlan": 20,
+    "visszafordíthatatlan": 20,
+    "elnyomórendszereknek": 20,
+    "Pygmalion-történetet": 20
+  },
+  "posStats": {
     "NOUN": {
-      "szöveg": 119,
-      "ember": 93,
-      "vers": 88,
-      "irodalom": 63,
-      "történet": 55
-    },
-    "DET": {
-      "a": 3442,
-      "az": 1310,
-      "A": 895,
-      "Az": 348,
-      "egy": 215
-    },
-    "PRON": {
-      "Milyen": 99,
-      "milyen": 91,
-      "amely": 76,
-      "aki": 70,
-      "olyan": 57
-    },
-    "CONJ": {
-      "és": 1117,
-      "is": 406,
-      "vagy": 112,
-      "de": 77,
-      "hanem": 65
+      "frequency": 15536,
+      "averageWordLength": 9.485070079219987,
+      "mostFrequentWords": {
+        "szöveg": 119,
+        "ember": 93,
+        "vers": 88,
+        "irodalom": 63,
+        "történet": 55
+      },
+      "longestWords": {
+        "Csoportmegbeszélés-módszerrel": 29,
+        "Peloponnészoszi-félszigeten": 27,
+        "Csoportmegoldás-módszerrel": 26,
+        "szeretetmegnyilvánulásait": 25,
+        "Csodaszarvas-ábrázolások": 24
+      }
     },
     "ADJ": {
-      "görög": 125,
-      "című": 115,
-      "első": 105,
-      "magyar": 82,
-      "emberi": 80
+      "frequency": 7292,
+      "averageWordLength": 8.577194357366771,
+      "mostFrequentWords": {
+        "görög": 125,
+        "című": 115,
+        "első": 105,
+        "magyar": 82,
+        "emberi": 80
+      },
+      "longestWords": {
+        "lelki-szellemi-gondolati": 24,
+        "tudományos-fantasztikus": 23,
+        "összehasonlíthatatlanul": 23,
+        "stilisztikai-retorikai": 22,
+        "megmagyarázhatatlanul": 21
+      }
     },
-    "ADV": {
-      "nem": 241,
-      "el": 209,
-      "ki": 101,
-      "fel": 72,
-      "már": 71
+    "DET": {
+      "frequency": 6239,
+      "averageWordLength": 2.125,
+      "mostFrequentWords": {
+        "a": 3442,
+        "az": 1310,
+        "A": 895,
+        "Az": 348,
+        "egy": 215
+      },
+      "longestWords": {
+        "nAz": 3,
+        "egy": 3,
+        "Egy": 3,
+        "Az": 2,
+        "az": 2
+      }
     },
     "VERB": {
-      "volt": 105,
-      "Olvasd": 76,
-      "van": 48,
-      "Fogalmazd": 40,
-      "utal": 32
+      "frequency": 4522,
+      "averageWordLength": 8.370547350130321,
+      "mostFrequentWords": {
+        "volt": 105,
+        "Olvasd": 76,
+        "van": 48,
+        "Fogalmazd": 40,
+        "utal": 32
+      },
+      "longestWords": {
+        "összeszerkesztették": 19,
+        "továbbfejleszthette": 19,
+        "megbotránkoztatnak": 18,
+        "megkérdőjeleződött": 18,
+        "bekapcsolódhatnak": 17
+      }
     },
-    "PART": {
-      "meg": 379,
-      "Meg": 1
+    "ADV": {
+      "frequency": 2623,
+      "averageWordLength": 6.7481060606060606,
+      "mostFrequentWords": {
+        "nem": 241,
+        "el": 209,
+        "ki": 101,
+        "fel": 72,
+        "már": 71
+      },
+      "longestWords": {
+        "irodalomtörténe": 15,
+        "visszautasítva": 14,
+        "tulajdonképpen": 14,
+        "huszonnégyszer": 14,
+        "történelmileg": 13
+      }
     },
-    "SCONJ": {
-      "hogy": 277,
-      "mint": 62,
-      "ha": 26,
-      "mert": 16,
-      "Ha": 10
+    "PRON": {
+      "frequency": 2413,
+      "averageWordLength": 6.190839694656488,
+      "mostFrequentWords": {
+        "Milyen": 99,
+        "milyen": 91,
+        "amely": 76,
+        "aki": 70,
+        "olyan": 57
+      },
+      "longestWords": {
+        "Megváltoztatnátok-e": 19,
+        "mindannyiunkért": 15,
+        "folytatható-e": 13,
+        "mindanynyiunk": 13,
+        "vonatkoznak-e": 13
+      }
     },
-    "NUM": {
-      "két": 91,
-      "három": 42,
-      "több": 26,
-      "egy": 22,
-      "négy": 21
+    "CONJ": {
+      "frequency": 2330,
+      "averageWordLength": 5.246376811594203,
+      "mostFrequentWords": {
+        "és": 1117,
+        "is": 406,
+        "vagy": 112,
+        "de": 77,
+        "hanem": 65
+      },
+      "longestWords": {
+        "következésképpen": 16,
+        "megváltoztatha": 14,
+        "Mindazonáltal": 13,
+        "ugyancsak": 9,
+        "Ugyancsak": 9
+      }
     },
     "PROPN": {
-      "Jézus": 91,
-      "Isten": 72,
-      "Kr.": 45,
-      "Szent": 42,
-      "Biblia": 37
+      "frequency": 1624,
+      "averageWordLength": 7.079365079365079,
+      "mostFrequentWords": {
+        "Jézus": 91,
+        "Isten": 72,
+        "Kr.": 45,
+        "Szent": 42,
+        "Biblia": 37
+      },
+      "longestWords": {
+        "Vadászni-madarászni,": 20,
+        "csodafiú-szarvast,": 18,
+        "csodafiú-szarvas,": 17,
+        "Aszklépiadésztől": 16,
+        "Metamorphosesnek": 16
+      }
+    },
+    "NUM": {
+      "frequency": 682,
+      "averageWordLength": 5.547445255474453,
+      "mostFrequentWords": {
+        "két": 91,
+        "három": 42,
+        "több": 26,
+        "egy": 22,
+        "négy": 21
+      },
+      "longestWords": {
+        "százhuszonhárom": 15,
+        "mindkettejükre": 14,
+        "hármat-hármat": 13,
+        "mondattömbnyi": 13,
+        "mindkettőnek": 12
+      }
     },
     "ADP": {
-      "szerint": 61,
-      "által": 45,
-      "után": 45,
-      "között": 43,
-      "körül": 39
+      "frequency": 619,
+      "averageWordLength": 5.811320754716981,
+      "mostFrequentWords": {
+        "szerint": 61,
+        "által": 45,
+        "után": 45,
+        "között": 43,
+        "körül": 39
+      },
+      "longestWords": {
+        "következtében": 13,
+        "ellentétben": 11,
+        "függetlenül": 11,
+        "kifolyólag": 10,
+        "keresztül": 9
+      }
+    },
+    "SCONJ": {
+      "frequency": 470,
+      "averageWordLength": 5.107142857142857,
+      "mostFrequentWords": {
+        "hogy": 277,
+        "mint": 62,
+        "ha": 26,
+        "mert": 16,
+        "Ha": 10
+      },
+      "longestWords": {
+        "amennyiben": 10,
+        "Amennyiben": 10,
+        "miszerint": 9,
+        "akárcsak": 8,
+        "mielőtt": 7
+      }
+    },
+    "PART": {
+      "frequency": 380,
+      "averageWordLength": 3,
+      "mostFrequentWords": {
+        "meg": 379,
+        "Meg": 1
+      },
+      "longestWords": {
+        "meg": 3,
+        "Meg": 3
+      }
     },
     "INTJ": {
-      "Ó": 8,
-      "igen": 6,
-      "jaj": 4,
-      "sajnos": 2,
-      "Persze": 1
+      "frequency": 27,
+      "averageWordLength": 3.272727272727273,
+      "mostFrequentWords": {
+        "Ó": 8,
+        "igen": 6,
+        "jaj": 4,
+        "sajnos": 2,
+        "Persze": 1
+      },
+      "longestWords": {
+        "mindegy": 7,
+        "Persze": 6,
+        "sajnos": 6,
+        "igen": 4,
+        "jaj": 3
+      }
     },
     "AUX": {
-      "fogsz": 1
+      "frequency": 1,
+      "averageWordLength": 5,
+      "mostFrequentWords": {
+        "fogsz": 1
+      },
+      "longestWords": {
+        "fogsz": 5
+      }
     }
   }
 }

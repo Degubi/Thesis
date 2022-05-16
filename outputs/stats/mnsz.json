@@ -1,37 +1,4 @@
 {
-  "posFrequencies": {
-    "Det": 21450971,
-    "NOUN": 12589409,
-    "VERB": 11666099,
-    "Con": 10022048,
-    "Pro": 8628396,
-    "Adv": 8155240,
-    "ADJ": 6883109,
-    "UNKNOWNTAG": 5017685,
-    "DIG": 4040440,
-    "Pre": 2349545,
-    "Num": 2023239,
-    "NU": 1102400,
-    "MIB": 811440,
-    "UNKNOWN": 463805,
-    "V V": 366370,
-    "Abb": 203618,
-    "S": 123156,
-    "Int": 100796,
-    "N N": 89080,
-    "A N": 8223,
-    "Adv Adv": 6870,
-    "Pro Pro": 4530,
-    "V V V": 3939,
-    "ELO": 2694,
-    "A A": 2228,
-    "A MIB": 668,
-    "Pre Pre": 418,
-    "DATUM": 122,
-    "NU NU": 25,
-    "UNKNOWNTAG-EMPTY": 11,
-    "Num Num": 2
-  },
   "wordFrequencies": {
     "a": {
       "Det": 13604313
@@ -363,201 +330,572 @@
       "Pro": 84554
     }
   },
-  "wordFrequenciesPerPOS": {
-    "DIG": {
-      "00": 206666,
-      "1": 168676,
-      "99": 154638,
-      "2": 133501,
-      "98": 128698
-    },
-    "UNKNOWNTAG": {
-      "o": 14613,
-      "i": 12351,
-      "en": 11253,
-      "d": 10345,
-      "szam": 8089
-    },
-    "UNKNOWN": {
-      "to": 8548,
-      "for": 3428,
-      "on": 2701,
-      "der": 2587,
-      "or": 2459
-    },
-    "Num": {
-      "egy": 1107891,
-      "Egy": 109712,
-      "sok": 105809,
-      "ezer": 85244,
-      "sokkal": 40944
-    },
-    "Adv": {
-      "nem": 2090164,
-      "csak": 613436,
-      "sem": 413546,
-      "Nem": 253194,
-      "majd": 215316
+  "wordLengths": {
+    "rulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulez": 300,
+    "hahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahzahahahahahahahahahahahahahahahahahahahahahahahahah": 290,
+    "HogyajobudoskurvaannyatbasznaszajbaazosszesmoderatormegazokettamogatofaszkalaptasztaltarsakiskulonkiemelveamogorvafeleketszinualakokakikaseggemetiskinyalhatjakfenyesreHAMEGENGEDEMNEKIKezzelbucsuzomafentebbemlitettfaszkalapsegnyalokomitejennevelkedettavospalantaktolbasszaktovabbazannyukat": 288,
+    "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD": 183,
+    "GuinnessRockGuinnessRockGuinnessRockGuinnessRockGuinnessRockGuinnessRockGuinnessRockGuinnessRockGuinnessRockGuinnessRockGuinnessRockGuinnessRock": 144,
+    "001101001101101100110101110111001101000101001010101101100010101000101110101001101001001101010101010001001111100": 111,
+    "rakoshegykertecsermaglodgyomromendesulysapszecsonagykataujszaszszolnokmezoturgyomabekescsabagyulafeleavonat": 107,
+    "Jajjajjajajajajjajajajjajajajajjajajjjjjjajjjjjjjjjjajjjjjjjajajajajajjajajajjajajajajajjajjajja": 96,
+    "oDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD": 89,
+    "Jaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaj": 83,
+    "DOROMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB": 77,
+    "CUPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP": 71,
+    "BlablablasokatpofaztammostegyhetignemfogokaztanmajdmegvisszanezekBYE": 68,
+    "ittulokaszamitogepelottmertmashoznemnagyontudnekhozzaszolniazeletben": 68,
+    "JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ": 66,
+    "ezerezerezerezerezerezerezerezerezerezerezerezerezerezerezerezer": 64,
+    "IGENIGENIGENIGENIGENIGENIGENIGENIGENIGENIGENIGENIGENIGENIGENIGEN": 64,
+    "kettoezerotszaznegyvenegyesszamuszikalisandoruttorocsapatvigyazz": 64,
+    "mOZFxyvZnkyvW1hM2oMxRVmShWlewg0uphUsB2ayiACYgUhIK36mr7bDpSTqGR7r": 64,
+    "YS51cz60HkVGRiA8NzY3MTEuMzE3QGNvbXB1c2VydmUuY29tPrQYRUZGIDwxOjEw": 64,
+    "pfujjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj": 62,
+    "MQXCABNXOj9sR3GOlSF8JLOPInKWbo4iHunNnUczU7pQUKnmuVpkY014M5Cl": 60,
+    "rulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulez": 60,
+    "KzzzzzzZzzzTzzzzzzZZZZzzZZzzzZzZZzzzZzZZzZzZzzZZzZzZZzZzZzZ": 59,
+    "zsikokosomeszpatfluoritapatitfoldpatkvarctopazkorundgyemant": 59,
+    "AAAAAHHHHHJAAAAAAGGGUUUUUUTTJJJJJJAAAAKOMMMMSPRICCCEEEEENN": 58,
+    "Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch": 58,
+    "FIDESZMAGYARPOLGARIDEMOKRATANEMZETIKERESZTENYSZOVETSEGRE": 56,
+    "neduddgiabnormalisegynikestudathasadasnelkuliamatorlamer": 56,
+    "rohadtnacikommunistafaisztaliberalisorbankovackunczehorn": 56,
+    "1000000000000000000000000000000000000000000000000000000": 55,
+    "AAAAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa": 55,
+    "szemekszemekszemekszemekszemekszemekszemekszemekszemek": 54,
+    "hatengemetezakicsihasipocakgazemberigencsakmegsertett": 53,
+    "JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ": 52,
+    "nacionalistarasszistaantiszemitafasisztarevizionista": 52,
+    "ezislarpurlarlettatvettetekadzsihadtoleztabutasagot": 51,
+    "fasisztanacirohadtciganyuldozokretenbaromallatozast": 51,
+    "FogyIkamagyarDEmimajdSZigoritunkazabortusztorvenyen": 51,
+    "JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ": 51,
+    "NewtonRobbsonlofasznemlinearisoperatorosimpedanzcia": 51,
+    "HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA": 50,
+    "oDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD": 50,
+    "pliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiz": 49,
+    "AAAAAAAAAAAAAAAAAAAAARRRRRRRRRRRGHHHHHHHHHHHHHHH": 48,
+    "DOROMMMMMMMMMMMMMMMMMMMBBBBBBBBBBBBBBBBBBBBBBBBB": 48,
+    "manpediglenkeremszepenenkibaszottfuggetlenvagyok": 48,
+    "SCHSCHSCHSCHSCHSCHSCHSCHSCHSCHSCHSCHSCHSCHSCHSCH": 48,
+    "SEGGFEJSEGGFEJSEGGFEJSEGGFEJSEGFEJSEGGFEJSEGGFEJ": 48,
+    "heheheheheheheheheheheheheheheheheheheheheheheh": 47
+  },
+  "posStats": {
+    "Det": {
+      "frequency": 21450971,
+      "averageWordLength": 1.75,
+      "mostFrequentWords": {
+        "a": 13604313,
+        "az": 4476582,
+        "A": 2504021,
+        "Az": 857630,
+        "AZ": 6507
+      },
+      "longestWords": {
+        "az": 2,
+        "Az": 2,
+        "AZ": 2,
+        "sz": 2,
+        "SZ": 2
+      }
     },
     "NOUN": {
-      "ember": 117163,
-      "forint": 63094,
-      "semmi": 55399,
-      "emberek": 54145,
-      "esetben": 52937
-    },
-    "ADJ": {
-      "magyar": 294722,
-      "nagy": 214396,
-      "Magyar": 116586,
-      "politikai": 100666,
-      "kis": 98449
+      "frequency": 12589409,
+      "averageWordLength": 10.475700818911282,
+      "mostFrequentWords": {
+        "ember": 117163,
+        "forint": 63094,
+        "semmi": 55399,
+        "emberek": 54145,
+        "esetben": 52937
+      },
+      "longestWords": {
+        "Holocaustszentimentalizmus": 26,
+        "dezoxiribonukleinsavakkal": 25,
+        "dezoxiribonukleinsavaknak": 25,
+        "hadseregcsoportparancsnok": 25,
+        "intelligenciatulajdonosok": 25
+      }
     },
     "VERB": {
-      "volt": 622203,
-      "van": 495636,
-      "kell": 435047,
-      "lehet": 265303,
-      "volna": 227936
-    },
-    "Abb": {
-      "F": 14805,
-      "t": 13215,
-      "m": 12336,
-      "Ft": 12170,
-      "T": 11980
-    },
-    "MIB": {
-      "adott": 36836,
-      "ismert": 20778,
-      "volt": 20335,
-      "tervezett": 19966,
-      "tartott": 18995
-    },
-    "Pro": {
-      "azt": 513069,
-      "az": 480648,
-      "ez": 458486,
-      "akkor": 306077,
-      "olyan": 274185
-    },
-    "Pre": {
-      "meg": 733616,
-      "el": 446984,
-      "ki": 374989,
-      "be": 211291,
-      "fel": 201547
-    },
-    "V V": {
-      "jelentette": 31172,
-      "veszi": 17174,
-      "kijelentette": 15206,
-      "dolgozik": 11638,
-      "dolgozott": 11586
-    },
-    "N N": {
-      "lapunknak": 15211,
-      "fia": 7048,
-      "lapunk": 6281,
-      "fiam": 6039,
-      "sikert": 4886
-    },
-    "Det": {
-      "a": 13604313,
-      "az": 4476582,
-      "A": 2504021,
-      "Az": 857630,
-      "AZ": 6507
-    },
-    "Int": {
-      "Na": 30167,
-      "No": 12821,
-      "na": 9586,
-      "no": 7759,
-      "Ja": 7756
-    },
-    "S": {
-      "persze": 55762,
-      "Persze": 25865,
-      "Nos": 9747,
-      "la": 3650,
-      "Sziasztok": 3433
-    },
-    "NU": {
-      "szerint": 401557,
-      "miatt": 128858,
-      "alatt": 128081,
-      "mellett": 110797,
-      "ellen": 81811
+      "frequency": 11666099,
+      "averageWordLength": 10.26036753144654,
+      "mostFrequentWords": {
+        "volt": 622203,
+        "van": 495636,
+        "kell": 435047,
+        "lehet": 265303,
+        "volna": 227936
+      },
+      "longestWords": {
+        "elbizonytalanodhattunk": 22,
+        "doktorkisasszonyoznom": 21,
+        "elbizonytalanodhatnak": 21,
+        "elbizonytalanodhatunk": 21,
+        "engedelmeskedhessenek": 21
+      }
     },
     "Con": {
-      "hogy": 2619977,
-      "is": 2108457,
-      "de": 588152,
-      "s": 538158,
-      "ha": 501562
+      "frequency": 10022048,
+      "averageWordLength": 5.8046875,
+      "mostFrequentWords": {
+        "hogy": 2619977,
+        "is": 2108457,
+        "de": 588152,
+        "s": 538158,
+        "ha": 501562
+      },
+      "longestWords": {
+        "amennyiben": 10,
+        "Amennyiben": 10,
+        "AMENNYIBEN": 10,
+        "minthogyha": 10,
+        "Minthogyha": 10
+      }
     },
-    "Pre Pre": {
-      "Bele": 397,
-      "BELE": 21
+    "Pro": {
+      "frequency": 8628396,
+      "averageWordLength": 7.788198103266597,
+      "mostFrequentWords": {
+        "azt": 513069,
+        "az": 480648,
+        "ez": 458486,
+        "akkor": 306077,
+        "olyan": 274185
+      },
+      "longestWords": {
+        "statisztikaminden": 17,
+        "Valamelyiketeknek": 17,
+        "valamelyiketeket": 16,
+        "csillagmindenek": 15,
+        "mindegyikteknek": 15
+      }
     },
-    "ELO": {
-      "bel": 1247,
-      "Geo": 326,
-      "mikro": 315,
-      "GEO": 217,
-      "makro": 151
+    "Adv": {
+      "frequency": 8155240,
+      "averageWordLength": 10.610108782170338,
+      "mostFrequentWords": {
+        "nem": 2090164,
+        "csak": 613436,
+        "sem": 413546,
+        "Nem": 253194,
+        "majd": 215316
+      },
+      "longestWords": {
+        "legmegbonthatatlanabbul": 23,
+        "diskurzusanalitikailag": 22,
+        "leglelkiismeretesebben": 22,
+        "legszisztematikusabban": 22,
+        "megvigasztalhatatlanul": 22
+      }
     },
-    "Adv Adv": {
-      "bizonnyal": 5893,
-      "messzebbre": 552,
-      "legmesszebbre": 113,
-      "legalul": 104,
-      "Bizonnyal": 67
+    "ADJ": {
+      "frequency": 6883109,
+      "averageWordLength": 10.172020660115898,
+      "mostFrequentWords": {
+        "magyar": 294722,
+        "nagy": 214396,
+        "Magyar": 116586,
+        "politikai": 100666,
+        "kis": 98449
+      },
+      "longestWords": {
+        "legmegvesztegethetetlenebbnek": 29,
+        "Legmegengesztelhetetlenebb": 26,
+        "legproblematikusabbaknak": 24,
+        "posztkommunizmusbelieket": 24,
+        "csatornatulajdonosokban": 23
+      }
     },
-    "DATUM": {
-      "DATE": 121,
-      "DATEAGK": 1
+    "UNKNOWNTAG": {
+      "frequency": 5017685,
+      "averageWordLength": 8.635218019526555,
+      "mostFrequentWords": {
+        "o": 14613,
+        "i": 12351,
+        "en": 11253,
+        "d": 10345,
+        "szam": 8089
+      },
+      "longestWords": {
+        "rulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulez": 300,
+        "hahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahzahahahahahahahahahahahahahahahahahahahahahahahahah": 290,
+        "HogyajobudoskurvaannyatbasznaszajbaazosszesmoderatormegazokettamogatofaszkalaptasztaltarsakiskulonkiemelveamogorvafeleketszinualakokakikaseggemetiskinyalhatjakfenyesreHAMEGENGEDEMNEKIKezzelbucsuzomafentebbemlitettfaszkalapsegnyalokomitejennevelkedettavospalantaktolbasszaktovabbazannyukat": 288,
+        "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD": 183,
+        "GuinnessRockGuinnessRockGuinnessRockGuinnessRockGuinnessRockGuinnessRockGuinnessRockGuinnessRockGuinnessRockGuinnessRockGuinnessRockGuinnessRock": 144
+      }
     },
-    "V V V": {
-      "teremtette": 1695,
-      "megteremtette": 729,
-      "teremtettek": 686,
-      "kellettek": 415,
-      "kellettem": 103
+    "DIG": {
+      "frequency": 4040440,
+      "averageWordLength": 5.071053909664886,
+      "mostFrequentWords": {
+        "00": 206666,
+        "1": 168676,
+        "99": 154638,
+        "2": 133501,
+        "98": 128698
+      },
+      "longestWords": {
+        "001101001101101100110101110111001101000101001010101101100010101000101110101001101001001101010101010001001111100": 111,
+        "1000000000000000000000000000000000000000000000000000000": 55,
+        "123456789012345678901234567890123456789012": 42,
+        "0000000000000000000000000000000000000": 37,
+        "100110011001100110011001100110011001": 36
+      }
     },
-    "NU NU": {
-      "felibe": 25
+    "Pre": {
+      "frequency": 2349545,
+      "averageWordLength": 4.441441441441442,
+      "mostFrequentWords": {
+        "meg": 733616,
+        "el": 446984,
+        "ki": 374989,
+        "be": 211291,
+        "fel": 201547
+      },
+      "longestWords": {
+        "keresztbe": 9,
+        "Keresztbe": 9,
+        "Idealul": 7,
+        "Idebenn": 7,
+        "Idehaza": 7
+      }
     },
-    "A A": {
-      "kubai": 2108,
-      "Kubai": 120
+    "Num": {
+      "frequency": 2023239,
+      "averageWordLength": 9.955103607060629,
+      "mostFrequentWords": {
+        "egy": 1107891,
+        "Egy": 109712,
+        "sok": 105809,
+        "ezer": 85244,
+        "sokkal": 40944
+      },
+      "longestWords": {
+        "kilencvenkilencedikbe": 21,
+        "visszarendezetlenedik": 21,
+        "harminckilencezerrel": 20,
+        "kilencvennyolcadikba": 20,
+        "harminckilencediket": 19
+      }
+    },
+    "NU": {
+      "frequency": 1102400,
+      "averageWordLength": 7.537037037037037,
+      "mostFrequentWords": {
+        "szerint": 401557,
+        "miatt": 128858,
+        "alatt": 128081,
+        "mellett": 110797,
+        "ellen": 81811
+      },
+      "longestWords": {
+        "tiszerintetek": 13,
+        "helyettetek": 11,
+        "Helyettetek": 11,
+        "mellettetek": 11,
+        "Mellettetek": 11
+      }
+    },
+    "MIB": {
+      "frequency": 811440,
+      "averageWordLength": 10.806444589592859,
+      "mostFrequentWords": {
+        "adott": 36836,
+        "ismert": 20778,
+        "volt": 20335,
+        "tervezett": 19966,
+        "tartott": 18995
+      },
+      "longestWords": {
+        "miniszterfigyelmeztetett": 24,
+        "legvisszafogottabbaknak": 23,
+        "megkeresztelkedetteknek": 23,
+        "elbizonytalanodottakat": 22,
+        "elrugaszkodottabbaknak": 22
+      }
+    },
+    "UNKNOWN": {
+      "frequency": 463805,
+      "averageWordLength": 8.10268978403511,
+      "mostFrequentWords": {
+        "to": 8548,
+        "for": 3428,
+        "on": 2701,
+        "der": 2587,
+        "or": 2459
+      },
+      "longestWords": {
+        "rulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulez": 300,
+        "mOZFxyvZnkyvW1hM2oMxRVmShWlewg0uphUsB2ayiACYgUhIK36mr7bDpSTqGR7r": 64,
+        "YS51cz60HkVGRiA8NzY3MTEuMzE3QGNvbXB1c2VydmUuY29tPrQYRUZGIDwxOjEw": 64,
+        "rulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulezrulez": 60,
+        "FogyIkamagyarDEmimajdSZigoritunkazabortusztorvenyen": 51
+      }
+    },
+    "V V": {
+      "frequency": 366370,
+      "averageWordLength": 10.314330646746608,
+      "mostFrequentWords": {
+        "jelentette": 31172,
+        "veszi": 17174,
+        "kijelentette": 15206,
+        "dolgozik": 11638,
+        "dolgozott": 11586
+      },
+      "longestWords": {
+        "elbizonytalanodjanak": 20,
+        "agyonszerkesztettek": 19,
+        "egybeszerkesztettem": 19,
+        "elbizonytalanodniuk": 19,
+        "elbizonytalanodtunk": 19
+      }
+    },
+    "Abb": {
+      "frequency": 203618,
+      "averageWordLength": 2.5531914893617023,
+      "mostFrequentWords": {
+        "F": 14805,
+        "t": 13215,
+        "m": 12336,
+        "Ft": 12170,
+        "T": 11980
+      },
+      "longestWords": {
+        "ABBAHAGYNI": 10,
+        "INITIATIVE": 10,
+        "ABBAHAGYD": 9,
+        "ABBILDUNG": 9,
+        "INITIO": 6
+      }
+    },
+    "S": {
+      "frequency": 123156,
+      "averageWordLength": 5.743119266055046,
+      "mostFrequentWords": {
+        "persze": 55762,
+        "Persze": 25865,
+        "Nos": 9747,
+        "la": 3650,
+        "Sziasztok": 3433
+      },
+      "longestWords": {
+        "bizonyistenemre": 15,
+        "Bizonyistenemre": 15,
+        "csingilinginek": 14,
+        "csingilingivel": 14,
+        "bizonyistenre": 13
+      }
+    },
+    "Int": {
+      "frequency": 100796,
+      "averageWordLength": 4.32994923857868,
+      "mostFrequentWords": {
+        "Na": 30167,
+        "No": 12821,
+        "na": 9586,
+        "no": 7759,
+        "Ja": 7756
+      },
+      "longestWords": {
+        "kutykurutty": 11,
+        "Kutykurutty": 11,
+        "teringette": 10,
+        "Teringette": 10,
+        "Jesszusom": 9
+      }
+    },
+    "N N": {
+      "frequency": 89080,
+      "averageWordLength": 9.25107296137339,
+      "mostFrequentWords": {
+        "lapunknak": 15211,
+        "fia": 7048,
+        "lapunk": 6281,
+        "fiam": 6039,
+        "sikert": 4886
+      },
+      "longestWords": {
+        "elektrokardiogrammal": 20,
+        "parlamentereinkkel": 18,
+        "Szerencsesarkokban": 18,
+        "futballsikereiben": 17,
+        "rozmaringsavaknak": 17
+      }
     },
     "A N": {
-      "legmagasabb": 7381,
-      "legokosabb": 331,
-      "legmagasabbra": 133,
-      "legbizalmasabb": 88,
-      "legmagasabbak": 80
+      "frequency": 8223,
+      "averageWordLength": 13.307692307692308,
+      "mostFrequentWords": {
+        "legmagasabb": 7381,
+        "legokosabb": 331,
+        "legmagasabbra": 133,
+        "legbizalmasabb": 88,
+        "legmagasabbak": 80
+      },
+      "longestWords": {
+        "legbennfentesebbek": 18,
+        "legbizonyosabbnak": 17,
+        "legbennfentesebb": 16,
+        "legbizalmasabbak": 16,
+        "legbizalmasabban": 16
+      }
     },
-    "A MIB": {
-      "legelterjedtebb": 542,
-      "legelvontabb": 46,
-      "legelterjedtebbek": 24,
-      "Legelterjedtebb": 14,
-      "legkiforrottabb": 12
-    },
-    "UNKNOWNTAG-EMPTY": {
-      "legesleg": 10,
-      "Legesleg": 1
+    "Adv Adv": {
+      "frequency": 6870,
+      "averageWordLength": 9.25,
+      "mostFrequentWords": {
+        "bizonnyal": 5893,
+        "messzebbre": 552,
+        "legmesszebbre": 113,
+        "legalul": 104,
+        "Bizonnyal": 67
+      },
+      "longestWords": {
+        "legmesszebbre": 13,
+        "Legmesszebbre": 13,
+        "mindenhogyan": 12,
+        "Mindenhogyan": 12,
+        "messzebbre": 10
+      }
     },
     "Pro Pro": {
-      "mindennek": 3260,
-      "Mindennek": 1266,
-      "MINDENNEK": 4
+      "frequency": 4530,
+      "averageWordLength": 9,
+      "mostFrequentWords": {
+        "mindennek": 3260,
+        "Mindennek": 1266,
+        "MINDENNEK": 4
+      },
+      "longestWords": {
+        "mindennek": 9,
+        "Mindennek": 9,
+        "MINDENNEK": 9
+      }
+    },
+    "V V V": {
+      "frequency": 3939,
+      "averageWordLength": 11.823529411764707,
+      "mostFrequentWords": {
+        "teremtette": 1695,
+        "megteremtette": 729,
+        "teremtettek": 686,
+        "kellettek": 415,
+        "kellettem": 103
+      },
+      "longestWords": {
+        "elhessentettem": 14,
+        "Elhessentettem": 14,
+        "megteremtetted": 14,
+        "Megteremtetted": 14,
+        "megteremtettek": 14
+      }
+    },
+    "ELO": {
+      "frequency": 2694,
+      "averageWordLength": 4.277777777777778,
+      "mostFrequentWords": {
+        "bel": 1247,
+        "Geo": 326,
+        "mikro": 315,
+        "GEO": 217,
+        "makro": 151
+      },
+      "longestWords": {
+        "sztereo": 7,
+        "Sztereo": 7,
+        "hason": 5,
+        "makro": 5,
+        "Makro": 5
+      }
+    },
+    "A A": {
+      "frequency": 2228,
+      "averageWordLength": 5,
+      "mostFrequentWords": {
+        "kubai": 2108,
+        "Kubai": 120
+      },
+      "longestWords": {
+        "kubai": 5,
+        "Kubai": 5
+      }
+    },
+    "A MIB": {
+      "frequency": 668,
+      "averageWordLength": 16.444444444444443,
+      "mostFrequentWords": {
+        "legelterjedtebb": 542,
+        "legelvontabb": 46,
+        "legelterjedtebbek": 24,
+        "Legelterjedtebb": 14,
+        "legkiforrottabb": 12
+      },
+      "longestWords": {
+        "legmegalapozottabbnak": 21,
+        "legmegalapozottabbak": 20,
+        "legelterjedtebbeket": 19,
+        "legelterjedtebbnek": 18,
+        "legkiforrottabbnak": 18
+      }
+    },
+    "Pre Pre": {
+      "frequency": 418,
+      "averageWordLength": 4,
+      "mostFrequentWords": {
+        "Bele": 397,
+        "BELE": 21
+      },
+      "longestWords": {
+        "Bele": 4,
+        "BELE": 4
+      }
+    },
+    "DATUM": {
+      "frequency": 122,
+      "averageWordLength": 5.5,
+      "mostFrequentWords": {
+        "DATE": 121,
+        "DATEAGK": 1
+      },
+      "longestWords": {
+        "DATEAGK": 7,
+        "DATE": 4
+      }
+    },
+    "NU NU": {
+      "frequency": 25,
+      "averageWordLength": 6,
+      "mostFrequentWords": {
+        "felibe": 25
+      },
+      "longestWords": {
+        "felibe": 6
+      }
+    },
+    "UNKNOWNTAG-EMPTY": {
+      "frequency": 11,
+      "averageWordLength": 8,
+      "mostFrequentWords": {
+        "legesleg": 10,
+        "Legesleg": 1
+      },
+      "longestWords": {
+        "legesleg": 8,
+        "Legesleg": 8
+      }
     },
     "Num Num": {
-      "nemzetlenedtek": 2
+      "frequency": 2,
+      "averageWordLength": 14,
+      "mostFrequentWords": {
+        "nemzetlenedtek": 2
+      },
+      "longestWords": {
+        "nemzetlenedtek": 14
+      }
     }
   }
 }
