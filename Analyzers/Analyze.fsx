@@ -45,7 +45,8 @@ let statJsonSettings = JsonSerializerOptions(WriteIndented = true, Encoder = Jav
 
 let CHART_PIE = "pie"
 let CHART_DOTTED_LINE = "dotted_line"
-let posChartIgnoresPOSes = [| "PART"; "X"; "INTJ"; "SYM"; "AUX"; "PUNCT" |]
+let posChartIgnoredMagyarlancPOSes = [| "PART"; "X"; "INTJ"; "SYM"; "AUX"; "PUNCT" |]
+let posChartIgnoredMNSZPOSes = [| "UNKNOWNTAG"; "UNKNOWN"; "S"; "UNKNOWNTAG-EMPTY"; "ELO"; "MIB"; "NU"; "Int"; "DATUM"; "Num Num"; "NU NU"; "Pre Pre"; "A A"; "A MIB" |]
 let perGradeUsedPOSes = [| "NOUN"; "VERB"; "PROPN" |]
 let wordCloudPOSes = [| ""; "NOUN"; "VERB"; "ADJ" |]
 let magyarlancAnalysisIgnoredPOSes = [| "PUNCT"; ""; "SYM"; "X" |]
@@ -208,7 +209,7 @@ let writeAnalysisStat fileName stats =
 
     File.WriteAllText($"{magyarlancStatsOutputDir}/{fileName}.json", JsonSerializer.Serialize(stats |> truncateAnalysisStat, statJsonSettings))
     wordCloudPOSes |> Seq.iter(writeWordCloud stats.wordFrequencies wordCloudBaseFilePath)
-    stats.posStats |> Seq.filter(fun (KeyValue(pos, _)) -> not(Array.contains pos posChartIgnoresPOSes))
+    stats.posStats |> Seq.filter(fun (KeyValue(pos, _)) -> not(Array.contains pos posChartIgnoredMagyarlancPOSes))
                    |> Seq.map(fun (KeyValue(pos, stat)) -> (pos, stat.frequency))
                    |> Seq.sortByDescending(fun (_, freq) -> freq)
                    |> dict
@@ -259,6 +260,12 @@ if File.Exists mnszDataFilePath then
 
     File.WriteAllText($"{statsOutputDir}/mnsz.json", JsonSerializer.Serialize(mnszAnalysisStat |> truncateAnalysisStat, statJsonSettings))
     wordCloudPOSes |> Seq.iter(writeWordCloud mnszAnalysisStat.wordFrequencies $"{wordCloudOutputDir}/mnsz")
+
+    mnszAnalysisStat.posStats |> Seq.filter(fun (KeyValue(pos, _)) -> not(Array.contains pos posChartIgnoredMNSZPOSes))
+                              |> Seq.map(fun (KeyValue(pos, stat)) -> (pos, stat.frequency))
+                              |> Seq.sortByDescending(fun (_, freq) -> freq)
+                              |> dict
+                              |> writeChart $"{chartOutputDir}/mnsz_pos_distribution.png" CHART_PIE "Szófaj"
 
 let endTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()
 printfn "All done in %dms" (endTime - beginTime)
