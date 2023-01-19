@@ -1,4 +1,8 @@
 {
+  "wordCounts": {
+    "total": 94827,
+    "unique": 28065
+  },
   "wordFrequencies": {
     "a": {
       "DET": 7295,

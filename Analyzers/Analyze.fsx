@@ -24,7 +24,14 @@ type POSStat = {
     mostFrequentWords: IDictionary<string, int>
     longestWords: IDictionary<string, int>
 }
+
+type WordCountStat = {
+    total: int
+    unique: int
+}
+
 type AnalysisStat = {
+    wordCounts: WordCountStat
     wordFrequencies: IDictionary<string, WordStat>
     wordLengths: IDictionary<string, int>
     posStats: IDictionary<string, POSStat>
@@ -50,6 +57,7 @@ let posChartIgnoredMNSZPOSes = [| "UNKNOWNTAG"; "UNKNOWN"; "S"; "UNKNOWNTAG-EMPT
 let perGradeUsedPOSes = [| "NOUN"; "VERB"; "PROPN" |]
 let wordCloudPOSes = [| ""; "NOUN"; "VERB"; "ADJ" |]
 let magyarlancAnalysisIgnoredPOSes = [| "PUNCT"; ""; "SYM"; "X" |]
+
 
 let parseMagyarlancWordFrequencies file =
     let calculatePOSFrequencies(args: seq<string[]>) = args |> Seq.countBy(fun k -> k.[2]) |> dict
@@ -82,11 +90,17 @@ let parseMNSZWordFrequencies file =
          |> Seq.map(fun (word, args) -> {| word = word; posFrequencies = calculatePOSFrequencies args |})
          |> Seq.toArray
 
-let createAnalysisStat(wordFrequencies: {| word: string; posFrequencies: IDictionary<string, int> |}[]) =
+
+let createWordCountStat(wordFrequencies: IDictionary<string, WordStat>) = {
+    total = wordFrequencies |> Seq.collect(fun k -> k.Value.Values) |> Seq.sum
+    unique = wordFrequencies.Count
+}
+
+let createAnalysisStat(rawWordFrequencies: {| word: string; posFrequencies: IDictionary<string, int> |}[]) =
     let createPOSStat pos =
-        let wordsToPOSFrequency = wordFrequencies |> Seq.filter(fun k -> k.posFrequencies.ContainsKey pos)
-                                                  |> Seq.map(fun k -> (k.word, k.posFrequencies.[pos]))
-                                                  |> dict
+        let wordsToPOSFrequency = rawWordFrequencies |> Seq.filter(fun k -> k.posFrequencies.ContainsKey pos)
+                                                     |> Seq.map(fun k -> (k.word, k.posFrequencies.[pos]))
+                                                     |> dict
 
         let mostFrequentWords = wordsToPOSFrequency |> Seq.map(|KeyValue|)
                                                     |> Seq.sortByDescending(fun (_, freq) -> freq)
@@ -100,13 +114,17 @@ let createAnalysisStat(wordFrequencies: {| word: string; posFrequencies: IDictio
             longestWords = longestWords |> dict
         }
 
-    let posStats = wordFrequencies |> Seq.collect(fun k -> k.posFrequencies.Keys)
-                                   |> Seq.distinct
-                                   |> Seq.map(fun pos -> (pos, createPOSStat pos))
-                                   |> Seq.sortByDescending(fun (_, stats) -> stats.frequency)
+    let posStats = rawWordFrequencies |> Seq.collect(fun k -> k.posFrequencies.Keys)
+                                      |> Seq.distinct
+                                      |> Seq.map(fun pos -> (pos, createPOSStat pos))
+                                      |> Seq.sortByDescending(fun (_, stats) -> stats.frequency)
+
+    let wordFrequencies = rawWordFrequencies |> Seq.map(fun k -> (k.word, k.posFrequencies)) |> dict
+
     {
-        wordFrequencies = wordFrequencies |> Seq.map(fun k -> (k.word, k.posFrequencies)) |> dict
-        wordLengths = wordFrequencies |> Seq.map(fun k -> (k.word, k.word.Length)) |> dict
+        wordCounts = createWordCountStat wordFrequencies
+        wordFrequencies = wordFrequencies
+        wordLengths = rawWordFrequencies |> Seq.map(fun k -> (k.word, k.word.Length)) |> dict
         posStats = posStats |> dict
     }
 
@@ -127,8 +145,11 @@ let mergeAnalysisStats s1 s2 =
                          |> Seq.fold(mergeDictionary Seq.max) (dict [])
     }
 
+    let mergedWordFrequencies = mergeDictionary mergeWordFrequency s1.wordFrequencies s2.wordFrequencies
+
     {
-        wordFrequencies = mergeDictionary mergeWordFrequency s1.wordFrequencies s2.wordFrequencies
+        wordCounts = createWordCountStat mergedWordFrequencies
+        wordFrequencies = mergedWordFrequencies
         wordLengths = mergeDictionary Seq.head s1.wordLengths s2.wordLengths
         posStats = mergeDictionary mergePOSStat s1.posStats s2.posStats
     }
@@ -162,6 +183,7 @@ let truncateAnalysisStat stat =
                                                     }))
                                           |> Seq.sortByDescending(fun (_, stats) -> stats.frequency)
     {
+        wordCounts = stat.wordCounts
         wordFrequencies = truncatedWordFrequencies |> dict
         wordLengths = truncatedWordLengths |> dict
         posStats = truncatedPOSStats |> dict
@@ -217,7 +239,7 @@ let writeAnalysisStat fileName stats =
 
 
 let beginTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()
-let emptyStats = { wordFrequencies = dict([]); wordLengths = dict([]); posStats = dict([]) }
+let identityStat = { wordCounts = { total = 0; unique = 0 }; wordFrequencies = dict([]); wordLengths = dict([]); posStats = dict([]) }
 
 let perBookStats = Directory.GetFiles magyarlancOutputDir
                  |> PSeq.map(fun k -> (Path.GetFileNameWithoutExtension k, k |> parseMagyarlancWordFrequencies |> createAnalysisStat))
@@ -227,10 +249,10 @@ let perBookTypeStats = perBookStats |> Seq.groupBy(fun (fileName, _) -> parseBoo
                                     |> dict
 
 let szgyStats = perBookTypeStats.["szgy"] |> Seq.map(fun (_, stats) -> stats)
-                                          |> Seq.fold mergeAnalysisStats emptyStats
+                                          |> Seq.fold mergeAnalysisStats identityStat
 
 let tkStats = perBookTypeStats.["tk"] |> Seq.map(fun (_, stats) -> stats)
-                                      |> Seq.fold mergeAnalysisStats emptyStats
+                                      |> Seq.fold mergeAnalysisStats identityStat
 
 let mergedStats = mergeAnalysisStats szgyStats tkStats
 
